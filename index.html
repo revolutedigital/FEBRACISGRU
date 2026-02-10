@@ -6,7 +6,7 @@
     <title>Método CIS 248 | Febracis Guarulhos - O Maior Treinamento de Inteligência Emocional do Mundo</title>
     <meta name="description" content="Método CIS 248 em Guarulhos. +60 horas de imersão que já transformaram +1.8 milhão de vidas em 83 países. Garanta sua vaga agora.">
     <meta name="theme-color" content="#0D2240">
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <meta property="og:title" content="Método CIS 248 | Febracis Guarulhos">
     <meta property="og:description" content="+60 horas de imersão que já transformaram +1.8 milhão de vidas em 83 países.">
@@ -211,7 +211,7 @@
             display: flex;
             align-items: center;
             position: relative;
-            padding-top: 80px;
+            padding-top: 0;
             background: var(--dark);
             overflow: hidden;
         }
@@ -1355,66 +1355,228 @@
 
 
         /* ============================================
-           RESPONSIVE
+           RESPONSIVE — MOBILE-FIRST OPTIMIZATION
            ============================================ */
+
+        /* ---------- Tablet (≤1024px) ---------- */
         @media (max-width: 1024px) {
             .pillars-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
         }
 
+        /* ---------- Mobile (≤768px) ---------- */
         @media (max-width: 768px) {
             .section {
-                padding: 64px 0;
+                padding: 52px 0;
             }
 
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 24px;
+            .container {
+                padding: 0 20px;
             }
 
-            .what-grid,
-            .paulo-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
+            /* Hero */
+            .hero {
+                min-height: 100dvh;
+                min-height: 100vh;
             }
 
-            .pillars-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .hero-badge {
+                font-size: 0.7rem;
+                padding: 6px 14px;
+                margin-bottom: 20px;
+                line-height: 1.4;
+                text-align: center;
             }
 
-            .journey-grid {
-                grid-template-columns: 1fr;
+            .hero h1 {
+                font-size: clamp(2rem, 8vw, 3rem);
+                margin-bottom: 16px;
             }
 
-            .for-grid {
-                grid-template-columns: 1fr;
+            .hero-sub {
+                font-size: 1rem;
+                margin: 0 auto 28px;
+                line-height: 1.7;
             }
 
-            .hero-proof {
-                gap: 24px;
+            .hero-cta-group {
+                margin-bottom: 32px;
             }
 
             .btn-primary {
                 min-width: auto;
                 width: 100%;
-                max-width: 360px;
+                max-width: 100%;
+                padding: 16px 24px;
+                font-size: 0.95rem;
+                border-radius: 10px;
+            }
+
+            .hero-proof {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 16px;
+            }
+
+            .hero-proof-item .number {
+                font-size: 1.6rem;
+            }
+
+            .hero-proof-item .label {
+                font-size: 0.7rem;
+            }
+
+            .hero-micro {
+                font-size: 0.75rem;
+            }
+
+            /* Stats */
+            .stats-bar {
+                padding: 40px 0;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .stat-number {
+                font-size: clamp(2rem, 6vw, 2.8rem);
+            }
+
+            /* Pain */
+            .pain-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .pain-card {
+                padding: 24px;
+            }
+
+            .pain-header {
+                margin-bottom: 40px;
+            }
+
+            /* What is CIS */
+            .what-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .cycle-container {
+                padding: 28px 16px;
+            }
+
+            .cycle-items {
+                gap: 16px;
+            }
+
+            .cycle-item {
+                padding: 16px 12px;
+            }
+
+            /* Pillars — horizontal scroll carousel */
+            .pillars-grid {
+                display: flex;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                gap: 16px;
+                padding-bottom: 16px;
+                margin: 0 -20px;
+                padding-left: 20px;
+                padding-right: 20px;
+                scrollbar-width: none;
+            }
+
+            .pillars-grid::-webkit-scrollbar {
+                display: none;
+            }
+
+            .pillar-card {
+                flex: 0 0 260px;
+                scroll-snap-align: start;
+                padding: 28px 20px;
+            }
+
+            .pillars-header {
+                margin-bottom: 40px;
+            }
+
+            /* Journey */
+            .journey-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .journey-card {
+                padding: 28px 20px;
+            }
+
+            .journey-header {
+                margin-bottom: 40px;
+            }
+
+            /* Paulo Vieira */
+            .paulo-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .paulo-image {
+                text-align: center;
+            }
+
+            .paulo-photo {
+                max-width: 300px;
+                margin: 0 auto;
             }
 
             .paulo-credentials {
                 grid-template-columns: 1fr;
+                gap: 12px;
             }
 
-            .urgency-counter {
+            .credential {
+                padding: 14px;
+            }
+
+            /* For/Not For */
+            .for-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .for-card {
+                padding: 28px 20px;
+            }
+
+            /* FAQ */
+            .faq-header {
+                margin-bottom: 40px;
+            }
+
+            .faq-question {
+                padding: 20px 0;
+                font-size: 0.95rem;
                 gap: 12px;
+            }
+
+            /* Final CTA */
+            .urgency-counter {
+                gap: 10px;
             }
 
             .counter-number {
                 width: 56px;
                 height: 56px;
                 font-size: 1.5rem;
+                border-radius: 12px;
             }
 
+            /* Footer */
             .footer-content {
                 flex-direction: column;
                 text-align: center;
@@ -1424,23 +1586,161 @@
                 text-align: center;
             }
 
-            .nav-cta span {
-                display: none;
+            /* Mobile bottom CTA */
+            .mobile-bottom-cta {
+                display: block;
+                padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+            }
+
+            body {
+                padding-bottom: 68px;
+            }
+
+            /* Form popup */
+            .lead-form-card {
+                padding: 28px 20px;
+            }
+
+            .form-popup-overlay {
+                padding: 16px;
+                align-items: flex-start;
+                padding-top: 10vh;
+            }
+
+            /* Scroll indicator */
+            .scroll-indicator {
+                bottom: 24px;
+            }
+
+            /* Media logos */
+            .media-logos-grid {
+                gap: 16px 24px;
+            }
+
+            .media-logo {
+                font-size: 0.9rem;
             }
         }
 
+        /* ---------- Small Mobile (≤480px) ---------- */
         @media (max-width: 480px) {
-            .pillars-grid {
-                grid-template-columns: 1fr;
+            .container {
+                padding: 0 16px;
+            }
+
+            .section {
+                padding: 44px 0;
+            }
+
+            .hero h1 {
+                font-size: clamp(1.8rem, 7.5vw, 2.5rem);
+            }
+
+            .hero-sub {
+                font-size: 0.95rem;
             }
 
             .stats-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 1fr;
+                gap: 16px;
             }
 
-            .hero-proof {
-                flex-direction: column;
-                gap: 16px;
+            .stat-number {
+                font-size: clamp(1.8rem, 6vw, 2.5rem);
+            }
+
+            .pain-card {
+                padding: 20px;
+            }
+
+            .pillar-card {
+                flex: 0 0 240px;
+            }
+
+            .pillars-grid {
+                margin: 0 -16px;
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            .cycle-container {
+                padding: 24px 12px;
+            }
+
+            .journey-card {
+                padding: 24px 16px;
+            }
+
+            .for-card {
+                padding: 24px 16px;
+            }
+
+            .counter-number {
+                width: 48px;
+                height: 48px;
+                font-size: 1.3rem;
+                border-radius: 10px;
+            }
+
+            .counter-label {
+                font-size: 0.6rem;
+            }
+
+            .urgency-counter {
+                gap: 8px;
+            }
+
+            .scroll-indicator {
+                display: none;
+            }
+
+            .final-cta h2 {
+                font-size: clamp(1.8rem, 7vw, 2.5rem);
+            }
+
+            .pain-header h2,
+            .pillars-header h2,
+            .journey-header h2,
+            .faq-header h2,
+            .video-testimonials-header h2 {
+                font-size: clamp(1.6rem, 6vw, 2.2rem);
+            }
+
+            .what-content h2,
+            .paulo-content h2 {
+                font-size: clamp(1.6rem, 6vw, 2.2rem);
+            }
+        }
+
+        /* ---------- Extra Small (≤360px) ---------- */
+        @media (max-width: 360px) {
+            .hero-badge {
+                font-size: 0.6rem;
+                padding: 5px 10px;
+                letter-spacing: 0.05em;
+            }
+
+            .hero-micro {
+                font-size: 0.65rem;
+            }
+
+            .btn-primary {
+                padding: 14px 16px;
+                font-size: 0.85rem;
+            }
+
+            .counter-number {
+                width: 42px;
+                height: 42px;
+                font-size: 1.1rem;
+            }
+
+            .hero-proof-item .number {
+                font-size: 1.3rem;
+            }
+
+            .hero-proof-item .label {
+                font-size: 0.6rem;
             }
         }
 
@@ -1713,13 +2013,10 @@
 
         .hero-video-bg video {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 177.78vh;
-            height: 100vh;
-            min-width: 100%;
-            min-height: 100%;
-            transform: translate(-50%, -50%);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
         }
 
@@ -1917,32 +2214,7 @@
             font-variant-numeric: tabular-nums;
         }
 
-        /* ============================================
-           RESPONSIVE ENHANCEMENTS (Sprint 1)
-           ============================================ */
-        @media (max-width: 768px) {
-            .mobile-bottom-cta {
-                display: block;
-            }
-            .hero {
-                min-height: 100dvh;
-                min-height: 100vh;
-            }
-            .section {
-                padding: 48px 0;
-            }
-            .nav-cta span {
-                display: inline !important;
-                font-size: 0.75rem;
-            }
-            .nav-cta {
-                padding: 10px 16px;
-                font-size: 0.75rem;
-            }
-            .lead-form-card {
-                padding: 32px 20px;
-            }
-        }
+        /* (Sprint 1 responsive rules merged into main responsive block above) */
 
         /* ============================================
            TOUCH TARGETS
@@ -2686,27 +2958,22 @@
             }
         };
 
-        // ========== COUNTDOWN TIMER (persistent) ==========
+        // ========== COUNTDOWN TIMER (real event date) ==========
         function startCountdown() {
-            var storageKey = 'cis_countdown_target';
-            var stored = localStorage.getItem(storageKey);
-            var target;
-
-            if (stored) {
-                target = new Date(parseInt(stored));
-                if (target <= new Date()) {
-                    target = new Date(Date.now() + 15 * 24 * 60 * 60 * 1000);
-                    localStorage.setItem(storageKey, target.getTime());
-                }
-            } else {
-                target = new Date(Date.now() + 15 * 24 * 60 * 60 * 1000);
-                localStorage.setItem(storageKey, target.getTime());
-            }
+            // CIS 248 — 26 de fevereiro de 2026, 14h (horário de Brasília)
+            var target = new Date('2026-02-26T14:00:00-03:00');
 
             function update() {
                 var now = new Date();
                 var diff = target - now;
-                if (diff <= 0) return;
+
+                if (diff <= 0) {
+                    document.getElementById('days').textContent = '00';
+                    document.getElementById('hours').textContent = '00';
+                    document.getElementById('minutes').textContent = '00';
+                    document.getElementById('seconds').textContent = '00';
+                    return;
+                }
 
                 var d = Math.floor(diff / (1000 * 60 * 60 * 24));
                 var h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
