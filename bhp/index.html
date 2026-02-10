@@ -1859,10 +1859,15 @@
 
         // ========== HERO VIDEO ==========
         var heroVideo = document.querySelector('#heroVideoBg video');
-        if (heroVideo) {
-            heroVideo.addEventListener('playing', function() {
-                document.getElementById('heroVideoBg').classList.add('playing');
-            });
+        var heroVideoBg = document.getElementById('heroVideoBg');
+        if (heroVideo && heroVideoBg) {
+            function showVideo() { heroVideoBg.classList.add('playing'); }
+            heroVideo.addEventListener('playing', showVideo);
+            heroVideo.addEventListener('loadeddata', showVideo);
+            // Fallback: show after 2s regardless
+            setTimeout(showVideo, 2000);
+            // Try to play if autoplay was blocked
+            heroVideo.play().catch(function() { showVideo(); });
         }
 
         // ========== SCROLL PROGRESS ==========
