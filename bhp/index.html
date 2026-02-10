@@ -1,0 +1,1929 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BHP - Business High Performance | Febracis Guarulhos</title>
+    <meta name="description" content="BHP - Business High Performance. 33 horas de imers&atilde;o em gest&atilde;o, lideran&ccedil;a e alta performance empresarial. Dobre seu faturamento com ferramentas pr&aacute;ticas.">
+    <meta name="theme-color" content="#0D2240">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <meta property="og:title" content="BHP - Business High Performance | Febracis Guarulhos">
+    <meta property="og:description" content="33 horas de imers&atilde;o em gest&atilde;o, lideran&ccedil;a e negocia&ccedil;&atilde;o de alta performance. Ferramentas pr&aacute;ticas para dobrar seu faturamento.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@700;900&display=swap&subset=latin" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "BHP - Business High Performance | Febracis Guarulhos",
+      "description": "Treinamento de 33 horas em gest&atilde;o, lideran&ccedil;a e alta performance empresarial.",
+      "organizer": {
+        "@type": "Organization",
+        "name": "Febracis Guarulhos"
+      },
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "performer": { "@type": "Person", "name": "Newton Vieira" }
+    }
+    </script>
+    <style>
+        /* ============================================
+           RESET & BASE
+           ============================================ */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #EBA818;
+            --gold-light: #F5C04A;
+            --gold-dark: #C78E0E;
+            --dark: #0D2240;
+            --dark-2: #0F2847;
+            --dark-3: #142E50;
+            --dark-4: #1A3660;
+            --white: #FFFFFF;
+            --gray-100: #F5F5F5;
+            --gray-200: #E5E5E5;
+            --gray-300: #C8D3E0;
+            --gray-400: #94A7BF;
+            --gray-500: #7B90AB;
+            --gray-600: #5E7694;
+            --green: #16A34A;
+            --red: #DC2626;
+            --gradient-gold: linear-gradient(135deg, #EBA818 0%, #F5C04A 50%, #EBA818 100%);
+            --gradient-dark: linear-gradient(180deg, #0D2240 0%, #142E50 100%);
+            --shadow-lg: 0 20px 60px rgba(10,20,40,0.6);
+            --shadow-gold: 0 0 40px rgba(235,168,24,0.2);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--dark);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        /* ============================================
+           TYPOGRAPHY
+           ============================================ */
+        .headline-display {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            line-height: 1.05;
+            letter-spacing: -0.02em;
+        }
+
+        .text-gold {
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ============================================
+           HERO
+           ============================================ */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-top: 0;
+            background: var(--dark);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -15%;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(235,168,24,0.1) 0%, transparent 70%),
+                        radial-gradient(circle at 30% 70%, rgba(100,160,220,0.06) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 200px;
+            background: linear-gradient(to top, var(--dark), transparent);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(235,168,24,0.1);
+            border: 1px solid rgba(235,168,24,0.3);
+            padding: 8px 20px;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 32px;
+        }
+
+        .hero-badge svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .hero-logo {
+            font-size: 3.5rem;
+            font-weight: 900;
+            letter-spacing: 0.05em;
+            margin-bottom: 4px;
+        }
+
+        .hero-logo-sub {
+            font-size: 0.85rem;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-weight: 600;
+            margin-bottom: 32px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.2rem, 5.5vw, 4.2rem);
+            margin-bottom: 24px;
+        }
+
+        .hero-sub {
+            font-size: clamp(1.05rem, 2vw, 1.3rem);
+            color: var(--gray-300);
+            max-width: 680px;
+            margin: 0 auto 40px;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: var(--gradient-gold);
+            color: var(--dark);
+            padding: 20px 48px;
+            border-radius: 12px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
+            font-size: 1.1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            cursor: pointer;
+            min-width: 320px;
+            box-shadow: 0 4px 20px rgba(235,168,24,0.25);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(235,168,24,0.35);
+        }
+
+        .btn-primary::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.5s ease, height 0.5s ease;
+        }
+
+        .btn-primary:active::after {
+            width: 300px;
+            height: 300px;
+            opacity: 0;
+        }
+
+        .btn-primary svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .hero-micro {
+            font-size: 0.85rem;
+            color: var(--gray-500);
+        }
+
+        .hero-proof {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .hero-proof-item {
+            text-align: center;
+        }
+
+        .hero-proof-item .number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--gold);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .hero-proof-item .label {
+            font-size: 0.75rem;
+            color: var(--gray-500);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: 4px;
+        }
+
+        /* ============================================
+           PAIN SECTION
+           ============================================ */
+        .pain-section {
+            background: var(--dark-2);
+            position: relative;
+        }
+
+        .pain-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(235,168,24,0.3), transparent);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .section-header .overline {
+            font-size: 0.8rem;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section-header p.desc {
+            font-size: 1.1rem;
+            color: var(--gray-400);
+            max-width: 600px;
+            margin: 16px auto 0;
+        }
+
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+
+        .pain-card {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            padding: 32px;
+            transition: border-color 0.3s ease, background 0.3s ease;
+        }
+
+        .pain-card:hover {
+            border-color: rgba(235,168,24,0.2);
+            background: rgba(235,168,24,0.03);
+        }
+
+        .pain-card .icon {
+            margin-bottom: 16px;
+            line-height: 1;
+        }
+
+        .pain-card .icon svg {
+            width: 32px;
+            height: 32px;
+            stroke: var(--gold);
+            fill: none;
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .pain-card h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .pain-card p {
+            font-size: 0.95rem;
+            color: var(--gray-400);
+            line-height: 1.7;
+        }
+
+        .pain-bottom {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .pain-bottom p {
+            font-size: 1.2rem;
+            color: var(--gray-300);
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        .pain-bottom strong {
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        /* ============================================
+           STATS BAR
+           ============================================ */
+        .stats-bar {
+            background: var(--gradient-gold);
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-bar::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            font-weight: 900;
+            color: var(--dark);
+            line-height: 1;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--dark);
+            opacity: 0.7;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-top: 8px;
+        }
+
+        /* ============================================
+           WHAT IS BHP
+           ============================================ */
+        .what-section {
+            background: var(--dark);
+        }
+
+        .what-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .what-content .overline {
+            font-size: 0.8rem;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .what-content h2 {
+            font-size: clamp(2rem, 3.5vw, 2.8rem);
+            margin-bottom: 24px;
+            line-height: 1.15;
+        }
+
+        .what-content p {
+            color: var(--gray-300);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .what-content p strong {
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .what-visual {
+            position: relative;
+        }
+
+        .what-areas {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .what-area-item {
+            text-align: center;
+            padding: 24px 16px;
+            background: rgba(255,255,255,0.06);
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.06);
+            transition: border-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .what-area-item:hover {
+            border-color: rgba(235,168,24,0.3);
+            transform: translateY(-4px);
+        }
+
+        .what-area-item .area-icon {
+            margin-bottom: 12px;
+        }
+
+        .what-area-item .area-icon svg {
+            width: 32px;
+            height: 32px;
+            stroke: var(--gold);
+            fill: none;
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .what-area-item h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 6px;
+        }
+
+        .what-area-item p {
+            font-size: 0.8rem;
+            color: var(--gray-400);
+            line-height: 1.4;
+        }
+
+        /* ============================================
+           TOOLS SECTION
+           ============================================ */
+        .tools-section {
+            background: var(--dark-2);
+            position: relative;
+        }
+
+        .tools-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(235,168,24,0.3), transparent);
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .tool-card {
+            background: linear-gradient(180deg, rgba(235,168,24,0.06) 0%, rgba(235,168,24,0.02) 100%);
+            border: 1px solid rgba(235,168,24,0.15);
+            border-radius: 20px;
+            padding: 36px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(235,168,24,0.3);
+        }
+
+        .tool-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--gradient-gold);
+            color: var(--dark);
+            font-weight: 800;
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+        }
+
+        .tool-card h3 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            color: var(--gold-light);
+        }
+
+        .tool-card p {
+            font-size: 0.95rem;
+            color: var(--gray-300);
+            line-height: 1.7;
+        }
+
+        /* ============================================
+           6 AREAS
+           ============================================ */
+        .areas-section {
+            background: var(--dark);
+        }
+
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .area-card {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 20px;
+            padding: 36px 24px;
+            text-align: center;
+            transition: border-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .area-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: var(--gradient-gold);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .area-card:hover {
+            border-color: rgba(235,168,24,0.2);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .area-card:hover::before {
+            opacity: 1;
+        }
+
+        .area-card-icon {
+            margin-bottom: 20px;
+        }
+
+        .area-card-icon svg {
+            width: 40px;
+            height: 40px;
+            stroke: var(--gold);
+            fill: none;
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .area-card h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--gold-light);
+        }
+
+        .area-card p {
+            font-size: 0.9rem;
+            color: var(--gray-400);
+            line-height: 1.6;
+        }
+
+        /* ============================================
+           NEWTON VIEIRA
+           ============================================ */
+        .newton-section {
+            background: var(--dark-2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .newton-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(235,168,24,0.3), transparent);
+        }
+
+        .newton-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .newton-content .overline {
+            font-size: 0.8rem;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .newton-content h2 {
+            font-size: clamp(2rem, 3.5vw, 2.8rem);
+            margin-bottom: 24px;
+            line-height: 1.15;
+        }
+
+        .newton-content .bio {
+            color: var(--gray-300);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 32px;
+            font-weight: 300;
+        }
+
+        .newton-content .bio strong {
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .newton-credentials {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .credential {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 16px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.08);
+            text-align: left;
+        }
+
+        .credential-icon {
+            color: var(--gold);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .credential-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--gold);
+            fill: none;
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            flex-shrink: 0;
+        }
+
+        .credential-text {
+            font-size: 0.9rem;
+            color: var(--gray-300);
+            line-height: 1.5;
+        }
+
+        .credential-text strong {
+            color: var(--white);
+            font-weight: 600;
+            display: block;
+        }
+
+        /* ============================================
+           FOR / NOT FOR
+           ============================================ */
+        .for-section {
+            background: var(--dark);
+        }
+
+        .for-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .for-card {
+            padding: 48px;
+            border-radius: 24px;
+        }
+
+        .for-card.yes {
+            background: rgba(22,163,74,0.05);
+            border: 1px solid rgba(22,163,74,0.15);
+        }
+
+        .for-card.no {
+            background: rgba(220,38,38,0.05);
+            border: 1px solid rgba(220,38,38,0.15);
+        }
+
+        .for-card h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 28px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .for-card.yes h3 { color: #4ADE80; }
+        .for-card.no h3 { color: #F87171; }
+
+        .for-list {
+            list-style: none;
+        }
+
+        .for-list li {
+            padding: 10px 0;
+            font-size: 0.95rem;
+            color: var(--gray-300);
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            line-height: 1.5;
+        }
+
+        .for-list .check { color: #4ADE80; font-weight: 700; flex-shrink: 0; }
+        .for-list .cross { color: #F87171; font-weight: 700; flex-shrink: 0; }
+
+        /* ============================================
+           FAQ
+           ============================================ */
+        .faq-section {
+            background: var(--dark-2);
+            position: relative;
+        }
+
+        .faq-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(235,168,24,0.3), transparent);
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 24px 0;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Inter', sans-serif;
+            transition: color 0.3s ease;
+            min-height: 44px;
+        }
+
+        .faq-question:hover { color: var(--gold); }
+
+        .faq-question .arrow {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+            color: var(--gold);
+        }
+
+        .faq-item.active .faq-question .arrow {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding-bottom: 24px;
+        }
+
+        .faq-answer p {
+            font-size: 0.95rem;
+            color: var(--gray-400);
+            line-height: 1.7;
+        }
+
+        /* ============================================
+           FINAL CTA
+           ============================================ */
+        .final-cta {
+            background: var(--dark);
+            position: relative;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(235,168,24,0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .final-cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .final-cta .overline {
+            font-size: 0.8rem;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .final-cta h2 {
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            margin-bottom: 24px;
+            line-height: 1.1;
+        }
+
+        .final-cta .subtitle {
+            font-size: 1.25rem;
+            font-weight: 300;
+            color: var(--gray-300);
+            line-height: 1.7;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .final-cta-buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        .footer {
+            background: var(--dark-2);
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding: 48px 0 32px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .footer-brand img {
+            height: 40px;
+            width: auto;
+        }
+
+        .footer-info {
+            text-align: center;
+            flex: 1;
+        }
+
+        .footer-info p {
+            font-size: 0.85rem;
+            color: var(--gray-500);
+            line-height: 1.6;
+        }
+
+        .footer-legal {
+            text-align: right;
+            font-size: 0.75rem;
+            color: var(--gray-600);
+        }
+
+        /* ============================================
+           FORM POPUP
+           ============================================ */
+        .form-popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 10002;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .form-popup-overlay.active {
+            display: flex;
+        }
+
+        .lead-form-card {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(235,168,24,0.2);
+            border-radius: 24px;
+            padding: 48px;
+            max-width: 560px;
+            margin: 0 auto;
+            position: relative;
+            transform: scale(0.8);
+            opacity: 0;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+        }
+
+        .form-popup-overlay.active .lead-form-card {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .lead-form-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 900;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .lead-form-card .form-sub {
+            font-size: 0.9rem;
+            color: var(--gray-400);
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 16px 20px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            color: var(--white);
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-group input::placeholder {
+            color: var(--gray-500);
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(235,168,24,0.15);
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 18px;
+            background: var(--gradient-gold);
+            color: var(--dark);
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 800;
+            font-family: 'Inter', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 8px;
+            min-height: 44px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(235,168,24,0.35);
+        }
+
+        .form-popup-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: none;
+            border: none;
+            color: var(--gray-400);
+            font-size: 1.8rem;
+            cursor: pointer;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.2s ease;
+        }
+
+        .form-popup-close:hover {
+            color: var(--white);
+        }
+
+        /* ============================================
+           MOBILE BOTTOM CTA
+           ============================================ */
+        .mobile-bottom-cta {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 998;
+            background: var(--gradient-gold);
+            padding: 12px 20px;
+            transform: translateY(100%);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .mobile-bottom-cta.visible {
+            transform: translateY(0);
+        }
+
+        .mobile-bottom-cta button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: none;
+            border: none;
+            color: var(--dark);
+            font-weight: 800;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            min-height: 44px;
+            width: 100%;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .mobile-bottom-cta button svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        /* ============================================
+           SCROLL PROGRESS
+           ============================================ */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: var(--gradient-gold);
+            z-index: 10001;
+            transition: width 0.05s linear;
+        }
+
+        /* ============================================
+           ANIMATIONS
+           ============================================ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: opacity, transform;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+
+        .hero h1 .word {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .hero h1 .word.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero h1 .word.glow {
+            text-shadow: 0 0 40px rgba(235,168,24,0.4);
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 1024px) {
+            .areas-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .newton-credentials {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section { padding: 52px 0; }
+            .container { padding: 0 20px; }
+
+            .hero { min-height: 100dvh; min-height: 100vh; }
+            .hero-badge { font-size: 0.7rem; padding: 6px 14px; margin-bottom: 20px; line-height: 1.4; text-align: center; }
+            .hero-logo { font-size: 2.5rem; }
+            .hero h1 { font-size: clamp(2rem, 8vw, 3rem); margin-bottom: 16px; }
+            .hero-sub { font-size: 1rem; margin: 0 auto 28px; line-height: 1.7; }
+            .hero-cta-group { margin-bottom: 32px; }
+            .btn-primary { min-width: auto; width: 100%; max-width: 100%; padding: 16px 24px; font-size: 0.95rem; border-radius: 10px; }
+            .hero-proof { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+            .hero-proof-item .number { font-size: 1.6rem; }
+            .hero-proof-item .label { font-size: 0.7rem; }
+            .hero-micro { font-size: 0.75rem; }
+
+            .section-header { margin-bottom: 40px; }
+            .pain-grid { grid-template-columns: 1fr; gap: 16px; }
+            .pain-card { padding: 24px; }
+
+            .stats-bar { padding: 40px 0; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+            .stat-number { font-size: clamp(2rem, 6vw, 2.8rem); }
+
+            .what-grid { grid-template-columns: 1fr; gap: 32px; }
+            .what-areas { gap: 12px; }
+            .what-area-item { padding: 16px 12px; }
+
+            .tools-grid { grid-template-columns: 1fr; gap: 16px; }
+            .tool-card { padding: 28px 20px; }
+
+            .areas-grid {
+                display: flex;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                gap: 16px;
+                padding-bottom: 16px;
+                margin: 0 -20px;
+                padding-left: 20px;
+                padding-right: 20px;
+                scrollbar-width: none;
+            }
+            .areas-grid::-webkit-scrollbar { display: none; }
+            .area-card { flex: 0 0 260px; scroll-snap-align: start; padding: 28px 20px; }
+
+            .newton-credentials { grid-template-columns: 1fr; gap: 12px; }
+            .credential { padding: 14px; }
+
+            .for-grid { grid-template-columns: 1fr; gap: 20px; }
+            .for-card { padding: 28px 20px; }
+
+            .faq-question { padding: 20px 0; font-size: 0.95rem; }
+
+            .footer-content { flex-direction: column; text-align: center; }
+            .footer-legal { text-align: center; }
+
+            .mobile-bottom-cta {
+                display: block;
+                padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+            }
+            body { padding-bottom: 68px; }
+
+            .lead-form-card { padding: 28px 20px; }
+            .form-popup-overlay { padding: 16px; align-items: flex-start; padding-top: 10vh; }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 0 16px; }
+            .section { padding: 44px 0; }
+            .hero h1 { font-size: clamp(1.8rem, 7.5vw, 2.5rem); }
+            .hero-sub { font-size: 0.95rem; }
+            .stats-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+            .stat-number { font-size: clamp(1.8rem, 6vw, 2.5rem); }
+            .pain-card { padding: 20px; }
+            .area-card { flex: 0 0 240px; }
+            .areas-grid { margin: 0 -16px; padding-left: 16px; padding-right: 16px; }
+            .tool-card { padding: 24px 16px; }
+            .for-card { padding: 24px 16px; }
+            .section-header h2 { font-size: clamp(1.6rem, 6vw, 2.2rem); }
+            .what-content h2, .newton-content h2 { font-size: clamp(1.6rem, 6vw, 2.2rem); }
+            .final-cta h2 { font-size: clamp(1.8rem, 7vw, 2.5rem); }
+        }
+
+        @media (max-width: 360px) {
+            .hero-badge { font-size: 0.6rem; padding: 5px 10px; letter-spacing: 0.05em; }
+            .hero-micro { font-size: 0.65rem; }
+            .btn-primary { padding: 14px 16px; font-size: 0.85rem; }
+            .hero-proof-item .number { font-size: 1.3rem; }
+            .hero-proof-item .label { font-size: 0.6rem; }
+            .hero-logo { font-size: 2rem; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            .reveal { opacity: 1; transform: none; }
+            .hero h1 .word { opacity: 1; transform: none; }
+        }
+
+        noscript .reveal { opacity: 1; transform: none; }
+    </style>
+    <noscript>
+        <style>
+            .reveal { opacity: 1 !important; transform: none !important; }
+            .hero h1 .word { opacity: 1 !important; transform: none !important; }
+        </style>
+    </noscript>
+</head>
+<body>
+    <a class="skip-link" href="#main-content" style="position:absolute;top:-100px;left:16px;background:var(--gold);color:var(--dark);padding:12px 24px;border-radius:0 0 8px 8px;font-weight:700;z-index:10000;transition:top .3s">Pular para conte&uacute;do</a>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- HERO -->
+    <section class="hero" role="region" aria-label="Apresenta&ccedil;&atilde;o">
+        <div class="container">
+            <div class="hero-content" id="main-content">
+                <div class="hero-badge reveal">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+                    Gest&atilde;o de Neg&oacute;cios &mdash; Febracis Guarulhos
+                </div>
+
+                <div class="hero-logo reveal">BHP</div>
+                <p class="hero-logo-sub reveal">Business High Performance</p>
+
+                <h1 class="headline-display" id="heroHeadline">
+                    <span class="word">Torne-se</span> <span class="word">o</span> <span class="word">l&iacute;der</span> <span class="word">que</span> <span class="word">sua</span><br>
+                    <span class="word text-gold glow">equipe</span> <span class="word text-gold glow">precisa.</span>
+                </h1>
+
+                <p class="hero-sub reveal">
+                    33 horas de imers&atilde;o em lideran&ccedil;a, gest&atilde;o e negocia&ccedil;&atilde;o de alta performance. Ferramentas pr&aacute;ticas para dobrar seu faturamento.
+                </p>
+
+                <div class="hero-cta-group reveal">
+                    <button class="btn-primary open-form-popup" type="button">
+                        Quero Participar do BHP
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
+                    <p class="hero-micro">Vagas limitadas &middot; Turmas presenciais</p>
+                </div>
+
+                <div class="hero-proof reveal">
+                    <div class="hero-proof-item">
+                        <div class="number">33h</div>
+                        <div class="label">De imers&atilde;o</div>
+                    </div>
+                    <div class="hero-proof-item">
+                        <div class="number">9</div>
+                        <div class="label">&Aacute;reas de neg&oacute;cio</div>
+                    </div>
+                    <div class="hero-proof-item">
+                        <div class="number">4</div>
+                        <div class="label">Ferramentas exclusivas</div>
+                    </div>
+                    <div class="hero-proof-item">
+                        <div class="number">30K+</div>
+                        <div class="label">Alunos formados</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAIN SECTION -->
+    <section class="pain-section section">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="overline">Isso soa familiar?</p>
+                <h2 class="headline-display">Sua empresa cresce, mas voc&ecirc; <span class="text-gold">n&atilde;o consegue sair do operacional.</span></h2>
+            </div>
+
+            <div class="pain-grid">
+                <div class="pain-card reveal">
+                    <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+                    <h3>Preso apagando inc&ecirc;ndios</h3>
+                    <p>Seu dia &eacute; consumido por urg&ecirc;ncias. Voc&ecirc; n&atilde;o lidera &mdash; voc&ecirc; sobrevive. E a empresa depende 100% de voc&ecirc;.</p>
+                </div>
+                <div class="pain-card reveal reveal-delay-1">
+                    <div class="icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+                    <h3>Equipe desalinhada</h3>
+                    <p>Contrata errado, treina pouco, perde gente boa. O time n&atilde;o entrega o que deveria e voc&ecirc; n&atilde;o sabe como mudar isso.</p>
+                </div>
+                <div class="pain-card reveal reveal-delay-2">
+                    <div class="icon"><svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
+                    <h3>Faturamento estagnado</h3>
+                    <p>Voc&ecirc; trabalha mais, mas o resultado n&atilde;o acompanha. O teto n&atilde;o &eacute; do mercado &mdash; &eacute; da gest&atilde;o.</p>
+                </div>
+                <div class="pain-card reveal reveal-delay-3">
+                    <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2a8 8 0 018 8c0 6-8 12-8 12S4 16 4 10a8 8 0 018-8z"/><circle cx="12" cy="10" r="3"/></svg></div>
+                    <h3>Sem estrat&eacute;gia clara</h3>
+                    <p>Opera no feeling. Sem processo de venda estruturado, sem m&eacute;tricas, sem previsibilidade de receita.</p>
+                </div>
+                <div class="pain-card reveal reveal-delay-1">
+                    <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></div>
+                    <h3>Feedback que n&atilde;o funciona</h3>
+                    <p>Ou evita conversas dif&iacute;ceis, ou fala de um jeito que desmotiva. O time n&atilde;o cresce porque n&atilde;o recebe dire&ccedil;&atilde;o.</p>
+                </div>
+                <div class="pain-card reveal reveal-delay-2">
+                    <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M16.2 7.8l-2 6.3-6.4 2.1 2-6.3z"/></svg></div>
+                    <h3>Lidera por instinto, n&atilde;o por m&eacute;todo</h3>
+                    <p>Sabe que precisa de processos, mas n&atilde;o tem as ferramentas certas. Cada decis&atilde;o vira uma aposta.</p>
+                </div>
+            </div>
+
+            <div class="pain-bottom reveal">
+                <p>Nenhum desses problemas se resolve com mais horas de trabalho. <strong>Se resolve com m&eacute;todo, ferramentas e lideran&ccedil;a real.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item reveal">
+                    <div class="stat-number">33h</div>
+                    <div class="stat-label">De imers&atilde;o intensiva</div>
+                </div>
+                <div class="stat-item reveal reveal-delay-1">
+                    <div class="stat-number">9</div>
+                    <div class="stat-label">&Aacute;reas de neg&oacute;cio cobertas</div>
+                </div>
+                <div class="stat-item reveal reveal-delay-2">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Ferramentas exclusivas</div>
+                </div>
+                <div class="stat-item reveal reveal-delay-3">
+                    <div class="stat-number">40+</div>
+                    <div class="stat-label">Franquias em 3 continentes</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT IS BHP -->
+    <section class="what-section section">
+        <div class="container">
+            <div class="what-grid">
+                <div class="what-content reveal">
+                    <p class="overline">O que &eacute; o BHP</p>
+                    <h2 class="headline-display">N&atilde;o &eacute; curso.<br>N&atilde;o &eacute; palestra.<br>&Eacute; <span class="text-gold">imers&atilde;o em gest&atilde;o real.</span></h2>
+                    <p>
+                        <strong>33 horas em 3 dias.</strong> O Business High Performance &eacute; o treinamento da Escola de Neg&oacute;cios da Febracis para l&iacute;deres, gestores e empreendedores que querem <strong>dobrar o faturamento com m&eacute;todo</strong>.
+                    </p>
+                    <p>
+                        Criado por <strong>Paulo Vieira</strong> (PhD, presidente da Febracis), o BHP usa a metodologia do <strong>Coaching Integral Sist&ecirc;mico</strong> aplicada ao mundo dos neg&oacute;cios &mdash; com ferramentas pr&aacute;ticas que voc&ecirc; aplica j&aacute; na segunda-feira.
+                    </p>
+                </div>
+                <div class="what-visual reveal reveal-delay-2">
+                    <div class="what-areas">
+                        <div class="what-area-item">
+                            <div class="area-icon"><svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
+                            <h4>Estrat&eacute;gia</h4>
+                            <p>Posicionamento e expans&atilde;o de mercado</p>
+                        </div>
+                        <div class="what-area-item">
+                            <div class="area-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+                            <h4>Gest&atilde;o de Pessoas</h4>
+                            <p>Recrutar, treinar e reter talentos</p>
+                        </div>
+                        <div class="what-area-item">
+                            <div class="area-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+                            <h4>Lideran&ccedil;a</h4>
+                            <p>Inspirar e direcionar com resultado</p>
+                        </div>
+                        <div class="what-area-item">
+                            <div class="area-icon"><svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+                            <h4>Rentabilidade</h4>
+                            <p>Aumentar margens e reduzir custos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6 AREAS -->
+    <section class="areas-section section">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="overline">Conte&uacute;do completo</p>
+                <h2 class="headline-display">9 &aacute;reas. 33 horas. <span class="text-gold">Gest&atilde;o de ponta a ponta.</span></h2>
+            </div>
+
+            <div class="areas-grid">
+                <div class="area-card reveal">
+                    <div class="area-card-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div>
+                    <h3>Empreendedorismo</h3>
+                    <p>Mentalidade e postura de dono para crescer com consist&ecirc;ncia</p>
+                </div>
+                <div class="area-card reveal reveal-delay-1">
+                    <div class="area-card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M16.2 7.8l-2 6.3-6.4 2.1 2-6.3z"/></svg></div>
+                    <h3>Estrat&eacute;gia Corporativa</h3>
+                    <p>Planejamento e diferencia&ccedil;&atilde;o competitiva no mercado</p>
+                </div>
+                <div class="area-card reveal reveal-delay-2">
+                    <div class="area-card-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+                    <h3>Gest&atilde;o de Pessoas</h3>
+                    <p>Processos de recrutamento, treinamento e reten&ccedil;&atilde;o</p>
+                </div>
+                <div class="area-card reveal reveal-delay-1">
+                    <div class="area-card-icon"><svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+                    <h3>Rentabilidade</h3>
+                    <p>Aumento de margens, redu&ccedil;&atilde;o de custos e efici&ecirc;ncia</p>
+                </div>
+                <div class="area-card reveal reveal-delay-2">
+                    <div class="area-card-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+                    <h3>Lideran&ccedil;a</h3>
+                    <p>Vis&atilde;o estrat&eacute;gica e gest&atilde;o de equipes de alta performance</p>
+                </div>
+                <div class="area-card reveal reveal-delay-3">
+                    <div class="area-card-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></div>
+                    <h3>Marketing</h3>
+                    <p>Posicionamento, comunica&ccedil;&atilde;o e capta&ccedil;&atilde;o de clientes</p>
+                </div>
+                <div class="area-card reveal reveal-delay-1">
+                    <div class="area-card-icon"><svg viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></div>
+                    <h3>Gest&atilde;o Comercial</h3>
+                    <p>Processos de venda, pipeline e previsibilidade de receita</p>
+                </div>
+                <div class="area-card reveal reveal-delay-2">
+                    <div class="area-card-icon"><svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
+                    <h3>T&eacute;cnicas de Vendas</h3>
+                    <p>Negocia&ccedil;&atilde;o, rapport e fechamento com excel&ecirc;ncia</p>
+                </div>
+                <div class="area-card reveal reveal-delay-3">
+                    <div class="area-card-icon"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6"/><path d="M23 11h-6"/></svg></div>
+                    <h3>Recrutamento &amp; Sele&ccedil;&atilde;o</h3>
+                    <p>Como atrair e contratar as pessoas certas para o seu time</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4 FERRAMENTAS -->
+    <section class="tools-section section">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="overline">Ferramentas exclusivas</p>
+                <h2 class="headline-display">4 ferramentas que voc&ecirc; <span class="text-gold">aplica na segunda-feira.</span></h2>
+                <p class="desc">Criadas por Paulo Vieira, s&atilde;o instrumentos de gest&atilde;o pr&aacute;ticos e aplic&aacute;veis no dia a dia de qualquer empresa.</p>
+            </div>
+
+            <div class="tools-grid">
+                <div class="tool-card reveal">
+                    <div class="tool-number">1</div>
+                    <h3>Identifica&ccedil;&atilde;o de Rotina</h3>
+                    <p>Descubra quais atividades est&atilde;o consumindo seu tempo e bloqueando sua produtividade como gestor. Elimine o operacional que n&atilde;o deveria ser seu.</p>
+                </div>
+                <div class="tool-card reveal reveal-delay-1">
+                    <div class="tool-number">2</div>
+                    <h3>Matriz de Decis&atilde;o</h3>
+                    <p>Framework quantitativo para tomar decis&otilde;es de promo&ccedil;&atilde;o, treinamento ou desligamento com base em dados &mdash; n&atilde;o em achismo.</p>
+                </div>
+                <div class="tool-card reveal reveal-delay-2">
+                    <div class="tool-number">3</div>
+                    <h3>Aplicativo Gerencial</h3>
+                    <p>Processo passo a passo para acompanhar o ciclo completo de cada colaborador: do recrutamento ao desligamento.</p>
+                </div>
+                <div class="tool-card reveal reveal-delay-3">
+                    <div class="tool-number">4</div>
+                    <h3>Matriz de Feedback</h3>
+                    <p>T&eacute;cnica para dar feedbacks aut&ecirc;nticos e assertivos que geram confian&ccedil;a, desempenho e reten&ccedil;&atilde;o de talentos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWTON VIEIRA -->
+    <section class="newton-section section">
+        <div class="container">
+            <div class="newton-content">
+                <p class="overline reveal">Quem aplica na unidade</p>
+                <h2 class="headline-display reveal">Newton Vieira<br><span class="text-gold">Seu facilitador no BHP</span></h2>
+                <p class="bio reveal">
+                    Newton Vieira &eacute; o respons&aacute;vel por aplicar o Business High Performance na <strong>Febracis Guarulhos</strong>. Com forma&ccedil;&atilde;o em Coaching Integral Sist&ecirc;mico pela Febracis, Newton traz a metodologia criada por <strong>Paulo Vieira</strong> com aplica&ccedil;&atilde;o pr&aacute;tica e acompanhamento personalizado para empreendedores e l&iacute;deres da regi&atilde;o.
+                </p>
+
+                <div class="newton-credentials reveal">
+                    <div class="credential">
+                        <span class="credential-icon"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg></span>
+                        <div class="credential-text">
+                            <strong>Formado pela Febracis</strong>
+                            Coaching Integral Sist&ecirc;mico
+                        </div>
+                    </div>
+                    <div class="credential">
+                        <span class="credential-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></span>
+                        <div class="credential-text">
+                            <strong>Facilitador BHP</strong>
+                            Febracis Guarulhos
+                        </div>
+                    </div>
+                    <div class="credential">
+                        <span class="credential-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+                        <div class="credential-text">
+                            <strong>Atendimento personalizado</strong>
+                            Suporte pr&eacute; e p&oacute;s-treinamento
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOR WHO -->
+    <section class="for-section section">
+        <div class="container">
+            <div class="for-grid">
+                <div class="for-card yes reveal">
+                    <h3>&#9989; O BHP &eacute; para voc&ecirc; se:</h3>
+                    <ul class="for-list">
+                        <li><span class="check">&#10003;</span> Tem empresa com 3 ou mais funcion&aacute;rios</li>
+                        <li><span class="check">&#10003;</span> Quer sair do operacional e liderar de verdade</li>
+                        <li><span class="check">&#10003;</span> Precisa de processos claros de gest&atilde;o e vendas</li>
+                        <li><span class="check">&#10003;</span> Quer dobrar o faturamento com m&eacute;todo, n&atilde;o com sorte</li>
+                        <li><span class="check">&#10003;</span> Busca ferramentas pr&aacute;ticas para aplicar imediatamente</li>
+                    </ul>
+                </div>
+                <div class="for-card no reveal reveal-delay-1">
+                    <h3>&#10060; O BHP N&Atilde;O &eacute; para voc&ecirc; se:</h3>
+                    <ul class="for-list">
+                        <li><span class="cross">&#10007;</span> Busca conte&uacute;do te&oacute;rico sem aplica&ccedil;&atilde;o pr&aacute;tica</li>
+                        <li><span class="cross">&#10007;</span> N&atilde;o est&aacute; disposto a mudar sua forma de gerir</li>
+                        <li><span class="cross">&#10007;</span> Acha que lideran&ccedil;a &eacute; s&oacute; dar ordens</li>
+                        <li><span class="cross">&#10007;</span> Prefere continuar no piloto autom&aacute;tico</li>
+                        <li><span class="cross">&#10007;</span> N&atilde;o quer investir tempo em desenvolvimento</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section section">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="overline">Perguntas frequentes</p>
+                <h2 class="headline-display">Tire suas <span class="text-gold">d&uacute;vidas</span></h2>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                        Quanto tempo dura o BHP?
+                        <span class="arrow">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O BHP &eacute; uma imers&atilde;o presencial de 33 horas distribu&iacute;das em 3 dias intensivos. Voc&ecirc; sai com ferramentas prontas para aplicar na sua empresa.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                        Qual a diferen&ccedil;a entre o BHP e o M&eacute;todo CIS?
+                        <span class="arrow">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O M&eacute;todo CIS trabalha intelig&ecirc;ncia emocional e transforma&ccedil;&atilde;o pessoal. O BHP &eacute; focado 100% em neg&oacute;cios: lideran&ccedil;a, gest&atilde;o, vendas e ferramentas gerenciais. Muitos alunos fazem os dois &mdash; o CIS primeiro (mentalidade) e depois o BHP (execu&ccedil;&atilde;o).</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                        Preciso ter feito o CIS antes?
+                        <span class="arrow">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>N&atilde;o &eacute; obrigat&oacute;rio, mas &eacute; recomendado. O CIS prepara sua mentalidade e intelig&ecirc;ncia emocional. O BHP constr&oacute;i em cima disso com ferramentas de gest&atilde;o e neg&oacute;cios.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                        Posso levar s&oacute;cios ou gestores da minha empresa?
+                        <span class="arrow">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Com certeza! Inclusive recomendamos. Quando o time de lideran&ccedil;a inteiro faz o BHP junto, a implementa&ccedil;&atilde;o das ferramentas &eacute; muito mais r&aacute;pida e eficaz. Temos condi&ccedil;&otilde;es especiais para grupos.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                        Por que fazer pela Febracis Guarulhos?
+                        <span class="arrow">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>A Febracis Guarulhos oferece atendimento personalizado com Newton Vieira, suporte pr&eacute; e p&oacute;s-treinamento, e acompanhamento dedicado para garantir que as ferramentas sejam implementadas na sua empresa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta section" id="garantir-vaga">
+        <div class="container">
+            <div class="final-cta-content">
+                <p class="overline reveal">Pr&oacute;ximo passo</p>
+                <h2 class="headline-display reveal">
+                    Sua empresa merece <span class="text-gold">gest&atilde;o de alta performance.</span>
+                </h2>
+                <p class="subtitle reveal">
+                    Preencha o formul&aacute;rio e nossa equipe entra em contato para garantir sua vaga na pr&oacute;xima turma.
+                </p>
+
+                <div class="final-cta-buttons reveal">
+                    <button class="btn-primary open-form-popup" type="button">
+                        Garantir Minha Vaga no BHP
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
+                    <p class="hero-micro">Atendimento humanizado &middot; Equipe especializada</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM POPUP -->
+    <div class="form-popup-overlay" id="formPopup" role="dialog" aria-modal="true" aria-label="Formul&aacute;rio de inscri&ccedil;&atilde;o">
+        <div class="lead-form-card">
+            <button class="form-popup-close" id="formPopupClose" aria-label="Fechar">&times;</button>
+            <h3>Garanta sua vaga no BHP</h3>
+            <p class="form-sub">Preencha e nossa equipe entra em contato</p>
+            <form id="leadForm" action="#" method="POST">
+                <input type="hidden" name="utm_source" id="utm_source">
+                <input type="hidden" name="utm_medium" id="utm_medium">
+                <input type="hidden" name="utm_campaign" id="utm_campaign">
+                <input type="hidden" name="treinamento" value="BHP">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Seu nome completo" required autocomplete="name" aria-label="Nome completo">
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="phone" placeholder="Telefone (DDD + n&uacute;mero)" required autocomplete="tel" aria-label="Telefone">
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Seu melhor e-mail" required autocomplete="email" aria-label="E-mail">
+                </div>
+                <button type="submit" class="form-submit">Garantir Minha Vaga Agora &rarr;</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="../Logo-CIS-GLOBAL-2023Presencial.png" alt="Febracis Guarulhos">
+                </div>
+                <div class="footer-info">
+                    <p>Febracis Guarulhos &mdash; Treinamentos de Alta Performance Empresarial<br>
+                    Business High Performance &bull; BHP</p>
+                </div>
+                <div class="footer-legal">
+                    &copy; 2026 Febracis Guarulhos. Todos os direitos reservados.<br>
+                    Este site n&atilde;o faz parte do site Facebook ou Facebook Inc.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MOBILE BOTTOM CTA -->
+    <div class="mobile-bottom-cta" id="mobileBottomCta" aria-label="Garantir vaga">
+        <button class="open-form-popup" type="button">
+            Garantir Vaga no BHP
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+    (function() {
+        'use strict';
+
+        // ========== SCROLL PROGRESS ==========
+        var scrollProgress = document.getElementById('scrollProgress');
+        window.addEventListener('scroll', function() {
+            var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            var pct = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
+            if (scrollProgress) scrollProgress.style.width = pct + '%';
+        }, { passive: true });
+
+        // ========== REVEAL ON SCROLL ==========
+        var revealElements = document.querySelectorAll('.reveal');
+        var revealObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        revealElements.forEach(function(el) { revealObserver.observe(el); });
+
+        // ========== HERO SPLIT-TEXT ==========
+        var heroWords = document.querySelectorAll('#heroHeadline .word');
+        setTimeout(function() {
+            heroWords.forEach(function(word, i) {
+                setTimeout(function() {
+                    word.classList.add('visible');
+                }, 300 + i * 100);
+            });
+        }, 200);
+
+        // ========== MOBILE BOTTOM CTA ==========
+        var mobileBottomCta = document.getElementById('mobileBottomCta');
+        var heroSection = document.querySelector('.hero');
+
+        var floatObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (!entry.isIntersecting) {
+                    if (mobileBottomCta) mobileBottomCta.classList.add('visible');
+                } else {
+                    if (mobileBottomCta) mobileBottomCta.classList.remove('visible');
+                }
+            });
+        }, { threshold: 0 });
+        if (heroSection) floatObserver.observe(heroSection);
+
+        // ========== FAQ ACCORDION ==========
+        window.toggleFaq = function(button) {
+            var item = button.parentElement;
+            var isActive = item.classList.contains('active');
+
+            document.querySelectorAll('.faq-item').forEach(function(faq) {
+                faq.classList.remove('active');
+                faq.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+            });
+
+            if (!isActive) {
+                item.classList.add('active');
+                button.setAttribute('aria-expanded', 'true');
+            }
+        };
+
+        // ========== UTM CAPTURE ==========
+        var params = new URLSearchParams(window.location.search);
+        ['utm_source', 'utm_medium', 'utm_campaign'].forEach(function(key) {
+            var el = document.getElementById(key);
+            if (el && params.get(key)) el.value = params.get(key);
+        });
+
+        // ========== FORM HANDLING ==========
+        var leadForm = document.getElementById('leadForm');
+        if (leadForm) {
+            leadForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                leadForm.innerHTML = '<div style="text-align:center;padding:24px"><p style="font-size:1.3rem;font-weight:700;color:var(--gold);margin-bottom:12px">Inscri&ccedil;&atilde;o recebida!</p><p style="color:var(--gray-300)">Nossa equipe entrar&aacute; em contato em breve.</p></div>';
+            });
+        }
+
+        // ========== FORM POPUP ==========
+        var formPopup = document.getElementById('formPopup');
+        var formPopupClose = document.getElementById('formPopupClose');
+
+        function openFormPopup() {
+            if (formPopup) {
+                formPopup.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                var firstInput = formPopup.querySelector('input[name="name"]');
+                if (firstInput) setTimeout(function() { firstInput.focus(); }, 400);
+            }
+        }
+
+        function closeFormPopup() {
+            if (formPopup) {
+                formPopup.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        document.querySelectorAll('.open-form-popup').forEach(function(btn) {
+            btn.addEventListener('click', openFormPopup);
+        });
+
+        if (formPopupClose) formPopupClose.addEventListener('click', closeFormPopup);
+        if (formPopup) {
+            formPopup.addEventListener('click', function(e) {
+                if (e.target === formPopup) closeFormPopup();
+            });
+        }
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && formPopup && formPopup.classList.contains('active')) {
+                closeFormPopup();
+            }
+        });
+    })();
+    </script>
+</body>
+</html>
