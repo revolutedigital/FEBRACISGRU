@@ -1,0 +1,2042 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IF - Intelig&ecirc;ncia Financeira | Febracis Guarulhos</title>
+    <meta name="description" content="IF - Intelig&ecirc;ncia Financeira. 33 horas de imers&atilde;o para reprogramar sua rela&ccedil;&atilde;o com o dinheiro e construir riqueza com m&eacute;todo. Febracis Guarulhos.">
+    <meta name="theme-color" content="#0D2240">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <meta property="og:title" content="IF - Intelig&ecirc;ncia Financeira | Febracis Guarulhos">
+    <meta property="og:description" content="33 horas de imers&atilde;o para reprogramar cren&ccedil;as financeiras e construir riqueza real. O curso de coaching financeiro mais completo do mercado.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@700;900&display=swap&subset=latin" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "IF - Intelig&ecirc;ncia Financeira | Febracis Guarulhos",
+      "description": "Treinamento de 33 horas em intelig&ecirc;ncia financeira, reprograma&ccedil;&atilde;o de cren&ccedil;as e constru&ccedil;&atilde;o de riqueza.",
+      "organizer": {
+        "@type": "Organization",
+        "name": "Febracis Guarulhos"
+      },
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "performer": { "@type": "Organization", "name": "Febracis Guarulhos" }
+    }
+    </script>
+    <style>
+        /* ============================================
+           RESET & BASE
+           ============================================ */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #EBA818;
+            --gold-light: #F5C04A;
+            --gold-dark: #C78E0E;
+            --dark: #0D2240;
+            --dark-2: #0F2847;
+            --dark-3: #142E50;
+            --dark-4: #1A3660;
+            --white: #FFFFFF;
+            --gray-100: #F5F5F5;
+            --gray-200: #E5E5E5;
+            --gray-300: #C8D3E0;
+            --gray-400: #94A7BF;
+            --gray-500: #7B90AB;
+            --gray-600: #5E7694;
+            --green: #16A34A;
+            --red: #DC2626;
+            --gradient-gold: linear-gradient(135deg, #EBA818 0%, #F5C04A 50%, #EBA818 100%);
+            --gradient-dark: linear-gradient(180deg, #0D2240 0%, #142E50 100%);
+            --shadow-lg: 0 20px 60px rgba(10,20,40,0.6);
+            --shadow-gold: 0 0 40px rgba(235,168,24,0.2);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--dark);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        /* ============================================
+           TYPOGRAPHY
+           ============================================ */
+        .headline-display {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            line-height: 1.05;
+            letter-spacing: -0.02em;
+        }
+
+        .text-gold {
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ============================================
+           HERO
+           ============================================ */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-top: 0;
+            background: var(--dark);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -15%;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(235,168,24,0.1) 0%, transparent 70%),
+                        radial-gradient(circle at 30% 70%, rgba(100,160,220,0.06) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 200px;
+            background: linear-gradient(to top, var(--dark), transparent);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(235,168,24,0.1);
+            border: 1px solid rgba(235,168,24,0.3);
+            padding: 8px 20px;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 32px;
+        }
+
+        .hero-badge svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .hero-logo {
+            font-size: 3.5rem;
+            font-weight: 900;
+            letter-spacing: 0.05em;
+            margin-bottom: 4px;
+        }
+
+        .hero-logo-sub {
+            font-size: 0.85rem;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-weight: 600;
+            margin-bottom: 32px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.2rem, 5.5vw, 4.2rem);
+            margin-bottom: 24px;
+        }
+
+        .hero-sub {
+            font-size: clamp(1.05rem, 2vw, 1.3rem);
+            color: var(--gray-300);
+            max-width: 680px;
+            margin: 0 auto 40px;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: var(--gradient-gold);
+            color: var(--dark);
+            padding: 20px 48px;
+            border-radius: 12px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
+            font-size: 1.1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            cursor: pointer;
+            min-width: 320px;
+            box-shadow: 0 4px 20px rgba(235,168,24,0.25);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(235,168,24,0.35);
+        }
+
+        .btn-primary::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.5s ease, height 0.5s ease;
+        }
+
+        .btn-primary:active::after {
+            width: 300px;
+            height: 300px;
+            opacity: 0;
+        }
+
+        .btn-primary svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .hero-micro {
+            font-size: 0.85rem;
+            color: var(--gray-500);
+        }
+
+        .hero-proof {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .hero-proof-item {
+            text-align: center;
+        }
+
+        .hero-proof-item .number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--gold);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .hero-proof-item .label {
+            font-size: 0.75rem;
+            color: var(--gray-500);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: 4px;
+        }
+
+        /* ============================================
+           PAIN SECTION
+           ============================================ */
+        .pain-section {
+            background: var(--dark-2);
+            position: relative;
+        }
+
+        .pain-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(235,168,24,0.3), transparent);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .section-header .overline {
+            font-size: 0.8rem;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section-header p.desc {
+            font-size: 1.1rem;
+            color: var(--gray-400);
+            max-width: 600px;
+            margin: 16px auto 0;
+        }
+
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+
+        .pain-card {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            padding: 32px;
+            transition: border-color 0.3s ease, background 0.3s ease;
+        }
+
+        .pain-card:hover {
+            border-color: rgba(235,168,24,0.2);
+            background: rgba(235,168,24,0.03);
+        }
+
+        .pain-card .icon {
+            margin-bottom: 16px;
+            line-height: 1;
+        }
+
+        .pain-card .icon svg {
+            width: 32px;
+            height: 32px;
+            stroke: var(--gold);
+            fill: none;
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .pain-card h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .pain-card p {
+            font-size: 0.95rem;
+            color: var(--gray-400);
+            line-height: 1.7;
+        }
+
+        .pain-bottom {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .pain-bottom p {
+            font-size: 1.2rem;
+            color: var(--gray-300);
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        .pain-bottom strong {
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        /* ============================================
+           STATS BAR
+           ============================================ */
+        .stats-bar {
+            background: var(--gradient-gold);
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-bar::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            font-weight: 900;
+            color: var(--dark);
+            line-height: 1;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--dark);
+            opacity: 0.7;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-top: 8px;
+        }
+
+        /* ============================================
+           WHAT IS IF
+           ============================================ */
+        .what-section {
+            background: var(--dark);
+        }
+
+        .what-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .what-content .overline {
+            font-size: 0.8rem;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .what-content h2 {
+            font-size: clamp(2rem, 3.5vw, 2.8rem);
+            margin-bottom: 24px;
+            line-height: 1.15;
+        }
+
+        .what-content p {
+            color: var(--gray-300);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .what-content p strong {
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .what-visual {
+            position: relative;
+        }
+
+        .what-areas {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .what-area-item {
+            text-align: center;
+            padding: 24px 16px;
+            background: rgba(255,255,255,0.06);
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.06);
+            transition: border-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .what-area-item:hover {
+            border-color: rgba(235,168,24,0.3);
+            transform: translateY(-4px);
+        }
+
+        .what-area-item .area-icon {
+            margin-bottom: 12px;
+        }
+
+        .what-area-item .area-icon svg {
+            width: 32px;
+            height: 32px;
+            stroke: var(--gold);
+            fill: none;
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .what-area-item h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 6px;
+        }
+
+        .what-area-item p {
+            font-size: 0.8rem;
+            color: var(--gray-400);
+            line-height: 1.4;
+        }
+
+        /* ============================================
+           MODULES SECTION
+           ============================================ */
+        .modules-section {
+            background: var(--dark-2);
+            position: relative;
+        }
+
+        .modules-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(235,168,24,0.3), transparent);
+        }
+
+        .modules-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+
+        .module-card {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 24px;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .module-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: var(--gradient-gold);
+        }
+
+        .module-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--gradient-gold);
+            color: var(--dark);
+            font-weight: 800;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .module-card h3 {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--gold-light);
+            margin-bottom: 8px;
+        }
+
+        .module-card .module-sub {
+            font-size: 0.85rem;
+            color: var(--gray-500);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 24px;
+        }
+
+        .module-list {
+            list-style: none;
+        }
+
+        .module-list li {
+            padding: 10px 0;
+            font-size: 0.95rem;
+            color: var(--gray-300);
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            line-height: 1.5;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+        }
+
+        .module-list li:last-child {
+            border-bottom: none;
+        }
+
+        .module-list .bullet {
+            color: var(--gold);
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* ============================================
+           TOOLS SECTION
+           ============================================ */
+        .tools-section {
+            background: var(--dark);
+            position: relative;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .tool-card {
+            background: linear-gradient(180deg, rgba(235,168,24,0.06) 0%, rgba(235,168,24,0.02) 100%);
+            border: 1px solid rgba(235,168,24,0.15);
+            border-radius: 20px;
+            padding: 36px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(235,168,24,0.3);
+        }
+
+        .tool-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--gradient-gold);
+            color: var(--dark);
+            font-weight: 800;
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+        }
+
+        .tool-card h3 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            color: var(--gold-light);
+        }
+
+        .tool-card p {
+            font-size: 0.95rem;
+            color: var(--gray-300);
+            line-height: 1.7;
+        }
+
+        /* ============================================
+           FORMULA SECTION
+           ============================================ */
+        .formula-section {
+            background: var(--dark-2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .formula-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(235,168,24,0.3), transparent);
+        }
+
+        .formula-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .formula-display {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            margin: 40px 0;
+            letter-spacing: 0.05em;
+        }
+
+        .formula-display .operator {
+            color: var(--gray-500);
+            font-weight: 400;
+        }
+
+        .formula-vars {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .formula-var {
+            text-align: center;
+            padding: 28px 20px;
+            background: rgba(255,255,255,0.06);
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.06);
+            transition: border-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .formula-var:hover {
+            border-color: rgba(235,168,24,0.3);
+            transform: translateY(-4px);
+        }
+
+        .formula-var .var-letter {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+
+        .formula-var h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 6px;
+        }
+
+        .formula-var p {
+            font-size: 0.8rem;
+            color: var(--gray-400);
+            line-height: 1.5;
+        }
+
+        /* ============================================
+           CONDUTAS SECTION
+           ============================================ */
+        .condutas-section {
+            background: var(--dark);
+        }
+
+        .condutas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .conduta-card {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 20px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: border-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .conduta-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: var(--gradient-gold);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .conduta-card:hover {
+            border-color: rgba(235,168,24,0.2);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .conduta-card:hover::before {
+            opacity: 1;
+        }
+
+        .conduta-card-icon {
+            margin-bottom: 20px;
+        }
+
+        .conduta-card-icon svg {
+            width: 40px;
+            height: 40px;
+            stroke: var(--gold);
+            fill: none;
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .conduta-card .conduta-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: rgba(235,168,24,0.15);
+            color: var(--gold);
+            font-weight: 800;
+            font-size: 0.8rem;
+            margin-bottom: 16px;
+        }
+
+        .conduta-card h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--gold-light);
+        }
+
+        .conduta-card p {
+            font-size: 0.9rem;
+            color: var(--gray-400);
+            line-height: 1.6;
+        }
+
+        /* ============================================
+           FOR / NOT FOR
+           ============================================ */
+        .for-section {
+            background: var(--dark-2);
+            position: relative;
+        }
+
+        .for-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(235,168,24,0.3), transparent);
+        }
+
+        .for-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .for-card {
+            padding: 48px;
+            border-radius: 24px;
+        }
+
+        .for-card.yes {
+            background: rgba(22,163,74,0.05);
+            border: 1px solid rgba(22,163,74,0.15);
+        }
+
+        .for-card.no {
+            background: rgba(220,38,38,0.05);
+            border: 1px solid rgba(220,38,38,0.15);
+        }
+
+        .for-card h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 28px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .for-card.yes h3 { color: #4ADE80; }
+        .for-card.no h3 { color: #F87171; }
+
+        .for-list {
+            list-style: none;
+        }
+
+        .for-list li {
+            padding: 10px 0;
+            font-size: 0.95rem;
+            color: var(--gray-300);
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            line-height: 1.5;
+        }
+
+        .for-list .check { color: #4ADE80; font-weight: 700; flex-shrink: 0; }
+        .for-list .cross { color: #F87171; font-weight: 700; flex-shrink: 0; }
+
+        /* ============================================
+           FAQ
+           ============================================ */
+        .faq-section {
+            background: var(--dark);
+            position: relative;
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 24px 0;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Inter', sans-serif;
+            transition: color 0.3s ease;
+            min-height: 44px;
+        }
+
+        .faq-question:hover { color: var(--gold); }
+
+        .faq-question .arrow {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+            color: var(--gold);
+        }
+
+        .faq-item.active .faq-question .arrow {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding-bottom: 24px;
+        }
+
+        .faq-answer p {
+            font-size: 0.95rem;
+            color: var(--gray-400);
+            line-height: 1.7;
+        }
+
+        /* ============================================
+           FINAL CTA
+           ============================================ */
+        .final-cta {
+            background: var(--dark-2);
+            position: relative;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(235,168,24,0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .final-cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .final-cta .overline {
+            font-size: 0.8rem;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .final-cta h2 {
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            margin-bottom: 24px;
+            line-height: 1.1;
+        }
+
+        .final-cta .subtitle {
+            font-size: 1.25rem;
+            font-weight: 300;
+            color: var(--gray-300);
+            line-height: 1.7;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .final-cta-buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        .footer {
+            background: var(--dark);
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding: 48px 0 32px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .footer-brand img {
+            height: 40px;
+            width: auto;
+        }
+
+        .footer-info {
+            text-align: center;
+            flex: 1;
+        }
+
+        .footer-info p {
+            font-size: 0.85rem;
+            color: var(--gray-500);
+            line-height: 1.6;
+        }
+
+        .footer-legal {
+            text-align: right;
+            font-size: 0.75rem;
+            color: var(--gray-600);
+        }
+
+        /* ============================================
+           FORM POPUP
+           ============================================ */
+        .form-popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 10002;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .form-popup-overlay.active {
+            display: flex;
+        }
+
+        .lead-form-card {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(235,168,24,0.2);
+            border-radius: 24px;
+            padding: 48px;
+            max-width: 560px;
+            margin: 0 auto;
+            position: relative;
+            transform: scale(0.8);
+            opacity: 0;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+        }
+
+        .form-popup-overlay.active .lead-form-card {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .lead-form-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 900;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .lead-form-card .form-sub {
+            font-size: 0.9rem;
+            color: var(--gray-400);
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 16px 20px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            color: var(--white);
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-group input::placeholder {
+            color: var(--gray-500);
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(235,168,24,0.15);
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 18px;
+            background: var(--gradient-gold);
+            color: var(--dark);
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 800;
+            font-family: 'Inter', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 8px;
+            min-height: 44px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(235,168,24,0.35);
+        }
+
+        .form-popup-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: none;
+            border: none;
+            color: var(--gray-400);
+            font-size: 1.8rem;
+            cursor: pointer;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.2s ease;
+        }
+
+        .form-popup-close:hover {
+            color: var(--white);
+        }
+
+        /* ============================================
+           MOBILE BOTTOM CTA
+           ============================================ */
+        .mobile-bottom-cta {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 998;
+            background: var(--gradient-gold);
+            padding: 12px 20px;
+            transform: translateY(100%);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .mobile-bottom-cta.visible {
+            transform: translateY(0);
+        }
+
+        .mobile-bottom-cta button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: none;
+            border: none;
+            color: var(--dark);
+            font-weight: 800;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            min-height: 44px;
+            width: 100%;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .mobile-bottom-cta button svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        /* ============================================
+           SCROLL PROGRESS
+           ============================================ */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: var(--gradient-gold);
+            z-index: 10001;
+            transition: width 0.05s linear;
+        }
+
+        /* ============================================
+           ANIMATIONS
+           ============================================ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: opacity, transform;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+
+        .hero h1 .word {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .hero h1 .word.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero h1 .word.glow {
+            text-shadow: 0 0 40px rgba(235,168,24,0.4);
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 1024px) {
+            .tools-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .formula-vars {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section { padding: 52px 0; }
+            .container { padding: 0 20px; }
+
+            .hero { min-height: 100dvh; min-height: 100vh; }
+            .hero-badge { font-size: 0.7rem; padding: 6px 14px; margin-bottom: 20px; line-height: 1.4; text-align: center; }
+            .hero-logo { font-size: 2.5rem; }
+            .hero h1 { font-size: clamp(2rem, 8vw, 3rem); margin-bottom: 16px; }
+            .hero-sub { font-size: 1rem; margin: 0 auto 28px; line-height: 1.7; }
+            .hero-cta-group { margin-bottom: 32px; }
+            .btn-primary { min-width: auto; width: 100%; max-width: 100%; padding: 16px 24px; font-size: 0.95rem; border-radius: 10px; }
+            .hero-proof { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+            .hero-proof-item .number { font-size: 1.6rem; }
+            .hero-proof-item .label { font-size: 0.7rem; }
+            .hero-micro { font-size: 0.75rem; }
+
+            .section-header { margin-bottom: 40px; }
+            .pain-grid { grid-template-columns: 1fr; gap: 16px; }
+            .pain-card { padding: 24px; }
+
+            .stats-bar { padding: 40px 0; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+            .stat-number { font-size: clamp(2rem, 6vw, 2.8rem); }
+
+            .what-grid { grid-template-columns: 1fr; gap: 32px; }
+            .what-areas { gap: 12px; }
+            .what-area-item { padding: 16px 12px; }
+
+            .modules-grid { grid-template-columns: 1fr; gap: 20px; }
+            .module-card { padding: 28px 20px; }
+
+            .tools-grid { grid-template-columns: 1fr; gap: 16px; }
+            .tool-card { padding: 28px 20px; }
+
+            .formula-vars { grid-template-columns: 1fr; gap: 16px; }
+            .formula-display { font-size: clamp(2rem, 8vw, 3rem); }
+
+            .condutas-grid {
+                display: flex;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                gap: 16px;
+                padding-bottom: 16px;
+                margin: 0 -20px;
+                padding-left: 20px;
+                padding-right: 20px;
+                scrollbar-width: none;
+            }
+            .condutas-grid::-webkit-scrollbar { display: none; }
+            .conduta-card { flex: 0 0 260px; scroll-snap-align: start; padding: 28px 20px; }
+
+            .for-grid { grid-template-columns: 1fr; gap: 20px; }
+            .for-card { padding: 28px 20px; }
+
+            .faq-question { padding: 20px 0; font-size: 0.95rem; }
+
+            .footer-content { flex-direction: column; text-align: center; }
+            .footer-legal { text-align: center; }
+
+            .mobile-bottom-cta {
+                display: block;
+                padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+            }
+            body { padding-bottom: 68px; }
+
+            .lead-form-card { padding: 28px 20px; }
+            .form-popup-overlay { padding: 16px; align-items: flex-start; padding-top: 10vh; }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 0 16px; }
+            .section { padding: 44px 0; }
+            .hero h1 { font-size: clamp(1.8rem, 7.5vw, 2.5rem); }
+            .hero-sub { font-size: 0.95rem; }
+            .stats-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+            .stat-number { font-size: clamp(1.8rem, 6vw, 2.5rem); }
+            .pain-card { padding: 20px; }
+            .conduta-card { flex: 0 0 240px; }
+            .condutas-grid { margin: 0 -16px; padding-left: 16px; padding-right: 16px; }
+            .tool-card { padding: 24px 16px; }
+            .for-card { padding: 24px 16px; }
+            .section-header h2 { font-size: clamp(1.6rem, 6vw, 2.2rem); }
+            .what-content h2 { font-size: clamp(1.6rem, 6vw, 2.2rem); }
+            .final-cta h2 { font-size: clamp(1.8rem, 7vw, 2.5rem); }
+        }
+
+        @media (max-width: 360px) {
+            .hero-badge { font-size: 0.6rem; padding: 5px 10px; letter-spacing: 0.05em; }
+            .hero-micro { font-size: 0.65rem; }
+            .btn-primary { padding: 14px 16px; font-size: 0.85rem; }
+            .hero-proof-item .number { font-size: 1.3rem; }
+            .hero-proof-item .label { font-size: 0.6rem; }
+            .hero-logo { font-size: 2rem; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            .reveal { opacity: 1; transform: none; }
+            .hero h1 .word { opacity: 1; transform: none; }
+        }
+
+        noscript .reveal { opacity: 1; transform: none; }
+    </style>
+    <noscript>
+        <style>
+            .reveal { opacity: 1 !important; transform: none !important; }
+            .hero h1 .word { opacity: 1 !important; transform: none !important; }
+        </style>
+    </noscript>
+</head>
+<body>
+    <a class="skip-link" href="#main-content" style="position:absolute;top:-100px;left:16px;background:var(--gold);color:var(--dark);padding:12px 24px;border-radius:0 0 8px 8px;font-weight:700;z-index:10000;transition:top .3s">Pular para conte&uacute;do</a>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- HERO -->
+    <section class="hero" role="region" aria-label="Apresenta&ccedil;&atilde;o">
+        <div class="container">
+            <div class="hero-content" id="main-content">
+                <div class="hero-badge reveal">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+                    Intelig&ecirc;ncia Financeira &mdash; Febracis Guarulhos
+                </div>
+
+                <div class="hero-logo reveal"><span class="text-gold">IF</span></div>
+                <p class="hero-logo-sub reveal">Intelig&ecirc;ncia Financeira</p>
+
+                <h1 class="headline-display" id="heroHeadline">
+                    <span class="word">Reprograme</span> <span class="word">sua</span> <span class="word">mente</span> <span class="word">para</span><br>
+                    <span class="word text-gold glow">construir</span> <span class="word text-gold glow">riqueza.</span>
+                </h1>
+
+                <p class="hero-sub reveal">
+                    33 horas de imers&atilde;o que unem reprograma&ccedil;&atilde;o emocional e ferramentas pr&aacute;ticas de finan&ccedil;as. Saia da escassez e construa abund&acirc;ncia em menos de 1 ano.
+                </p>
+
+                <div class="hero-cta-group reveal">
+                    <button class="btn-primary open-form-popup" type="button">
+                        Quero Participar do IF
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
+                    <p class="hero-micro">Vagas limitadas &middot; Turmas presenciais</p>
+                </div>
+
+                <div class="hero-proof reveal">
+                    <div class="hero-proof-item">
+                        <div class="number">33h</div>
+                        <div class="label">De imers&atilde;o</div>
+                    </div>
+                    <div class="hero-proof-item">
+                        <div class="number">2</div>
+                        <div class="label">M&oacute;dulos completos</div>
+                    </div>
+                    <div class="hero-proof-item">
+                        <div class="number">10M+</div>
+                        <div class="label">Livros vendidos</div>
+                    </div>
+                    <div class="hero-proof-item">
+                        <div class="number">83</div>
+                        <div class="label">Pa&iacute;ses impactados</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAIN SECTION -->
+    <section class="pain-section section">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="overline">Isso soa familiar?</p>
+                <h2 class="headline-display">O problema n&atilde;o &eacute; quanto voc&ecirc; ganha. &Eacute; <span class="text-gold">o que voc&ecirc; acredita sobre dinheiro.</span></h2>
+            </div>
+
+            <div class="pain-grid">
+                <div class="pain-card reveal">
+                    <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+                    <h3>Ganha bem, mas nunca sobra</h3>
+                    <p>O sal&aacute;rio aumentou, mas as d&iacute;vidas acompanharam. Voc&ecirc; n&atilde;o entende para onde o dinheiro vai &mdash; e o ciclo se repete todo m&ecirc;s.</p>
+                </div>
+                <div class="pain-card reveal reveal-delay-1">
+                    <div class="icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+                    <h3>Dinheiro causa conflito</h3>
+                    <p>Brigas com c&ocirc;njuge, tens&atilde;o em fam&iacute;lia, vergonha de falar sobre finan&ccedil;as. O dinheiro virou fonte de dor, n&atilde;o de liberdade.</p>
+                </div>
+                <div class="pain-card reveal reveal-delay-2">
+                    <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+                    <h3>Adia o futuro financeiro</h3>
+                    <p>Sabe que precisa investir, poupar, planejar &mdash; mas sempre deixa para depois. O tempo passa e a situa&ccedil;&atilde;o n&atilde;o muda.</p>
+                </div>
+                <div class="pain-card reveal reveal-delay-3">
+                    <div class="icon"><svg viewBox="0 0 24 24"><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><circle cx="12" cy="12" r="10"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+                    <h3>Cren&ccedil;as limitantes sobre riqueza</h3>
+                    <p>&ldquo;Dinheiro &eacute; sujo&rdquo;, &ldquo;rico &eacute; desonesto&rdquo;, &ldquo;n&atilde;o nasci para isso&rdquo;. Sua programa&ccedil;&atilde;o mental sabota cada tentativa de crescer.</p>
+                </div>
+                <div class="pain-card reveal reveal-delay-1">
+                    <div class="icon"><svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
+                    <h3>Autossabotagem financeira</h3>
+                    <p>Come&ccedil;a a juntar dinheiro e logo gasta com algo desnecess&aacute;rio. Ganha mais e gasta mais. O padr&atilde;o se repete inconscientemente.</p>
+                </div>
+                <div class="pain-card reveal reveal-delay-2">
+                    <div class="icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
+                    <h3>Ansiedade financeira constante</h3>
+                    <p>Vive com medo do boleto, da fatura, do imprevisto. A rela&ccedil;&atilde;o com dinheiro gera estresse, inseguran&ccedil;a e paralisia.</p>
+                </div>
+            </div>
+
+            <div class="pain-bottom reveal">
+                <p>Nenhum curso de planilha resolve isso. <strong>A raiz &eacute; emocional &mdash; e a solu&ccedil;&atilde;o tamb&eacute;m precisa ser.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item reveal">
+                    <div class="stat-number">33h</div>
+                    <div class="stat-label">De imers&atilde;o intensiva</div>
+                </div>
+                <div class="stat-item reveal reveal-delay-1">
+                    <div class="stat-number">10M+</div>
+                    <div class="stat-label">Livros vendidos pelo autor</div>
+                </div>
+                <div class="stat-item reveal reveal-delay-2">
+                    <div class="stat-number">40+</div>
+                    <div class="stat-label">Franquias em 3 continentes</div>
+                </div>
+                <div class="stat-item reveal reveal-delay-3">
+                    <div class="stat-number">26</div>
+                    <div class="stat-label">Anos de Febracis</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT IS IF -->
+    <section class="what-section section">
+        <div class="container">
+            <div class="what-grid">
+                <div class="what-content reveal">
+                    <p class="overline">O que &eacute; o IF</p>
+                    <h2 class="headline-display">N&atilde;o &eacute; planilha.<br>N&atilde;o &eacute; dica de investimento.<br>&Eacute; <span class="text-gold">reprograma&ccedil;&atilde;o financeira.</span></h2>
+                    <p>
+                        <strong>33 horas em 3 dias.</strong> O IF &eacute; o curso de coaching financeiro mais completo do mercado. Combina <strong>reprograma&ccedil;&atilde;o emocional</strong> com <strong>ferramentas pr&aacute;ticas de finan&ccedil;as</strong> usando a metodologia do Coaching Integral Sist&ecirc;mico.
+                    </p>
+                    <p>
+                        Baseado no livro <strong>&ldquo;Fator de Enriquecimento&rdquo;</strong> de Paulo Vieira, o treinamento revela que seus resultados financeiros s&atilde;o reflexo direto das suas cren&ccedil;as emocionais &mdash; e ensina como reprogramar tudo isso.
+                    </p>
+                </div>
+                <div class="what-visual reveal reveal-delay-2">
+                    <div class="what-areas">
+                        <div class="what-area-item">
+                            <div class="area-icon"><svg viewBox="0 0 24 24"><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><circle cx="12" cy="12" r="10"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+                            <h4>Cren&ccedil;as</h4>
+                            <p>Reprogramar padr&otilde;es limitantes sobre dinheiro</p>
+                        </div>
+                        <div class="what-area-item">
+                            <div class="area-icon"><svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
+                            <h4>Enriquecimento</h4>
+                            <p>F&oacute;rmula e ferramentas para construir riqueza</p>
+                        </div>
+                        <div class="what-area-item">
+                            <div class="area-icon"><svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+                            <h4>Planejamento</h4>
+                            <p>Or&ccedil;amento, metas e independ&ecirc;ncia financeira</p>
+                        </div>
+                        <div class="what-area-item">
+                            <div class="area-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+                            <h4>Relacionamentos</h4>
+                            <p>Alinhar finan&ccedil;as com fam&iacute;lia e parcerias</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2 MODULES -->
+    <section class="modules-section section">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="overline">Estrutura do treinamento</p>
+                <h2 class="headline-display">2 m&oacute;dulos. <span class="text-gold">Emo&ccedil;&atilde;o + T&eacute;cnica.</span></h2>
+                <p class="desc">O IF trabalha os dois lados: primeiro reprograma sua mente, depois ensina as ferramentas pr&aacute;ticas.</p>
+            </div>
+
+            <div class="modules-grid">
+                <div class="module-card reveal">
+                    <div class="module-number">1</div>
+                    <h3>Aspectos Emocionais e Comportamentais</h3>
+                    <p class="module-sub">Reprograma&ccedil;&atilde;o interna</p>
+                    <ul class="module-list">
+                        <li><span class="bullet">&#9670;</span> Reprograma&ccedil;&atilde;o de cren&ccedil;as financeiras limitantes e traum&aacute;ticas</li>
+                        <li><span class="bullet">&#9670;</span> Elimina&ccedil;&atilde;o da autossabotagem com dinheiro</li>
+                        <li><span class="bullet">&#9670;</span> Redu&ccedil;&atilde;o de traumas e v&iacute;cios relacionados a finan&ccedil;as</li>
+                        <li><span class="bullet">&#9670;</span> Alta performance pessoal e profissional</li>
+                        <li><span class="bullet">&#9670;</span> Maior comprometimento consigo mesmo</li>
+                        <li><span class="bullet">&#9670;</span> Gratid&atilde;o como motor de conquista</li>
+                    </ul>
+                </div>
+                <div class="module-card reveal reveal-delay-1">
+                    <div class="module-number">2</div>
+                    <h3>Aspectos T&eacute;cnicos e Pr&aacute;ticos</h3>
+                    <p class="module-sub">Ferramentas financeiras</p>
+                    <ul class="module-list">
+                        <li><span class="bullet">&#9670;</span> No&ccedil;&otilde;es de planejamento financeiro</li>
+                        <li><span class="bullet">&#9670;</span> Defini&ccedil;&atilde;o do estado financeiro atual e o que impede de prosperar</li>
+                        <li><span class="bullet">&#9670;</span> Montagem do or&ccedil;amento familiar</li>
+                        <li><span class="bullet">&#9670;</span> Constru&ccedil;&atilde;o de ativos e gera&ccedil;&atilde;o de riqueza</li>
+                        <li><span class="bullet">&#9670;</span> F&oacute;rmula do Fator de Enriquecimento</li>
+                        <li><span class="bullet">&#9670;</span> Independ&ecirc;ncia financeira e balan&ccedil;o patrimonial</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULA -->
+    <section class="formula-section section">
+        <div class="container">
+            <div class="formula-content">
+                <div class="section-header reveal">
+                    <p class="overline">A f&oacute;rmula da riqueza</p>
+                    <h2 class="headline-display">O <span class="text-gold">Fator de Enriquecimento</span></h2>
+                </div>
+
+                <div class="formula-display reveal">
+                    <span class="text-gold">FE</span> <span class="operator">=</span> <span class="text-gold">R</span> <span class="operator">&times;</span> <span class="text-gold">P</span> <span class="operator">&times;</span> <span class="text-gold">I</span>
+                </div>
+
+                <div class="formula-vars">
+                    <div class="formula-var reveal">
+                        <div class="var-letter">R</div>
+                        <h4>Renda Mensal Total</h4>
+                        <p>Todas as suas fontes de entrada financeira somadas</p>
+                    </div>
+                    <div class="formula-var reveal reveal-delay-1">
+                        <div class="var-letter">P</div>
+                        <h4>Percentual Poupado</h4>
+                        <p>Quanto da sua renda voc&ecirc; separa para investir todo m&ecirc;s</p>
+                    </div>
+                    <div class="formula-var reveal reveal-delay-2">
+                        <div class="var-letter">I</div>
+                        <h4>Rentabilidade</h4>
+                        <p>O retorno que seus investimentos geram ao longo do tempo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5 CONDUTAS -->
+    <section class="condutas-section section">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="overline">Metodologia exclusiva</p>
+                <h2 class="headline-display">As 5 Condutas <span class="text-gold">da Riqueza</span></h2>
+                <p class="desc">Comportamentos que separam quem constr&oacute;i riqueza de quem vive no ciclo da escassez.</p>
+            </div>
+
+            <div class="condutas-grid">
+                <div class="conduta-card reveal">
+                    <div class="conduta-num">1</div>
+                    <h3>Querer Ser Rico</h3>
+                    <p>Sacrificar a gratifica&ccedil;&atilde;o imediata em prol de objetivos maiores e duradouros.</p>
+                </div>
+                <div class="conduta-card reveal reveal-delay-1">
+                    <div class="conduta-num">2</div>
+                    <h3>Sentir-se Rico</h3>
+                    <p>Cultivar abund&acirc;ncia emocional que produz serotonina, endorfina e dopamina naturalmente.</p>
+                </div>
+                <div class="conduta-card reveal reveal-delay-2">
+                    <div class="conduta-num">3</div>
+                    <h3>Ser Grato</h3>
+                    <p>Praticar gratid&atilde;o ativa por palavras, a&ccedil;&otilde;es e atitudes que atraem prosperidade.</p>
+                </div>
+                <div class="conduta-card reveal reveal-delay-3">
+                    <div class="conduta-num">4</div>
+                    <h3>Autorresponsabilidade</h3>
+                    <p>Assumir responsabilidade total pelos seus resultados financeiros sem culpar terceiros.</p>
+                </div>
+                <div class="conduta-card reveal">
+                    <div class="conduta-num">5</div>
+                    <h3>Cont&aacute;gio Social</h3>
+                    <p>Construir uma rede de relacionamentos alinhada com seus objetivos e valores financeiros.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOOLS -->
+    <section class="tools-section section">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="overline">O que voc&ecirc; aprende na pr&aacute;tica</p>
+                <h2 class="headline-display">6 Comportamentos <span class="text-gold">de Enriquecimento</span></h2>
+                <p class="desc">Um modelo de aloca&ccedil;&atilde;o de renda que voc&ecirc; aplica j&aacute; no pr&oacute;ximo sal&aacute;rio.</p>
+            </div>
+
+            <div class="tools-grid">
+                <div class="tool-card reveal">
+                    <div class="tool-number">5%</div>
+                    <h3>Dinheiro no Bolso</h3>
+                    <p>Mantenha 5% da renda em espécie. A familiaridade com dinheiro f&iacute;sico reprograma sua rela&ccedil;&atilde;o com abund&acirc;ncia.</p>
+                </div>
+                <div class="tool-card reveal reveal-delay-1">
+                    <div class="tool-number">10%</div>
+                    <h3>Doe Generosamente</h3>
+                    <p>Doar 10% quebra a mentalidade de escassez e ativa o fluxo de prosperidade. Quem d&aacute;, recebe.</p>
+                </div>
+                <div class="tool-card reveal reveal-delay-2">
+                    <div class="tool-number">60%</div>
+                    <h3>Pague Suas Contas</h3>
+                    <p>No m&aacute;ximo 60% da renda para despesas fixas. Se passa disso, &eacute; hora de reestruturar seu padr&atilde;o de vida.</p>
+                </div>
+                <div class="tool-card reveal reveal-delay-3">
+                    <div class="tool-number">10%</div>
+                    <h3>Invista</h3>
+                    <p>M&iacute;nimo de 10% para investimentos que fazem seu dinheiro trabalhar por voc&ecirc; e gerar renda passiva.</p>
+                </div>
+                <div class="tool-card reveal reveal-delay-1">
+                    <div class="tool-number">10%</div>
+                    <h3>Poupe para Sonhos</h3>
+                    <p>Conta separada para seus objetivos. Viagem, casa, carro &mdash; metas concretas com prazo definido.</p>
+                </div>
+                <div class="tool-card reveal reveal-delay-2">
+                    <div class="tool-number">5%</div>
+                    <h3>Viva com Abund&acirc;ncia</h3>
+                    <p>Reserve 5% para gastar sem culpa. Prazer consciente &eacute; parte da constru&ccedil;&atilde;o de riqueza sustent&aacute;vel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOR WHO -->
+    <section class="for-section section">
+        <div class="container">
+            <div class="for-grid">
+                <div class="for-card yes reveal">
+                    <h3>&#9989; O IF &eacute; para voc&ecirc; se:</h3>
+                    <ul class="for-list">
+                        <li><span class="check">&#10003;</span> Ganha bem, mas o dinheiro nunca sobra no final do m&ecirc;s</li>
+                        <li><span class="check">&#10003;</span> Sente que se sabota financeiramente sem entender por qu&ecirc;</li>
+                        <li><span class="check">&#10003;</span> Quer sair das d&iacute;vidas e come&ccedil;ar a investir de verdade</li>
+                        <li><span class="check">&#10003;</span> Busca liberdade financeira com m&eacute;todo, n&atilde;o com sorte</li>
+                        <li><span class="check">&#10003;</span> Quer reprogramar cren&ccedil;as limitantes sobre dinheiro</li>
+                    </ul>
+                </div>
+                <div class="for-card no reveal reveal-delay-1">
+                    <h3>&#10060; O IF N&Atilde;O &eacute; para voc&ecirc; se:</h3>
+                    <ul class="for-list">
+                        <li><span class="cross">&#10007;</span> Busca &ldquo;dinheiro f&aacute;cil&rdquo; ou esquemas de enriquecimento r&aacute;pido</li>
+                        <li><span class="cross">&#10007;</span> N&atilde;o est&aacute; disposto a olhar para suas emo&ccedil;&otilde;es sobre dinheiro</li>
+                        <li><span class="cross">&#10007;</span> Acha que s&oacute; precisa de uma planilha para resolver tudo</li>
+                        <li><span class="cross">&#10007;</span> N&atilde;o quer mudar h&aacute;bitos e comportamentos financeiros</li>
+                        <li><span class="cross">&#10007;</span> Prefere culpar o governo, a economia ou terceiros</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section section">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="overline">Perguntas frequentes</p>
+                <h2 class="headline-display">Tire suas <span class="text-gold">d&uacute;vidas</span></h2>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                        Quanto tempo dura o IF?
+                        <span class="arrow">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O IF &eacute; uma imers&atilde;o presencial de 33 horas distribu&iacute;das em 3 dias intensivos. Voc&ecirc; sai com ferramentas pr&aacute;ticas de planejamento financeiro e reprograma&ccedil;&atilde;o emocional.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                        Preciso ter conhecimento em finan&ccedil;as?
+                        <span class="arrow">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>N&atilde;o. O IF &eacute; para todos os n&iacute;veis &mdash; de quem est&aacute; endividado a quem ganha bem mas n&atilde;o consegue poupar. O treinamento come&ccedil;a pela base emocional e depois avan&ccedil;a para as ferramentas t&eacute;cnicas.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                        Qual a diferen&ccedil;a entre o IF e o M&eacute;todo CIS?
+                        <span class="arrow">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O M&eacute;todo CIS trabalha intelig&ecirc;ncia emocional em todas as 5 &aacute;reas da vida. O IF &eacute; focado 100% na dimens&atilde;o financeira: reprograma&ccedil;&atilde;o de cren&ccedil;as sobre dinheiro, planejamento, investimentos e constru&ccedil;&atilde;o de riqueza. Muitos alunos fazem os dois.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                        Posso levar meu c&ocirc;njuge ou s&oacute;cio?
+                        <span class="arrow">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Recomendamos muito! Quando casais ou s&oacute;cios fazem o IF juntos, o alinhamento financeiro &eacute; muito mais profundo e os resultados aparecem mais r&aacute;pido. Temos condi&ccedil;&otilde;es especiais para duplas e grupos.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                        Por que fazer pela Febracis Guarulhos?
+                        <span class="arrow">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>A Febracis Guarulhos oferece atendimento personalizado, suporte pr&eacute; e p&oacute;s-treinamento, e acompanhamento dedicado para garantir que as ferramentas sejam aplicadas na sua vida financeira.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta section" id="garantir-vaga">
+        <div class="container">
+            <div class="final-cta-content">
+                <p class="overline reveal">Pr&oacute;ximo passo</p>
+                <h2 class="headline-display reveal">
+                    Sua vida financeira merece <span class="text-gold">uma reprograma&ccedil;&atilde;o.</span>
+                </h2>
+                <p class="subtitle reveal">
+                    Preencha o formul&aacute;rio e nossa equipe entra em contato para garantir sua vaga na pr&oacute;xima turma do IF.
+                </p>
+
+                <div class="final-cta-buttons reveal">
+                    <button class="btn-primary open-form-popup" type="button">
+                        Garantir Minha Vaga no IF
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
+                    <p class="hero-micro">Atendimento humanizado &middot; Equipe especializada</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM POPUP -->
+    <div class="form-popup-overlay" id="formPopup" role="dialog" aria-modal="true" aria-label="Formul&aacute;rio de inscri&ccedil;&atilde;o">
+        <div class="lead-form-card">
+            <button class="form-popup-close" id="formPopupClose" aria-label="Fechar">&times;</button>
+            <h3>Garanta sua vaga no IF</h3>
+            <p class="form-sub">Preencha e nossa equipe entra em contato</p>
+            <form id="leadForm" action="#" method="POST">
+                <input type="hidden" name="utm_source" id="utm_source">
+                <input type="hidden" name="utm_medium" id="utm_medium">
+                <input type="hidden" name="utm_campaign" id="utm_campaign">
+                <input type="hidden" name="treinamento" value="IF">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Seu nome completo" required autocomplete="name" aria-label="Nome completo">
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="phone" placeholder="Telefone (DDD + n&uacute;mero)" required autocomplete="tel" aria-label="Telefone">
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Seu melhor e-mail" required autocomplete="email" aria-label="E-mail">
+                </div>
+                <button type="submit" class="form-submit">Garantir Minha Vaga Agora &rarr;</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="/Logo-CIS-GLOBAL-2023Presencial.png" alt="Febracis Guarulhos">
+                </div>
+                <div class="footer-info">
+                    <p>Febracis Guarulhos &mdash; Treinamentos de Alta Performance<br>
+                    Intelig&ecirc;ncia Financeira &bull; IF</p>
+                </div>
+                <div class="footer-legal">
+                    &copy; 2026 Febracis Guarulhos. Todos os direitos reservados.<br>
+                    Este site n&atilde;o faz parte do site Facebook ou Facebook Inc.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MOBILE BOTTOM CTA -->
+    <div class="mobile-bottom-cta" id="mobileBottomCta" aria-label="Garantir vaga">
+        <button class="open-form-popup" type="button">
+            Garantir Vaga no IF
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+    (function() {
+        'use strict';
+
+        // ========== SCROLL PROGRESS ==========
+        var scrollProgress = document.getElementById('scrollProgress');
+        window.addEventListener('scroll', function() {
+            var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            var pct = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
+            if (scrollProgress) scrollProgress.style.width = pct + '%';
+        }, { passive: true });
+
+        // ========== REVEAL ON SCROLL ==========
+        var revealElements = document.querySelectorAll('.reveal');
+        var revealObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        revealElements.forEach(function(el) { revealObserver.observe(el); });
+
+        // ========== HERO SPLIT-TEXT ==========
+        var heroWords = document.querySelectorAll('#heroHeadline .word');
+        setTimeout(function() {
+            heroWords.forEach(function(word, i) {
+                setTimeout(function() {
+                    word.classList.add('visible');
+                }, 300 + i * 100);
+            });
+        }, 200);
+
+        // ========== MOBILE BOTTOM CTA ==========
+        var mobileBottomCta = document.getElementById('mobileBottomCta');
+        var heroSection = document.querySelector('.hero');
+
+        var floatObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (!entry.isIntersecting) {
+                    if (mobileBottomCta) mobileBottomCta.classList.add('visible');
+                } else {
+                    if (mobileBottomCta) mobileBottomCta.classList.remove('visible');
+                }
+            });
+        }, { threshold: 0 });
+        if (heroSection) floatObserver.observe(heroSection);
+
+        // ========== FAQ ACCORDION ==========
+        window.toggleFaq = function(button) {
+            var item = button.parentElement;
+            var isActive = item.classList.contains('active');
+
+            document.querySelectorAll('.faq-item').forEach(function(faq) {
+                faq.classList.remove('active');
+                faq.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+            });
+
+            if (!isActive) {
+                item.classList.add('active');
+                button.setAttribute('aria-expanded', 'true');
+            }
+        };
+
+        // ========== UTM CAPTURE ==========
+        var params = new URLSearchParams(window.location.search);
+        ['utm_source', 'utm_medium', 'utm_campaign'].forEach(function(key) {
+            var el = document.getElementById(key);
+            if (el && params.get(key)) el.value = params.get(key);
+        });
+
+        // ========== FORM HANDLING ==========
+        var leadForm = document.getElementById('leadForm');
+        if (leadForm) {
+            leadForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                leadForm.innerHTML = '<div style="text-align:center;padding:24px"><p style="font-size:1.3rem;font-weight:700;color:var(--gold);margin-bottom:12px">Inscri&ccedil;&atilde;o recebida!</p><p style="color:var(--gray-300)">Nossa equipe entrar&aacute; em contato em breve.</p></div>';
+            });
+        }
+
+        // ========== FORM POPUP ==========
+        var formPopup = document.getElementById('formPopup');
+        var formPopupClose = document.getElementById('formPopupClose');
+
+        function openFormPopup() {
+            if (formPopup) {
+                formPopup.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                var firstInput = formPopup.querySelector('input[name="name"]');
+                if (firstInput) setTimeout(function() { firstInput.focus(); }, 400);
+            }
+        }
+
+        function closeFormPopup() {
+            if (formPopup) {
+                formPopup.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        document.querySelectorAll('.open-form-popup').forEach(function(btn) {
+            btn.addEventListener('click', openFormPopup);
+        });
+
+        if (formPopupClose) formPopupClose.addEventListener('click', closeFormPopup);
+        if (formPopup) {
+            formPopup.addEventListener('click', function(e) {
+                if (e.target === formPopup) closeFormPopup();
+            });
+        }
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && formPopup && formPopup.classList.contains('active')) {
+                closeFormPopup();
+            }
+        });
+    })();
+    </script>
+</body>
+</html>
