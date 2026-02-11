@@ -3009,11 +3009,8 @@
         if (leadForm) {
             leadForm.addEventListener('submit', function(e) {
                 e.preventDefault();
-                // TODO: enviar dados para webhook (Zapier/Make) quando URL estiver disponivel
-                // var formData = new FormData(leadForm);
-                // fetch('WEBHOOK_URL', { method: 'POST', body: formData });
-
-                // Show success
+                var formData = new FormData(leadForm);
+                fetch('https://hook.us2.make.com/mgxdccxl44ct0vq87rq839x4rl1tdzrd', { method: 'POST', body: formData });
                 leadForm.innerHTML = '<div style="text-align:center;padding:24px"><p style="font-size:1.3rem;font-weight:700;color:var(--gold);margin-bottom:12px">Inscrição recebida!</p><p style="color:var(--gray-300)">Nossa equipe entrará em contato em breve.</p></div>';
             });
         }

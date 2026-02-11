@@ -1816,6 +1816,8 @@
         if (leadForm) {
             leadForm.addEventListener('submit', function(e) {
                 e.preventDefault();
+                var formData = new FormData(leadForm);
+                fetch('https://hook.us2.make.com/2izbvm95o1e4njleuw7hpzccaanfirt6', { method: 'POST', body: formData });
                 leadForm.innerHTML = '<div style="text-align:center;padding:24px"><p style="font-size:1.3rem;font-weight:700;color:var(--gold);margin-bottom:12px">Inscri&ccedil;&atilde;o recebida!</p><p style="color:var(--gray-300)">Nossa equipe entrar&aacute; em contato em breve.</p></div>';
             });
         }
