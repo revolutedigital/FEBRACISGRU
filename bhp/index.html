@@ -986,10 +986,34 @@
             color: var(--gray-500);
         }
 
-        .form-group input:focus {
+        .form-group input:focus,
+        .form-group select:focus {
             outline: none;
             border-color: var(--gold);
             box-shadow: 0 0 0 3px rgba(235,168,24,0.15);
+        }
+
+        .form-group select {
+            width: 100%;
+            padding: 16px 20px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            color: var(--white);
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%237B90AB' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 20px center;
+            cursor: pointer;
+        }
+
+        .form-group select option {
+            background: var(--dark-2);
+            color: var(--white);
         }
 
         .form-submit {
@@ -1689,10 +1713,23 @@
                     <input type="text" name="name" placeholder="Seu nome completo" required autocomplete="name" aria-label="Nome completo">
                 </div>
                 <div class="form-group">
-                    <input type="tel" name="phone" placeholder="Telefone (DDD + n&uacute;mero)" required autocomplete="tel" aria-label="Telefone">
+                    <input type="email" name="email" placeholder="Seu melhor e-mail" required autocomplete="email" aria-label="E-mail">
                 </div>
                 <div class="form-group">
-                    <input type="email" name="email" placeholder="Seu melhor e-mail" required autocomplete="email" aria-label="E-mail">
+                    <input type="tel" name="whatsapp" placeholder="WhatsApp (DDD + n&uacute;mero)" required autocomplete="tel" aria-label="WhatsApp">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="cargo" placeholder="Seu cargo" required aria-label="Cargo">
+                </div>
+                <div class="form-group">
+                    <select name="faturamento" required aria-label="Faturamento m&eacute;dio da empresa">
+                        <option value="" disabled selected>Faturamento m&eacute;dio da empresa (mensal)</option>
+                        <option value="Ate 100 mil">At&eacute; 100 mil</option>
+                        <option value="101 mil a 500 mil">De 101 mil a 500 mil</option>
+                        <option value="500 mil a 1 milhao">500 mil a 1 milh&atilde;o</option>
+                        <option value="2 milhoes a 50 milhoes">2 milh&otilde;es a 50 milh&otilde;es</option>
+                        <option value="Mais de 50 milhoes">Mais de 50 milh&otilde;es</option>
+                    </select>
                 </div>
                 <button type="submit" class="form-submit">Garantir Minha Vaga Agora &rarr;</button>
             </form>
