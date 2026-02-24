@@ -13,8 +13,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@700;900&display=swap&subset=latin" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@700;900&display=swap&subset=latin" rel="stylesheet"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@700;900&display=swap&subset=latin" rel="stylesheet">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -1107,230 +1106,6 @@
         }
 
         /* ============================================
-           EVENT DATE BANNER
-           ============================================ */
-        .event-date-banner {
-            background: linear-gradient(135deg, rgba(235,168,24,0.12) 0%, rgba(235,168,24,0.04) 100%);
-            border: 1px solid rgba(235,168,24,0.25);
-            border-radius: 16px;
-            padding: 24px 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 16px;
-            margin: 0 auto;
-            max-width: 700px;
-        }
-
-        .event-date-banner svg {
-            width: 28px;
-            height: 28px;
-            stroke: var(--gold);
-            fill: none;
-            stroke-width: 1.5;
-            flex-shrink: 0;
-        }
-
-        .event-date-info {
-            text-align: left;
-        }
-
-        .event-date-label {
-            font-size: 0.75rem;
-            color: var(--gold);
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            font-weight: 700;
-            margin-bottom: 2px;
-        }
-
-        /* ===== EDITE A DATA AQUI QUANDO CONFIRMADA ===== */
-        .event-date-value {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
-            font-weight: 900;
-            color: var(--white);
-        }
-
-        .event-date-location {
-            font-size: 0.85rem;
-            color: var(--gray-400);
-            margin-top: 2px;
-        }
-
-        @media (max-width: 768px) {
-            .event-date-banner {
-                padding: 20px;
-                flex-direction: column;
-                text-align: center;
-                gap: 12px;
-            }
-            .event-date-info { text-align: center; }
-            .event-date-value { font-size: 1.1rem; }
-        }
-
-        /* ============================================
-           ABOUT FEBRACIS SECTION
-           ============================================ */
-        .about-febracis {
-            background: var(--dark-2);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .about-febracis::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(235,168,24,0.3), transparent);
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .about-content .overline {
-            font-size: 0.8rem;
-            color: var(--gold);
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
-
-        .about-content h2 {
-            font-size: clamp(2rem, 3.5vw, 2.8rem);
-            margin-bottom: 24px;
-            line-height: 1.15;
-        }
-
-        .about-content p {
-            color: var(--gray-300);
-            font-size: 1.05rem;
-            line-height: 1.8;
-            margin-bottom: 20px;
-            font-weight: 300;
-        }
-
-        .about-content p strong {
-            color: var(--white);
-            font-weight: 600;
-        }
-
-        .about-stats {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-
-        .about-stat-card {
-            background: rgba(235,168,24,0.06);
-            border: 1px solid rgba(235,168,24,0.15);
-            border-radius: 16px;
-            padding: 28px 20px;
-            text-align: center;
-            transition: border-color 0.3s ease, transform 0.3s ease;
-        }
-
-        .about-stat-card:hover {
-            border-color: rgba(235,168,24,0.3);
-            transform: translateY(-4px);
-        }
-
-        .about-stat-number {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2rem, 3vw, 2.8rem);
-            font-weight: 900;
-            color: var(--gold);
-            line-height: 1;
-            margin-bottom: 8px;
-        }
-
-        .about-stat-label {
-            font-size: 0.8rem;
-            color: var(--gray-400);
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            font-weight: 600;
-        }
-
-        .about-founder {
-            margin-top: 28px;
-            padding: 24px;
-            background: rgba(255,255,255,0.04);
-            border-radius: 16px;
-            border: 1px solid rgba(255,255,255,0.06);
-        }
-
-        .about-founder-name {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.2rem;
-            font-weight: 900;
-            color: var(--gold-light);
-            margin-bottom: 4px;
-        }
-
-        .about-founder-title {
-            font-size: 0.85rem;
-            color: var(--gray-400);
-            margin-bottom: 12px;
-        }
-
-        .about-founder p {
-            font-size: 0.95rem;
-            margin-bottom: 0;
-        }
-
-        @media (max-width: 768px) {
-            .about-grid { grid-template-columns: 1fr; gap: 40px; }
-            .about-stats { gap: 12px; }
-            .about-stat-card { padding: 20px 16px; }
-            .about-founder { padding: 20px; }
-        }
-
-        /* ============================================
-           SECTION CTA (between sections)
-           ============================================ */
-        .section-cta {
-            text-align: center;
-            padding: 48px 0;
-            background: var(--dark);
-            position: relative;
-        }
-
-        .section-cta::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 400px;
-            height: 200px;
-            background: radial-gradient(circle, rgba(235,168,24,0.06) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
-        .section-cta .btn-primary {
-            position: relative;
-            z-index: 2;
-        }
-
-        .section-cta .hero-micro {
-            position: relative;
-            z-index: 2;
-            margin-top: 12px;
-        }
-
-        @media (max-width: 768px) {
-            .section-cta { padding: 32px 0; }
-            .section-cta .btn-primary { width: auto; max-width: 90%; }
-        }
-
-        /* ============================================
            HERO VIDEO BACKGROUND
            ============================================ */
         .hero-video-bg {
@@ -1551,7 +1326,7 @@
     <!-- HERO -->
     <section class="hero" role="region" aria-label="Apresenta&ccedil;&atilde;o">
         <div class="hero-video-bg" id="heroVideoBg" aria-hidden="true">
-            <video muted loop playsinline preload="none">
+            <video autoplay muted loop playsinline>
                 <source src="/bhp/bhp-video.mp4" type="video/mp4">
             </video>
             <div class="video-overlay"></div>
@@ -1599,17 +1374,6 @@
                     <div class="hero-proof-item">
                         <div class="number">30K+</div>
                         <div class="label">Alunos formados</div>
-                    </div>
-                </div>
-
-                <!-- ===== DATA DO EVENTO - EDITAR QUANDO CONFIRMADA ===== -->
-                <div class="event-date-banner reveal" style="margin-top: 40px;" id="eventDateHero">
-                    <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                    <div class="event-date-info">
-                        <div class="event-date-label">Pr&oacute;xima Turma</div>
-                        <!-- ATUALIZAR A DATA ABAIXO QUANDO CONFIRMADA -->
-                        <div class="event-date-value">Data a confirmar em breve</div>
-                        <div class="event-date-location">Guarulhos, SP &middot; Presencial</div>
                     </div>
                 </div>
             </div>
@@ -1662,15 +1426,6 @@
             </div>
         </div>
     </section>
-
-    <!-- CTA BETWEEN SECTIONS -->
-    <div class="section-cta">
-        <button class="btn-primary open-form-popup" type="button">
-            Quero Participar
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </button>
-        <p class="hero-micro">Vagas limitadas &middot; Turmas presenciais</p>
-    </div>
 
     <!-- STATS BAR -->
     <section class="stats-bar">
@@ -1731,63 +1486,6 @@
                             <div class="area-icon"><svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
                             <h4>Rentabilidade</h4>
                             <p>Aumentar margens e reduzir custos</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA BETWEEN SECTIONS -->
-    <div class="section-cta">
-        <button class="btn-primary open-form-popup" type="button">
-            Quero Participar
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </button>
-        <p class="hero-micro">Vagas limitadas &middot; Pr&oacute;xima turma em breve</p>
-    </div>
-
-    <!-- ABOUT FEBRACIS -->
-    <section class="about-febracis section" role="region" aria-label="Sobre a Febracis">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-content reveal">
-                    <p class="overline">Sobre a Febracis</p>
-                    <h2 class="headline-display">A maior escola de <span class="text-gold">neg&oacute;cios e coaching</span> da Am&eacute;rica Latina</h2>
-                    <p>
-                        A <strong>Febracis</strong> (Federa&ccedil;&atilde;o Brasileira de Coaching Integral Sist&ecirc;mico) &eacute; refer&ecirc;ncia mundial em desenvolvimento humano e empresarial. Com mais de <strong>20 anos de hist&oacute;ria</strong>, j&aacute; transformou a vida de centenas de milhares de pessoas em tr&ecirc;s continentes.
-                    </p>
-                    <p>
-                        Sua metodologia exclusiva, o <strong>Coaching Integral Sist&ecirc;mico (CIS)</strong>, integra neuroci&ecirc;ncia, psicologia positiva, programa&ccedil;&atilde;o neurolingu&iacute;stica e gest&atilde;o estrat&eacute;gica &mdash; formando l&iacute;deres, empreendedores e profissionais de alta performance em todo o mundo.
-                    </p>
-                    <p>
-                        Presente em mais de <strong>40 franquias em 3 continentes</strong>, a Febracis oferece treinamentos como o <strong>M&eacute;todo CIS</strong>, <strong>BHP</strong> e <strong>Intelifam&iacute;lia</strong>, unindo ci&ecirc;ncia e pr&aacute;tica para resultados extraordin&aacute;rios nos neg&oacute;cios e na vida pessoal.
-                    </p>
-                    <div class="about-founder">
-                        <div class="about-founder-name">Paulo Vieira, PhD</div>
-                        <div class="about-founder-title">Fundador e Presidente da Febracis</div>
-                        <p>
-                            Autor best-seller com mais de <strong>10 milh&otilde;es de livros vendidos</strong>, Master Coach e PhD em Business Administration. Criador da metodologia CIS e mentor de milh&atilde;o de pessoas ao redor do mundo.
-                        </p>
-                    </div>
-                </div>
-                <div class="about-stats reveal reveal-delay-2">
-                    <div class="about-stats">
-                        <div class="about-stat-card">
-                            <div class="about-stat-number">20+</div>
-                            <div class="about-stat-label">Anos de hist&oacute;ria</div>
-                        </div>
-                        <div class="about-stat-card">
-                            <div class="about-stat-number">500K+</div>
-                            <div class="about-stat-label">Vidas transformadas</div>
-                        </div>
-                        <div class="about-stat-card">
-                            <div class="about-stat-number">40+</div>
-                            <div class="about-stat-label">Franquias em 3 continentes</div>
-                        </div>
-                        <div class="about-stat-card">
-                            <div class="about-stat-number">10M+</div>
-                            <div class="about-stat-label">Livros vendidos</div>
                         </div>
                     </div>
                 </div>
@@ -1887,15 +1585,6 @@
         </div>
     </section>
 
-    <!-- CTA BETWEEN SECTIONS -->
-    <div class="section-cta">
-        <button class="btn-primary open-form-popup" type="button">
-            Quero Participar
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </button>
-        <p class="hero-micro">Garanta sua vaga &middot; Atendimento humanizado</p>
-    </div>
-
     <!-- FOR WHO -->
     <section class="for-section section">
         <div class="container">
@@ -1923,15 +1612,6 @@
             </div>
         </div>
     </section>
-
-    <!-- CTA BETWEEN SECTIONS -->
-    <div class="section-cta">
-        <button class="btn-primary open-form-popup" type="button">
-            Quero Participar
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </button>
-        <p class="hero-micro">Vagas limitadas &middot; Equipe especializada</p>
-    </div>
 
     <!-- FAQ -->
     <section class="faq-section section">
@@ -2006,17 +1686,6 @@
                 <p class="subtitle reveal">
                     Preencha o formul&aacute;rio e nossa equipe entra em contato para garantir sua vaga na pr&oacute;xima turma.
                 </p>
-
-                <!-- ===== DATA DO EVENTO - EDITAR QUANDO CONFIRMADA ===== -->
-                <div class="event-date-banner reveal" style="margin-bottom: 32px;">
-                    <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                    <div class="event-date-info">
-                        <div class="event-date-label">Pr&oacute;xima Turma</div>
-                        <!-- ATUALIZAR A DATA ABAIXO QUANDO CONFIRMADA -->
-                        <div class="event-date-value">Data a confirmar em breve</div>
-                        <div class="event-date-location">Guarulhos, SP &middot; Presencial</div>
-                    </div>
-                </div>
 
                 <div class="final-cta-buttons reveal">
                     <button class="btn-primary open-form-popup" type="button">
@@ -2099,23 +1768,17 @@
     (function() {
         'use strict';
 
-        // ========== HERO VIDEO (lazy load) ==========
+        // ========== HERO VIDEO ==========
         var heroVideo = document.querySelector('#heroVideoBg video');
         var heroVideoBg = document.getElementById('heroVideoBg');
         if (heroVideo && heroVideoBg) {
             function showVideo() { heroVideoBg.classList.add('playing'); }
             heroVideo.addEventListener('playing', showVideo);
-            // Defer video load: start loading after page is interactive
-            function lazyLoadVideo() {
-                heroVideo.preload = 'auto';
-                heroVideo.load();
-                heroVideo.play().catch(function() { showVideo(); });
-            }
-            if (document.readyState === 'complete') {
-                setTimeout(lazyLoadVideo, 100);
-            } else {
-                window.addEventListener('load', function() { setTimeout(lazyLoadVideo, 100); });
-            }
+            heroVideo.addEventListener('loadeddata', showVideo);
+            // Fallback: show after 2s regardless
+            setTimeout(showVideo, 2000);
+            // Try to play if autoplay was blocked
+            heroVideo.play().catch(function() { showVideo(); });
         }
 
         // ========== SCROLL PROGRESS ==========
