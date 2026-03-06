@@ -32,6 +32,38 @@
     </script>
     <style>
         /* ============================================
+           TOP ALERT BAR
+           ============================================ */
+        .top-alert-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 10003;
+            background: var(--gradient-gold);
+            padding: 6px 16px;
+            text-align: center;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--dark);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            line-height: 1.4;
+        }
+
+        .top-alert-bar span {
+            font-weight: 900;
+        }
+
+        @media (max-width: 768px) {
+            .top-alert-bar { font-size: 0.6rem; padding: 5px 12px; }
+        }
+
+        @media (max-width: 360px) {
+            .top-alert-bar { font-size: 0.55rem; padding: 4px 8px; }
+        }
+
+        /* ============================================
            RESET & BASE
            ============================================ */
         *, *::before, *::after {
@@ -74,6 +106,7 @@
             color: var(--white);
             line-height: 1.6;
             overflow-x: hidden;
+            padding-top: 28px;
         }
 
         .container {
@@ -1374,7 +1407,7 @@
            ============================================ */
         .scroll-progress {
             position: fixed;
-            top: 0;
+            top: 28px;
             left: 0;
             width: 0%;
             height: 3px;
@@ -1545,6 +1578,11 @@
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://jcjrrbdr.san.stape.io/ns.html?id=GTM-NC44TJM9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+    <!-- TOP ALERT BAR -->
+    <div class="top-alert-bar" role="alert">
+        <span>EXCLUSIVO</span> | Apenas para Empres&aacute;rios com faturamento acima de R$200 mil/m&ecirc;s
+    </div>
+
     <a class="skip-link" href="#main-content" style="position:absolute;top:-100px;left:16px;background:var(--gold);color:var(--dark);padding:12px 24px;border-radius:0 0 8px 8px;font-weight:700;z-index:10000;transition:top .3s">Pular para conte&uacute;do</a>
     <div class="scroll-progress" id="scrollProgress"></div>
 
@@ -2050,16 +2088,13 @@
                     <input type="tel" name="whatsapp" placeholder="WhatsApp (DDD + n&uacute;mero)" required autocomplete="tel" aria-label="WhatsApp">
                 </div>
                 <div class="form-group">
-                    <input type="text" name="cargo" placeholder="Seu cargo" required aria-label="Cargo">
-                </div>
-                <div class="form-group">
-                    <select name="faturamento" required aria-label="Faturamento m&eacute;dio da empresa">
-                        <option value="" disabled selected>Faturamento m&eacute;dio da empresa (mensal)</option>
-                        <option value="Ate 100 mil">At&eacute; 100 mil</option>
-                        <option value="101 mil a 500 mil">De 101 mil a 500 mil</option>
-                        <option value="500 mil a 1 milhao">500 mil a 1 milh&atilde;o</option>
-                        <option value="2 milhoes a 50 milhoes">2 milh&otilde;es a 50 milh&otilde;es</option>
-                        <option value="Mais de 50 milhoes">Mais de 50 milh&otilde;es</option>
+                    <select name="cargo" required aria-label="Cargo">
+                        <option value="" disabled selected>Selecione o seu cargo</option>
+                        <option value="Empresario/Proprietario">Empres&aacute;rio/Propriet&aacute;rio</option>
+                        <option value="Diretor/CEO">Diretor/CEO</option>
+                        <option value="Gestor/Gerente">Gestor/Gerente</option>
+                        <option value="Socio/Diretor">S&oacute;cio/Diretor</option>
+                        <option value="Profissional Liberal">Profissional Liberal</option>
                     </select>
                 </div>
                 <button type="submit" class="form-submit">Garantir Minha Vaga Agora &rarr;</button>
