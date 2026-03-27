@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BHP - Business High Performance | Febracis Guarulhos</title>
-    <meta name="description" content="BHP - Business High Performance. 33 horas de imers&atilde;o em gest&atilde;o, lideran&ccedil;a e alta performance empresarial. Dobre seu faturamento com ferramentas pr&aacute;ticas.">
+    <meta name="description" content="BHP - Business High Performance | Exclusivo para empres&aacute;rios com faturamento acima de R$200 mil/m&ecirc;s. Imers&atilde;o de 33h em gest&atilde;o, lideran&ccedil;a e ferramentas pr&aacute;ticas para dobrar seu faturamento. 24 a 26 de junho de 2026 em Guarulhos, SP.">
     <meta name="theme-color" content="#0D2240">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <meta property="og:title" content="BHP - Business High Performance | Febracis Guarulhos">
-    <meta property="og:description" content="33 horas de imers&atilde;o em gest&atilde;o, lideran&ccedil;a e negocia&ccedil;&atilde;o de alta performance. Ferramentas pr&aacute;ticas para dobrar seu faturamento.">
+    <meta property="og:description" content="Exclusivo para empres&aacute;rios R$200k+/m&ecirc;s. Imers&atilde;o de 33h em gest&atilde;o, lideran&ccedil;a e ferramentas para dobrar seu faturamento. 24 a 26 de junho de 2026 | Guarulhos, SP.">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,14 +20,36 @@
       "@context": "https://schema.org",
       "@type": "Event",
       "name": "BHP - Business High Performance | Febracis Guarulhos",
-      "description": "Treinamento de 33 horas em gest&atilde;o, lideran&ccedil;a e alta performance empresarial.",
-      "organizer": {
-        "@type": "Organization",
-        "name": "Febracis Guarulhos"
-      },
+      "description": "Imersao de 33 horas em gestao, lideranca e alta performance empresarial. Exclusivo para empresarios com faturamento acima de R$200 mil/mes.",
+      "startDate": "2026-06-24",
+      "endDate": "2026-06-26",
       "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
       "eventStatus": "https://schema.org/EventScheduled",
-      "performer": { "@type": "Organization", "name": "Febracis Guarulhos" }
+      "location": {
+        "@type": "Place",
+        "name": "Febracis Guarulhos",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Guarulhos",
+          "addressRegion": "SP",
+          "addressCountry": "BR"
+        }
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "Febracis Guarulhos",
+        "url": "https://lp.febracisguarulhos.com.br"
+      },
+      "performer": {
+        "@type": "Person",
+        "name": "Paulo Vieira",
+        "jobTitle": "Fundador e Presidente da Febracis"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://lp.febracisguarulhos.com.br/bhp/",
+        "availability": "https://schema.org/LimitedAvailability"
+      }
     }
     </script>
     <style>
@@ -1096,48 +1118,7 @@
             color: var(--white);
         }
 
-        /* ============================================
-           MOBILE BOTTOM CTA
-           ============================================ */
-        .mobile-bottom-cta {
-            display: none;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            z-index: 998;
-            background: var(--gradient-gold);
-            padding: 12px 20px;
-            transform: translateY(100%);
-            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .mobile-bottom-cta.visible {
-            transform: translateY(0);
-        }
-
-        .mobile-bottom-cta button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            background: none;
-            border: none;
-            color: var(--dark);
-            font-weight: 800;
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            min-height: 44px;
-            width: 100%;
-            cursor: pointer;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .mobile-bottom-cta button svg {
-            width: 22px;
-            height: 22px;
-        }
+        /* mobile-bottom-cta replaced by sticky-cta */
 
         /* ============================================
            EVENT DATE BANNER
@@ -1516,10 +1497,6 @@
             .footer-content { flex-direction: column; text-align: center; }
             .footer-legal { text-align: center; }
 
-            .mobile-bottom-cta {
-                display: block;
-                padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
-            }
             body { padding-bottom: 68px; }
 
             .lead-form-card { padding: 28px 20px; }
@@ -1563,6 +1540,271 @@
         }
 
         noscript .reveal { opacity: 1; transform: none; }
+
+        /* ============================================
+           HERO PAIN/SOLUTION LISTS
+           ============================================ */
+        .hero-pain-list,
+        .hero-solution-list {
+            list-style: none;
+            text-align: left;
+            max-width: 620px;
+            margin: 0 auto 24px;
+        }
+
+        .hero-pain-list li,
+        .hero-solution-list li {
+            font-size: clamp(1rem, 2vw, 1.15rem);
+            padding: 6px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            line-height: 1.5;
+        }
+
+        .hero-pain-list li {
+            color: #F87171;
+            font-weight: 600;
+        }
+
+        .hero-solution-list li {
+            color: #4ADE80;
+            font-weight: 600;
+        }
+
+        .hero-pain-list .icon-x,
+        .hero-solution-list .icon-check {
+            flex-shrink: 0;
+            font-size: 1.1rem;
+        }
+
+        .hero-solution-intro {
+            font-size: clamp(1rem, 2vw, 1.15rem);
+            color: var(--gray-300);
+            max-width: 620px;
+            margin: 0 auto 16px;
+            text-align: left;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        .hero-warning {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(235,168,24,0.1);
+            border: 1px solid rgba(235,168,24,0.25);
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 24px;
+        }
+
+        /* ============================================
+           QUALIFICATION SECTION (NEW)
+           ============================================ */
+        .qualification-section {
+            background: var(--dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .qualification-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(235,168,24,0.3), transparent);
+        }
+
+        .qualification-content {
+            max-width: 760px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .qualification-content h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 32px;
+            line-height: 1.15;
+        }
+
+        .qualification-content .qual-text {
+            font-size: 1.1rem;
+            color: var(--gray-300);
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .qualification-content .qual-text strong {
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .qual-redirect {
+            font-size: 1rem;
+            color: var(--gray-400);
+            line-height: 1.8;
+            margin-bottom: 32px;
+        }
+
+        .qual-redirect a {
+            color: var(--gold);
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        .qual-pain-box {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-left: 3px solid var(--gold);
+            border-radius: 0 12px 12px 0;
+            padding: 28px 32px;
+            text-align: left;
+            margin-bottom: 28px;
+        }
+
+        .qual-pain-box h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 16px;
+        }
+
+        .qual-pain-box ul {
+            list-style: none;
+        }
+
+        .qual-pain-box ul li {
+            font-size: 1rem;
+            color: var(--gray-300);
+            padding: 6px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            line-height: 1.6;
+        }
+
+        .qual-pain-box ul li::before {
+            content: '\2022';
+            color: var(--gold);
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .qual-cta-text {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--gold);
+        }
+
+        @media (max-width: 768px) {
+            .qual-pain-box { padding: 20px; }
+        }
+
+        /* ============================================
+           STICKY CTA (DESKTOP + MOBILE)
+           ============================================ */
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            background: linear-gradient(135deg, #C78E0E 0%, #EBA818 50%, #F5C04A 100%);
+            padding: 0;
+            transform: translateY(100%);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
+        }
+
+        .sticky-cta.visible {
+            transform: translateY(0);
+        }
+
+        .sticky-cta-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 12px 24px;
+        }
+
+        .sticky-cta button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: none;
+            border: none;
+            color: var(--dark);
+            font-weight: 800;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            min-height: 44px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .sticky-cta button svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .sticky-cta-micro {
+            font-size: 0.75rem;
+            color: var(--dark);
+            opacity: 0.7;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .sticky-cta-inner {
+                flex-direction: column;
+                gap: 4px;
+                padding: 10px 16px;
+                padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+            }
+            .sticky-cta button { font-size: 0.9rem; }
+            .sticky-cta-micro { font-size: 0.65rem; }
+        }
+
+        /* ============================================
+           FORM REDIRECT MESSAGE
+           ============================================ */
+        .form-redirect-msg {
+            display: none;
+            background: rgba(235,168,24,0.1);
+            border: 1px solid rgba(235,168,24,0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 12px;
+            text-align: center;
+        }
+
+        .form-redirect-msg.active {
+            display: block;
+        }
+
+        .form-redirect-msg p {
+            font-size: 0.95rem;
+            color: var(--gray-300);
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .form-redirect-msg a {
+            display: inline-block;
+            color: var(--gold);
+            font-weight: 700;
+            text-decoration: underline;
+        }
     </style>
     <noscript>
         <style>
@@ -1596,35 +1838,45 @@
         </div>
         <div class="container">
             <div class="hero-content" id="main-content">
-                <div class="hero-badge reveal">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
-                    Gest&atilde;o de Neg&oacute;cios &mdash; Febracis Guarulhos
-                </div>
-
                 <div class="hero-logo reveal">BHP</div>
                 <p class="hero-logo-sub reveal">Business High Performance</p>
 
                 <h1 class="headline-display" id="heroHeadline">
-                    <span class="word">Torne-se</span> <span class="word">o</span> <span class="word">l&iacute;der</span> <span class="word">que</span> <span class="word">sua</span><br>
-                    <span class="word text-gold glow">equipe</span> <span class="word text-gold glow">precisa.</span>
+                    <span class="word">Se</span> <span class="word">sua</span> <span class="word">empresa</span> <span class="word">fatura</span> <span class="word">mais</span> <span class="word">de</span> <span class="word text-gold glow">R$200 mil/m&ecirc;s,</span><br>
+                    <span class="word">mas</span> <span class="word">voc&ecirc;</span> <span class="word">est&aacute;</span> <span class="word text-gold glow">travado</span> <span class="word text-gold glow">em:</span>
                 </h1>
 
-                <p class="hero-sub reveal">
-                    33 horas de imers&atilde;o em lideran&ccedil;a, gest&atilde;o e negocia&ccedil;&atilde;o de alta performance. Ferramentas pr&aacute;ticas para dobrar seu faturamento.
+                <ul class="hero-pain-list reveal">
+                    <li><span class="icon-x">&#10060;</span> Vendas sem previsibilidade</li>
+                    <li><span class="icon-x">&#10060;</span> Fluxo de caixa apertado</li>
+                    <li><span class="icon-x">&#10060;</span> Equipe que depende de voc&ecirc; no operacional</li>
+                </ul>
+
+                <p class="hero-solution-intro reveal">
+                    O BHP &eacute; a imers&atilde;o de 3 dias em Guarulhos que j&aacute; ajudou milhares de empres&aacute;rios a:
                 </p>
+
+                <ul class="hero-solution-list reveal">
+                    <li><span class="icon-check">&#9989;</span> Multiplicar vendas e lucro em at&eacute; 10x</li>
+                    <li><span class="icon-check">&#9989;</span> Formar l&iacute;deres aut&ocirc;nomos</li>
+                    <li><span class="icon-check">&#9989;</span> Estruturar processos escal&aacute;veis</li>
+                    <li><span class="icon-check">&#9989;</span> Conquistar tempo para crescer e viver</li>
+                </ul>
+
+                <div class="hero-warning reveal">&#9888;&#65039; Vagas extremamente limitadas e mediante aprova&ccedil;&atilde;o.</div>
 
                 <div class="hero-cta-group reveal">
                     <button class="btn-primary open-form-popup" type="button">
-                        Quero Participar do BHP
+                        Solicitar Minha Vaga no BHP
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </button>
-                    <p class="hero-micro">Vagas limitadas &middot; Turmas presenciais</p>
+                    <p class="hero-micro">Exclusivo R$200k+ &middot; Turma: 24 a 26 de junho &middot; Presencial</p>
                 </div>
 
                 <div class="hero-proof reveal">
                     <div class="hero-proof-item">
                         <div class="number">33h</div>
-                        <div class="label">De imers&atilde;o</div>
+                        <div class="label">De imers&atilde;o intensiva</div>
                     </div>
                     <div class="hero-proof-item">
                         <div class="number">9</div>
@@ -1636,7 +1888,7 @@
                     </div>
                     <div class="hero-proof-item">
                         <div class="number">30K+</div>
-                        <div class="label">Alunos formados</div>
+                        <div class="label">Empres&aacute;rios formados</div>
                     </div>
                 </div>
 
@@ -1654,49 +1906,78 @@
         </div>
     </section>
 
+    <!-- QUALIFICATION SECTION (NEW) -->
+    <section class="qualification-section section">
+        <div class="container">
+            <div class="qualification-content reveal">
+                <h2 class="headline-display">Esta imers&atilde;o <span class="text-gold">N&Atilde;O &eacute; para todo mundo.</span></h2>
+
+                <p class="qual-text">
+                    O BHP &eacute; exclusivo para <strong>empres&aacute;rios, donos de neg&oacute;cio e gestores</strong> de empresas com faturamento acima de <strong>R$200 mil/m&ecirc;s</strong>.
+                </p>
+
+                <p class="qual-redirect">
+                    Se voc&ecirc; ainda est&aacute; come&ccedil;ando, se sua empresa fatura abaixo disso ou se voc&ecirc; n&atilde;o tem equipe, esse n&atilde;o &eacute; o seu momento &mdash; e tudo bem. A Febracis tem outros treinamentos incr&iacute;veis pra voc&ecirc; (como o <a href="/">M&eacute;todo CIS</a>).
+                </p>
+
+                <div class="qual-pain-box">
+                    <h3>Mas se voc&ecirc; j&aacute; fatura acima de R$200 mil e sente que:</h3>
+                    <ul>
+                        <li>O crescimento travou e voc&ecirc; n&atilde;o sabe por qu&ecirc;</li>
+                        <li>A equipe n&atilde;o entrega sem voc&ecirc; em cima</li>
+                        <li>O faturamento sobe mas o lucro n&atilde;o acompanha</li>
+                        <li>Voc&ecirc; trabalha mais que qualquer funcion&aacute;rio</li>
+                    </ul>
+                </div>
+
+                <p class="qual-cta-text">Continue lendo. O BHP foi feito pra resolver exatamente isso.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- PAIN SECTION -->
     <section class="pain-section section">
         <div class="container">
             <div class="section-header reveal">
                 <p class="overline">Isso soa familiar?</p>
-                <h2 class="headline-display">Sua empresa cresce, mas voc&ecirc; <span class="text-gold">n&atilde;o consegue sair do operacional.</span></h2>
+                <h2 class="headline-display">Sua empresa fatura R$200 mil+, <span class="text-gold">mas...</span></h2>
             </div>
 
             <div class="pain-grid">
                 <div class="pain-card reveal">
                     <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-                    <h3>Preso apagando inc&ecirc;ndios</h3>
-                    <p>Seu dia &eacute; consumido por urg&ecirc;ncias. Voc&ecirc; n&atilde;o lidera &mdash; voc&ecirc; sobrevive. E a empresa depende 100% de voc&ecirc;.</p>
+                    <h3>Ref&eacute;m do operacional</h3>
+                    <p><strong>Voc&ecirc; trabalha mais que qualquer funcion&aacute;rio.</strong> A empresa cresce, mas voc&ecirc; n&atilde;o consegue sair da opera&ccedil;&atilde;o. F&eacute;rias? S&oacute; no nome. Se voc&ecirc; desliga o celular por um dia, a opera&ccedil;&atilde;o trava. Voc&ecirc; n&atilde;o tem uma empresa &mdash; tem um emprego caro que voc&ecirc; mesmo criou.</p>
                 </div>
                 <div class="pain-card reveal reveal-delay-1">
                     <div class="icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
-                    <h3>Equipe desalinhada</h3>
-                    <p>Contrata errado, treina pouco, perde gente boa. O time n&atilde;o entrega o que deveria e voc&ecirc; n&atilde;o sabe como mudar isso.</p>
+                    <h3>Equipe que n&atilde;o entrega</h3>
+                    <p><strong>Contrata errado, treina pouco e perde gente boa.</strong> A rotatividade consome dinheiro, tempo e moral do time. E cada vez que algu&eacute;m sai, voc&ecirc; volta pro operacional. Retreina. Readapta. Recome&ccedil;a. Um ciclo que n&atilde;o para nunca.</p>
                 </div>
                 <div class="pain-card reveal reveal-delay-2">
-                    <div class="icon"><svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
-                    <h3>Faturamento estagnado</h3>
-                    <p>Voc&ecirc; trabalha mais, mas o resultado n&atilde;o acompanha. O teto n&atilde;o &eacute; do mercado &mdash; &eacute; da gest&atilde;o.</p>
+                    <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+                    <h3>Faturamento alto, lucro baixo</h3>
+                    <p><strong>O faturamento subiu, mas a margem s&oacute; encolhe.</strong> R$200 mil, R$500 mil, R$1 milh&atilde;o de receita &mdash; mas no fim do m&ecirc;s, quase empata. A estrutura cresceu mais r&aacute;pido que o lucro. E voc&ecirc; n&atilde;o sabe onde t&aacute; o ralo.</p>
                 </div>
                 <div class="pain-card reveal reveal-delay-3">
-                    <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2a8 8 0 018 8c0 6-8 12-8 12S4 16 4 10a8 8 0 018-8z"/><circle cx="12" cy="10" r="3"/></svg></div>
-                    <h3>Sem estrat&eacute;gia clara</h3>
-                    <p>Opera no feeling. Sem processo de venda estruturado, sem m&eacute;tricas, sem previsibilidade de receita.</p>
+                    <div class="icon"><svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
+                    <h3>Vendas sem previsibilidade</h3>
+                    <p><strong>Opera no feeling. Sem pipeline, sem m&eacute;tricas, sem previsibilidade.</strong> Cada m&ecirc;s &eacute; uma surpresa. Voc&ecirc; n&atilde;o sabe quantas vendas v&atilde;o fechar, quanto vai entrar de receita, quanto vai sobrar. Gerencia no achismo &mdash; e sabe que isso custa caro.</p>
                 </div>
                 <div class="pain-card reveal reveal-delay-1">
-                    <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></div>
-                    <h3>Feedback que n&atilde;o funciona</h3>
-                    <p>Ou evita conversas dif&iacute;ceis, ou fala de um jeito que desmotiva. O time n&atilde;o cresce porque n&atilde;o recebe dire&ccedil;&atilde;o.</p>
+                    <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+                    <h3>Lideran&ccedil;a por instinto</h3>
+                    <p><strong>Sabe que precisa de processos, mas n&atilde;o tem as ferramentas certas.</strong> Cada decis&atilde;o &eacute; uma aposta. Feedback? Evita ou faz de um jeito que desmotiva. O time n&atilde;o cresce porque n&atilde;o recebe dire&ccedil;&atilde;o. E voc&ecirc; n&atilde;o sabe como dar essa dire&ccedil;&atilde;o sem virar o chato da empresa.</p>
                 </div>
                 <div class="pain-card reveal reveal-delay-2">
                     <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M16.2 7.8l-2 6.3-6.4 2.1 2-6.3z"/></svg></div>
-                    <h3>Lidera por instinto, n&atilde;o por m&eacute;todo</h3>
-                    <p>Sabe que precisa de processos, mas n&atilde;o tem as ferramentas certas. Cada decis&atilde;o vira uma aposta.</p>
+                    <h3>O crescimento virou armadilha</h3>
+                    <p><strong>Quanto mais a empresa cresce, mais voc&ecirc; se afunda.</strong> Mais gente pra gerenciar. Mais decis&otilde;es urgentes. Mais inc&ecirc;ndios pra apagar. O crescimento deveria trazer liberdade &mdash; mas trouxe mais pris&atilde;o. Algo t&aacute; errado na base.</p>
                 </div>
             </div>
 
             <div class="pain-bottom reveal">
-                <p>Nenhum desses problemas se resolve com mais horas de trabalho. <strong>Se resolve com m&eacute;todo, ferramentas e lideran&ccedil;a real.</strong></p>
+                <p>Nenhum desses problemas se resolve com mais esfor&ccedil;o. <strong>Se resolve com m&eacute;todo, ferramentas e lideran&ccedil;a real. E &eacute; exatamente isso que voc&ecirc; vai aprender em 33 horas de imers&atilde;o.</strong></p>
             </div>
         </div>
     </section>
@@ -1704,10 +1985,10 @@
     <!-- CTA BETWEEN SECTIONS -->
     <div class="section-cta">
         <button class="btn-primary open-form-popup" type="button">
-            Quero Participar
+            Quero Resolver Isso &mdash; Solicitar Minha Vaga
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </button>
-        <p class="hero-micro">Vagas limitadas &middot; Turmas presenciais</p>
+        <p class="hero-micro">Vagas extremamente limitadas e mediante aprova&ccedil;&atilde;o</p>
     </div>
 
     <!-- STATS BAR -->
@@ -1740,9 +2021,9 @@
             <div class="what-grid">
                 <div class="what-content reveal">
                     <p class="overline">O que &eacute; o BHP</p>
-                    <h2 class="headline-display">N&atilde;o &eacute; curso.<br>N&atilde;o &eacute; palestra.<br>&Eacute; <span class="text-gold">imers&atilde;o em gest&atilde;o real.</span></h2>
+                    <h2 class="headline-display">N&atilde;o &eacute; curso. N&atilde;o &eacute; palestra. &Eacute; a imers&atilde;o que <span class="text-gold">empres&aacute;rios R$200k+ usam pra dobrar o faturamento.</span></h2>
                     <p>
-                        <strong>33 horas em 3 dias.</strong> O Business High Performance &eacute; o treinamento da Escola de Neg&oacute;cios da Febracis para l&iacute;deres, gestores e empreendedores que querem <strong>dobrar o faturamento com m&eacute;todo</strong>.
+                        <strong>33 horas em 3 dias.</strong> O Business High Performance &eacute; o treinamento da Escola de Neg&oacute;cios da Febracis para empres&aacute;rios e gestores de empresas com faturamento acima de <strong>R$200 mil/m&ecirc;s</strong> que querem <strong>dobrar o resultado com m&eacute;todo</strong> &mdash; n&atilde;o com mais horas de trabalho.
                     </p>
                     <p>
                         Criado por <strong>Paulo Vieira</strong> (PhD, presidente da Febracis), o BHP usa a metodologia do <strong>Coaching Integral Sist&ecirc;mico</strong> aplicada ao mundo dos neg&oacute;cios &mdash; com ferramentas pr&aacute;ticas que voc&ecirc; aplica j&aacute; na segunda-feira.
@@ -1753,22 +2034,22 @@
                         <div class="what-area-item">
                             <div class="area-icon"><svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
                             <h4>Estrat&eacute;gia</h4>
-                            <p>Posicionamento e expans&atilde;o de mercado</p>
+                            <p>Posicionamento e expans&atilde;o de mercado para empresas R$200k+</p>
                         </div>
                         <div class="what-area-item">
                             <div class="area-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
                             <h4>Gest&atilde;o de Pessoas</h4>
-                            <p>Recrutar, treinar e reter talentos</p>
+                            <p>Recrutar, treinar e reter talentos &mdash; sem depender de voc&ecirc; no operacional</p>
                         </div>
                         <div class="what-area-item">
                             <div class="area-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
                             <h4>Lideran&ccedil;a</h4>
-                            <p>Inspirar e direcionar com resultado</p>
+                            <p>Inspirar, direcionar e formar l&iacute;deres aut&ocirc;nomos na sua empresa</p>
                         </div>
                         <div class="what-area-item">
                             <div class="area-icon"><svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
                             <h4>Rentabilidade</h4>
-                            <p>Aumentar margens e reduzir custos</p>
+                            <p>Aumentar margens e transformar faturamento em lucro real</p>
                         </div>
                     </div>
                 </div>
@@ -1779,10 +2060,10 @@
     <!-- CTA BETWEEN SECTIONS -->
     <div class="section-cta">
         <button class="btn-primary open-form-popup" type="button">
-            Quero Participar
+            Solicitar Minha Vaga no BHP
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </button>
-        <p class="hero-micro">Vagas limitadas &middot; Pr&oacute;xima turma em breve</p>
+        <p class="hero-micro">Vagas extremamente limitadas e mediante aprova&ccedil;&atilde;o | Pr&oacute;xima turma em breve</p>
     </div>
 
     <!-- ABOUT FEBRACIS -->
@@ -1801,11 +2082,14 @@
                     <p>
                         Presente em mais de <strong>40 franquias em 3 continentes</strong>, a Febracis oferece treinamentos como o <strong>M&eacute;todo CIS</strong>, <strong>BHP</strong> e <strong>Intelifam&iacute;lia</strong>, unindo ci&ecirc;ncia e pr&aacute;tica para resultados extraordin&aacute;rios nos neg&oacute;cios e na vida pessoal.
                     </p>
+                    <p>
+                        <strong>Mais de 30 mil empres&aacute;rios j&aacute; passaram pelo BHP e transformaram a gest&atilde;o dos seus neg&oacute;cios.</strong>
+                    </p>
                     <div class="about-founder">
                         <div class="about-founder-name">Paulo Vieira, PhD</div>
                         <div class="about-founder-title">Fundador e Presidente da Febracis</div>
                         <p>
-                            Autor best-seller com mais de <strong>10 milh&otilde;es de livros vendidos</strong>, Master Coach e PhD em Business Administration. Criador da metodologia CIS e mentor de milh&atilde;o de pessoas ao redor do mundo.
+                            Autor best-seller com mais de <strong>10 milh&otilde;es de livros vendidos</strong>, Master Coach e PhD em Business Administration. Criador da metodologia CIS e mentor de milh&atilde;o de pessoas ao redor do mundo. <strong>Criador das 4 ferramentas de gest&atilde;o que empres&aacute;rios R$200k+ usam para dobrar o faturamento.</strong>
                         </p>
                     </div>
                 </div>
@@ -1838,54 +2122,54 @@
         <div class="container">
             <div class="section-header reveal">
                 <p class="overline">Conte&uacute;do completo</p>
-                <h2 class="headline-display">9 &aacute;reas. 33 horas. <span class="text-gold">Gest&atilde;o de ponta a ponta.</span></h2>
+                <h2 class="headline-display">9 &aacute;reas. 33 horas. <span class="text-gold">Gest&atilde;o de ponta a ponta para empresas R$200k+.</span></h2>
             </div>
 
             <div class="areas-grid">
                 <div class="area-card reveal">
                     <div class="area-card-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div>
                     <h3>Empreendedorismo</h3>
-                    <p>Mentalidade e postura de dono para crescer com consist&ecirc;ncia</p>
+                    <p>Mentalidade e postura de dono para escalar com consist&ecirc;ncia &mdash; sem se perder no operacional.</p>
                 </div>
                 <div class="area-card reveal reveal-delay-1">
                     <div class="area-card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M16.2 7.8l-2 6.3-6.4 2.1 2-6.3z"/></svg></div>
                     <h3>Estrat&eacute;gia Corporativa</h3>
-                    <p>Planejamento e diferencia&ccedil;&atilde;o competitiva no mercado</p>
+                    <p>Planejamento e diferencia&ccedil;&atilde;o competitiva para empresas que faturam R$200k+ e querem chegar ao pr&oacute;ximo n&iacute;vel.</p>
                 </div>
                 <div class="area-card reveal reveal-delay-2">
                     <div class="area-card-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
                     <h3>Gest&atilde;o de Pessoas</h3>
-                    <p>Processos de recrutamento, treinamento e reten&ccedil;&atilde;o</p>
+                    <p>Processos de recrutamento, treinamento e reten&ccedil;&atilde;o &mdash; pare de perder talentos e recome&ccedil;ar do zero.</p>
                 </div>
                 <div class="area-card reveal reveal-delay-1">
                     <div class="area-card-icon"><svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
                     <h3>Rentabilidade</h3>
-                    <p>Aumento de margens, redu&ccedil;&atilde;o de custos e efici&ecirc;ncia</p>
+                    <p>Transforme faturamento em lucro real. Aumento de margens, redu&ccedil;&atilde;o de custos e efici&ecirc;ncia operacional.</p>
                 </div>
                 <div class="area-card reveal reveal-delay-2">
                     <div class="area-card-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
                     <h3>Lideran&ccedil;a</h3>
-                    <p>Vis&atilde;o estrat&eacute;gica e gest&atilde;o de equipes de alta performance</p>
+                    <p>Forme l&iacute;deres aut&ocirc;nomos dentro da sua empresa. Pare de ser o &uacute;nico que resolve tudo.</p>
                 </div>
                 <div class="area-card reveal reveal-delay-3">
                     <div class="area-card-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></div>
                     <h3>Marketing</h3>
-                    <p>Posicionamento, comunica&ccedil;&atilde;o e capta&ccedil;&atilde;o de clientes</p>
+                    <p>Posicionamento, comunica&ccedil;&atilde;o e capta&ccedil;&atilde;o de clientes para empresas que faturam acima de R$200 mil.</p>
                 </div>
                 <div class="area-card reveal reveal-delay-1">
                     <div class="area-card-icon"><svg viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></div>
                     <h3>Gest&atilde;o Comercial</h3>
-                    <p>Processos de venda, pipeline e previsibilidade de receita</p>
+                    <p>Pipeline estruturado, previsibilidade de receita e processo de venda que funciona sem voc&ecirc;.</p>
                 </div>
                 <div class="area-card reveal reveal-delay-2">
                     <div class="area-card-icon"><svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
                     <h3>T&eacute;cnicas de Vendas</h3>
-                    <p>Negocia&ccedil;&atilde;o, rapport e fechamento com excel&ecirc;ncia</p>
+                    <p>Negocia&ccedil;&atilde;o, rapport e fechamento de alto ticket. Para equipes comerciais de empresas R$200k+.</p>
                 </div>
                 <div class="area-card reveal reveal-delay-3">
                     <div class="area-card-icon"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6"/><path d="M23 11h-6"/></svg></div>
                     <h3>Recrutamento &amp; Sele&ccedil;&atilde;o</h3>
-                    <p>Como atrair e contratar as pessoas certas para o seu time</p>
+                    <p>Como atrair e contratar as pessoas certas &mdash; da primeira vez. Sem custo de rotatividade.</p>
                 </div>
             </div>
         </div>
@@ -1896,30 +2180,30 @@
         <div class="container">
             <div class="section-header reveal">
                 <p class="overline">Ferramentas exclusivas</p>
-                <h2 class="headline-display">4 ferramentas que voc&ecirc; <span class="text-gold">aplica na segunda-feira.</span></h2>
-                <p class="desc">Criadas por Paulo Vieira, s&atilde;o instrumentos de gest&atilde;o pr&aacute;ticos e aplic&aacute;veis no dia a dia de qualquer empresa.</p>
+                <h2 class="headline-display">4 ferramentas que voc&ecirc; aplica na segunda-feira. <span class="text-gold">E que j&aacute; mudaram a gest&atilde;o de 30 mil empres&aacute;rios.</span></h2>
+                <p class="desc">Criadas por Paulo Vieira. N&atilde;o &eacute; teoria &mdash; s&atilde;o instrumentos de gest&atilde;o pr&aacute;ticos e aplic&aacute;veis no dia seguinte &agrave; imers&atilde;o.</p>
             </div>
 
             <div class="tools-grid">
                 <div class="tool-card reveal">
                     <div class="tool-number">1</div>
                     <h3>Identifica&ccedil;&atilde;o de Rotina</h3>
-                    <p>Descubra quais atividades est&atilde;o consumindo seu tempo e bloqueando sua produtividade como gestor. Elimine o operacional que n&atilde;o deveria ser seu.</p>
+                    <p>Descubra quais atividades est&atilde;o consumindo seu tempo e te prendendo no operacional. Elimine o que n&atilde;o deveria ser seu &mdash; e libere horas para liderar de verdade.</p>
                 </div>
                 <div class="tool-card reveal reveal-delay-1">
                     <div class="tool-number">2</div>
                     <h3>Matriz de Decis&atilde;o</h3>
-                    <p>Framework quantitativo para tomar decis&otilde;es de promo&ccedil;&atilde;o, treinamento ou desligamento com base em dados &mdash; n&atilde;o em achismo.</p>
+                    <p>Framework quantitativo para decidir: promover, treinar ou desligar. Com dados &mdash; n&atilde;o com achismo. A ferramenta que acaba com decis&otilde;es por feeling.</p>
                 </div>
                 <div class="tool-card reveal reveal-delay-2">
                     <div class="tool-number">3</div>
                     <h3>Aplicativo Gerencial</h3>
-                    <p>Processo passo a passo para acompanhar o ciclo completo de cada colaborador: do recrutamento ao desligamento.</p>
+                    <p>Processo passo a passo para acompanhar o ciclo completo de cada colaborador: do recrutamento ao desligamento. Gest&atilde;o de pessoas sistematizada.</p>
                 </div>
                 <div class="tool-card reveal reveal-delay-3">
                     <div class="tool-number">4</div>
                     <h3>Matriz de Feedback</h3>
-                    <p>T&eacute;cnica para dar feedbacks aut&ecirc;nticos e assertivos que geram confian&ccedil;a, desempenho e reten&ccedil;&atilde;o de talentos.</p>
+                    <p>T&eacute;cnica para dar feedbacks que geram confian&ccedil;a, desempenho e reten&ccedil;&atilde;o. Pare de evitar conversas dif&iacute;ceis &mdash; ou de faz&ecirc;-las de um jeito que desmotiva.</p>
                 </div>
             </div>
         </div>
@@ -1928,10 +2212,10 @@
     <!-- CTA BETWEEN SECTIONS -->
     <div class="section-cta">
         <button class="btn-primary open-form-popup" type="button">
-            Quero Participar
+            Quero Essas Ferramentas &mdash; Solicitar Minha Vaga
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </button>
-        <p class="hero-micro">Garanta sua vaga &middot; Atendimento humanizado</p>
+        <p class="hero-micro">Vagas extremamente limitadas e mediante aprova&ccedil;&atilde;o</p>
     </div>
 
     <!-- FOR WHO -->
@@ -1941,21 +2225,23 @@
                 <div class="for-card yes reveal">
                     <h3>&#9989; O BHP &eacute; para voc&ecirc; se:</h3>
                     <ul class="for-list">
-                        <li><span class="check">&#10003;</span> Tem empresa com 3 ou mais funcion&aacute;rios</li>
-                        <li><span class="check">&#10003;</span> Quer sair do operacional e liderar de verdade</li>
-                        <li><span class="check">&#10003;</span> Precisa de processos claros de gest&atilde;o e vendas</li>
-                        <li><span class="check">&#10003;</span> Quer dobrar o faturamento com m&eacute;todo, n&atilde;o com sorte</li>
-                        <li><span class="check">&#10003;</span> Busca ferramentas pr&aacute;ticas para aplicar imediatamente</li>
+                        <li><span class="check">&#10003;</span> Sua empresa fatura acima de R$200 mil/m&ecirc;s</li>
+                        <li><span class="check">&#10003;</span> Tem equipe de 5+ pessoas e quer formar l&iacute;deres aut&ocirc;nomos</li>
+                        <li><span class="check">&#10003;</span> Sente que o faturamento travou e quer dobrar com m&eacute;todo</li>
+                        <li><span class="check">&#10003;</span> Quer sair do operacional e ter processos escal&aacute;veis</li>
+                        <li><span class="check">&#10003;</span> Precisa de ferramentas aplic&aacute;veis j&aacute; na segunda-feira</li>
+                        <li><span class="check">&#10003;</span> Quer fazer networking com outros empres&aacute;rios R$200k+</li>
                     </ul>
                 </div>
                 <div class="for-card no reveal reveal-delay-1">
                     <h3>&#10060; O BHP N&Atilde;O &eacute; para voc&ecirc; se:</h3>
                     <ul class="for-list">
-                        <li><span class="cross">&#10007;</span> Busca conte&uacute;do te&oacute;rico sem aplica&ccedil;&atilde;o pr&aacute;tica</li>
+                        <li><span class="cross">&#10007;</span> Sua empresa fatura abaixo de R$200 mil/m&ecirc;s (conhe&ccedil;a o <a href="/" style="color:#F87171;text-decoration:underline">M&eacute;todo CIS</a>)</li>
+                        <li><span class="cross">&#10007;</span> N&atilde;o tem equipe ou trabalha sozinho</li>
+                        <li><span class="cross">&#10007;</span> Busca conte&uacute;do motivacional sem aplica&ccedil;&atilde;o pr&aacute;tica</li>
                         <li><span class="cross">&#10007;</span> N&atilde;o est&aacute; disposto a mudar sua forma de gerir</li>
-                        <li><span class="cross">&#10007;</span> Acha que lideran&ccedil;a &eacute; s&oacute; dar ordens</li>
-                        <li><span class="cross">&#10007;</span> Prefere continuar no piloto autom&aacute;tico</li>
-                        <li><span class="cross">&#10007;</span> N&atilde;o quer investir tempo em desenvolvimento</li>
+                        <li><span class="cross">&#10007;</span> Quer resultados sem investir 33 horas de dedica&ccedil;&atilde;o</li>
+                        <li><span class="cross">&#10007;</span> Prefere continuar gerenciando no achismo</li>
                     </ul>
                 </div>
             </div>
@@ -1965,10 +2251,10 @@
     <!-- CTA BETWEEN SECTIONS -->
     <div class="section-cta">
         <button class="btn-primary open-form-popup" type="button">
-            Quero Participar
+            Solicitar Minha Vaga no BHP
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </button>
-        <p class="hero-micro">Vagas limitadas &middot; Equipe especializada</p>
+        <p class="hero-micro">Vagas extremamente limitadas e mediante aprova&ccedil;&atilde;o</p>
     </div>
 
     <!-- FAQ -->
@@ -1986,7 +2272,17 @@
                         <span class="arrow">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>O BHP &eacute; uma imers&atilde;o presencial de 33 horas distribu&iacute;das em 3 dias intensivos. Voc&ecirc; sai com ferramentas prontas para aplicar na sua empresa.</p>
+                        <p>O BHP &eacute; uma imers&atilde;o presencial de 33 horas distribu&iacute;das em 3 dias intensivos. Voc&ecirc; sai com 4 ferramentas pr&aacute;ticas prontas para aplicar na sua empresa j&aacute; na segunda-feira.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                        Para quem &eacute; o BHP?
+                        <span class="arrow">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Exclusivamente para empres&aacute;rios, donos de neg&oacute;cio e gestores de empresas com faturamento acima de R$200 mil/m&ecirc;s. Se sua empresa fatura abaixo disso, recomendamos o M&eacute;todo CIS como primeiro passo.</p>
                     </div>
                 </div>
 
@@ -1996,7 +2292,7 @@
                         <span class="arrow">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>O M&eacute;todo CIS trabalha intelig&ecirc;ncia emocional e transforma&ccedil;&atilde;o pessoal. O BHP &eacute; focado 100% em neg&oacute;cios: lideran&ccedil;a, gest&atilde;o, vendas e ferramentas gerenciais. Muitos alunos fazem os dois &mdash; o CIS primeiro (mentalidade) e depois o BHP (execu&ccedil;&atilde;o).</p>
+                        <p>O M&eacute;todo CIS trabalha intelig&ecirc;ncia emocional e transforma&ccedil;&atilde;o pessoal. O BHP &eacute; 100% focado em neg&oacute;cios: lideran&ccedil;a, gest&atilde;o, vendas e ferramentas gerenciais. Muitos empres&aacute;rios fazem os dois &mdash; o CIS primeiro (mentalidade) e depois o BHP (execu&ccedil;&atilde;o com m&eacute;todo).</p>
                     </div>
                 </div>
 
@@ -2016,7 +2312,17 @@
                         <span class="arrow">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Com certeza! Inclusive recomendamos. Quando o time de lideran&ccedil;a inteiro faz o BHP junto, a implementa&ccedil;&atilde;o das ferramentas &eacute; muito mais r&aacute;pida e eficaz. Temos condi&ccedil;&otilde;es especiais para grupos.</p>
+                        <p>Recomendamos fortemente. Quando o time de lideran&ccedil;a inteiro faz o BHP junto, a implementa&ccedil;&atilde;o das ferramentas &eacute; muito mais r&aacute;pida e eficaz. Temos condi&ccedil;&otilde;es especiais para grupos de uma mesma empresa.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                        O que acontece se minha empresa fatura abaixo de R$200 mil?
+                        <span class="arrow">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O BHP foi desenhado para desafios de gest&atilde;o de empresas j&aacute; consolidadas (R$200k+/m&ecirc;s). Para empres&aacute;rios em fase anterior, recomendamos o M&eacute;todo CIS &mdash; que vai preparar sua mentalidade e base emocional para o crescimento. Entre em contato e te direcionamos para o treinamento ideal.</p>
                     </div>
                 </div>
 
@@ -2026,7 +2332,7 @@
                         <span class="arrow">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>A Febracis Guarulhos oferece atendimento personalizado, suporte pr&eacute; e p&oacute;s-treinamento, e acompanhamento dedicado para garantir que as ferramentas sejam implementadas na sua empresa.</p>
+                        <p>A Febracis Guarulhos oferece atendimento personalizado, suporte pr&eacute; e p&oacute;s-treinamento, e acompanhamento dedicado para garantir que as ferramentas sejam implementadas na sua empresa. Al&eacute;m disso, voc&ecirc; faz networking com outros empres&aacute;rios R$200k+ da regi&atilde;o.</p>
                     </div>
                 </div>
             </div>
@@ -2039,10 +2345,10 @@
             <div class="final-cta-content">
                 <p class="overline reveal">Pr&oacute;ximo passo</p>
                 <h2 class="headline-display reveal">
-                    Sua empresa merece <span class="text-gold">gest&atilde;o de alta performance.</span>
+                    Sua empresa fatura R$200k+ e merece <span class="text-gold">gest&atilde;o de alta performance.</span>
                 </h2>
                 <p class="subtitle reveal">
-                    Preencha o formul&aacute;rio e nossa equipe entra em contato para garantir sua vaga na pr&oacute;xima turma.
+                    Preencha o formul&aacute;rio abaixo e nossa equipe entra em contato para avaliar se o BHP &eacute; o treinamento certo para o seu momento. As vagas s&atilde;o extremamente limitadas e a sele&ccedil;&atilde;o &eacute; feita com base no perfil da empresa.
                 </p>
 
                 <!-- ===== DATA DO EVENTO - EDITAR QUANDO CONFIRMADA ===== -->
@@ -2058,10 +2364,10 @@
 
                 <div class="final-cta-buttons reveal">
                     <button class="btn-primary open-form-popup" type="button">
-                        Garantir Minha Vaga no BHP
+                        Solicitar Minha Vaga no BHP
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </button>
-                    <p class="hero-micro">Atendimento humanizado &middot; Equipe especializada</p>
+                    <p class="hero-micro">Vagas extremamente limitadas e mediante aprova&ccedil;&atilde;o | Atendimento humanizado</p>
                 </div>
             </div>
         </div>
@@ -2071,8 +2377,8 @@
     <div class="form-popup-overlay" id="formPopup" role="dialog" aria-modal="true" aria-label="Formul&aacute;rio de inscri&ccedil;&atilde;o">
         <div class="lead-form-card">
             <button class="form-popup-close" id="formPopupClose" aria-label="Fechar">&times;</button>
-            <h3>Garanta sua vaga no BHP</h3>
-            <p class="form-sub">Preencha e nossa equipe entra em contato</p>
+            <h3>Solicite sua vaga no BHP</h3>
+            <p class="form-sub">Preencha e nossa equipe entra em contato para avaliar seu perfil</p>
             <form id="leadForm" action="#" method="POST">
                 <input type="hidden" name="utm_source" id="utm_source">
                 <input type="hidden" name="utm_medium" id="utm_medium">
@@ -2082,22 +2388,52 @@
                     <input type="text" name="name" placeholder="Seu nome completo" required autocomplete="name" aria-label="Nome completo">
                 </div>
                 <div class="form-group">
-                    <input type="email" name="email" placeholder="Seu melhor e-mail" required autocomplete="email" aria-label="E-mail">
-                </div>
-                <div class="form-group">
                     <input type="tel" name="whatsapp" placeholder="WhatsApp (DDD + n&uacute;mero)" required autocomplete="tel" aria-label="WhatsApp">
                 </div>
                 <div class="form-group">
-                    <select name="cargo" required aria-label="Cargo">
+                    <input type="email" name="email" placeholder="Seu melhor e-mail" required autocomplete="email" aria-label="E-mail">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="empresa" placeholder="Nome da sua empresa" required autocomplete="organization" aria-label="Nome da empresa">
+                </div>
+                <div class="form-group">
+                    <select name="cargo" required aria-label="Seu cargo">
                         <option value="" disabled selected>Selecione o seu cargo</option>
-                        <option value="Empresario/Proprietario">Empres&aacute;rio/Propriet&aacute;rio</option>
-                        <option value="Diretor/CEO">Diretor/CEO</option>
-                        <option value="Gestor/Gerente">Gestor/Gerente</option>
-                        <option value="Socio/Diretor">S&oacute;cio/Diretor</option>
-                        <option value="Profissional Liberal">Profissional Liberal</option>
+                        <option value="Dono">Dono</option>
+                        <option value="Socio">S&oacute;cio</option>
+                        <option value="CEO">CEO</option>
+                        <option value="Diretor">Diretor</option>
+                        <option value="Gestor">Gestor</option>
+                        <option value="Outro">Outro</option>
                     </select>
                 </div>
-                <button type="submit" class="form-submit">Garantir Minha Vaga Agora &rarr;</button>
+                <div class="form-group">
+                    <select name="faturamento" id="faturamentoSelect" required aria-label="Faturamento mensal">
+                        <option value="" disabled selected>Faturamento mensal da empresa</option>
+                        <option value="R$200mil-R$500mil">R$200 mil a R$500 mil</option>
+                        <option value="R$500mil-R$1milhao">R$500 mil a R$1 milh&atilde;o</option>
+                        <option value="R$1milhao-R$5milhoes">R$1 milh&atilde;o a R$5 milh&otilde;es</option>
+                        <option value="R$5milhoes-R$50milhoes">R$5 milh&otilde;es a R$50 milh&otilde;es</option>
+                        <option value="Acima-R$50milhoes">Acima de R$50 milh&otilde;es</option>
+                        <option value="Abaixo-R$200mil">Minha empresa fatura abaixo de R$200 mil</option>
+                    </select>
+                </div>
+                <div class="form-redirect-msg" id="formRedirectMsg">
+                    <p>O BHP &eacute; indicado para empresas com faturamento acima de R$200 mil/m&ecirc;s. Para o seu momento, recomendamos o <strong>M&eacute;todo CIS</strong> &mdash; o treinamento que j&aacute; transformou mais de 500 mil vidas e prepara voc&ecirc; para o pr&oacute;ximo n&iacute;vel.</p>
+                    <a href="/">Clique aqui para conhecer o M&eacute;todo CIS &rarr;</a>
+                </div>
+                <div class="form-group">
+                    <select name="funcionarios" required aria-label="Quantidade de funcion&aacute;rios">
+                        <option value="" disabled selected>Quantos funcion&aacute;rios?</option>
+                        <option value="1-5">1 a 5</option>
+                        <option value="6-20">6 a 20</option>
+                        <option value="21-50">21 a 50</option>
+                        <option value="51-200">51 a 200</option>
+                        <option value="+200">Mais de 200</option>
+                    </select>
+                </div>
+                <button type="submit" class="form-submit" id="formSubmitBtn">Solicitar Minha Vaga no BHP &rarr;</button>
+                <p class="hero-micro" style="text-align:center;margin-top:10px">Vagas extremamente limitadas e mediante aprova&ccedil;&atilde;o | Atendimento humanizado</p>
             </form>
         </div>
     </div>
@@ -2111,7 +2447,7 @@
                 </div>
                 <div class="footer-info">
                     <p>Febracis Guarulhos &mdash; Treinamentos de Alta Performance Empresarial<br>
-                    Business High Performance &bull; BHP</p>
+                    Business High Performance | BHP | Exclusivo para empresas R$200k+</p>
                 </div>
                 <div class="footer-legal">
                     &copy; 2026 Febracis Guarulhos. Todos os direitos reservados.<br>
@@ -2121,13 +2457,6 @@
         </div>
     </footer>
 
-    <!-- MOBILE BOTTOM CTA -->
-    <div class="mobile-bottom-cta" id="mobileBottomCta" aria-label="Garantir vaga">
-        <button class="open-form-popup" type="button">
-            Garantir Vaga no BHP
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </button>
-    </div>
 
     <!-- SCRIPTS -->
     <script>
@@ -2182,16 +2511,16 @@
             });
         }, 200);
 
-        // ========== MOBILE BOTTOM CTA ==========
-        var mobileBottomCta = document.getElementById('mobileBottomCta');
+        // ========== STICKY CTA (DESKTOP + MOBILE) ==========
+        var stickyCta = document.getElementById('stickyCta');
         var heroSection = document.querySelector('.hero');
 
         var floatObserver = new IntersectionObserver(function(entries) {
             entries.forEach(function(entry) {
                 if (!entry.isIntersecting) {
-                    if (mobileBottomCta) mobileBottomCta.classList.add('visible');
+                    if (stickyCta) stickyCta.classList.add('visible');
                 } else {
-                    if (mobileBottomCta) mobileBottomCta.classList.remove('visible');
+                    if (stickyCta) stickyCta.classList.remove('visible');
                 }
             });
         }, { threshold: 0 });
@@ -2266,6 +2595,26 @@
                 closeFormPopup();
             }
         });
+
+        // ========== FATURAMENTO REDIRECT LOGIC ==========
+        var faturamentoSelect = document.getElementById('faturamentoSelect');
+        var formRedirectMsg = document.getElementById('formRedirectMsg');
+        var formSubmitBtn = document.getElementById('formSubmitBtn');
+        var funcionariosGroup = formSubmitBtn ? formSubmitBtn.previousElementSibling : null;
+
+        if (faturamentoSelect) {
+            faturamentoSelect.addEventListener('change', function() {
+                if (this.value === 'Abaixo-R$200mil') {
+                    if (formRedirectMsg) formRedirectMsg.classList.add('active');
+                    if (formSubmitBtn) formSubmitBtn.style.display = 'none';
+                    if (funcionariosGroup) funcionariosGroup.style.display = 'none';
+                } else {
+                    if (formRedirectMsg) formRedirectMsg.classList.remove('active');
+                    if (formSubmitBtn) formSubmitBtn.style.display = '';
+                    if (funcionariosGroup) funcionariosGroup.style.display = '';
+                }
+            });
+        }
     })();
     </script>
 </body>
