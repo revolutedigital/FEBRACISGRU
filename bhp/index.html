@@ -164,7 +164,7 @@
     .hero-overlay {
       position: absolute;
       inset: 0;
-      background: rgba(10, 15, 28, 0.7);
+      background: rgba(10, 15, 28, 0.82);
       z-index: 1;
     }
     .hero-content {
@@ -1027,10 +1027,10 @@
       background: var(--bg-card);
       border: 1px solid var(--border-gold);
       border-radius: 20px;
-      padding: 36px 32px;
+      padding: 28px 28px;
       position: relative;
       box-shadow: 0 0 60px rgba(212, 168, 67, 0.1);
-      max-height: 90vh;
+      max-height: 95vh;
       overflow-y: auto;
     }
     .popup-close {
@@ -1057,24 +1057,24 @@
       font-size: 13px;
       color: var(--text-secondary);
       text-align: center;
-      margin-bottom: 28px;
+      margin-bottom: 16px;
     }
     .form-group {
-      margin-bottom: 16px;
+      margin-bottom: 10px;
     }
     .form-group label {
       display: block;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 600;
       color: var(--text-secondary);
-      margin-bottom: 6px;
+      margin-bottom: 4px;
       text-transform: uppercase;
       letter-spacing: 0.3px;
     }
     .form-group input,
     .form-group select {
       width: 100%;
-      padding: 12px 16px;
+      padding: 10px 14px;
       background: var(--bg-surface);
       border: 1px solid var(--border);
       border-radius: 8px;
@@ -1122,6 +1122,123 @@
       font-size: 14px;
       color: var(--text-secondary);
       line-height: 1.6;
+    }
+
+    /* ========== EXIT POPUP ========== */
+    .exit-popup-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 10005;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .exit-popup-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .exit-popup-card {
+      background: linear-gradient(180deg, #111827 0%, #0A0F1C 100%);
+      border: 1px solid var(--border-gold);
+      border-radius: 16px;
+      padding: 40px 36px;
+      max-width: 440px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 0 80px rgba(212, 168, 67, 0.12);
+    }
+    .exit-popup-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 4px;
+    }
+    .exit-popup-close:hover { color: var(--text-primary); }
+    .exit-popup-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(231, 76, 60, 0.15);
+      border: 1px solid rgba(231, 76, 60, 0.3);
+      color: var(--red);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+    .exit-popup-badge::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: var(--red);
+      border-radius: 50%;
+      animation: exitPulse 1.5s ease-in-out infinite;
+    }
+    @keyframes exitPulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+    .exit-popup-card h3 {
+      font-size: 1.6rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .exit-popup-card h3 span {
+      color: var(--gold);
+    }
+    .exit-popup-card p {
+      color: var(--text-secondary);
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+    .exit-popup-cta {
+      display: block;
+      width: 100%;
+      padding: 16px;
+      background: var(--gradient-gold);
+      color: var(--bg-dark);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 0 30px var(--gold-glow);
+    }
+    .exit-popup-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 40px var(--gold-glow);
+    }
+    .exit-popup-dismiss {
+      display: block;
+      margin: 16px auto 0;
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-size: 13px;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .exit-popup-dismiss:hover {
+      color: var(--text-secondary);
     }
 
     /* ========== RESPONSIVE ========== */
@@ -1798,11 +1915,7 @@
     <p class="footer-disclaimer">Este site n&atilde;o &eacute; afiliado ao Facebook ou a qualquer entidade do Facebook. Depois que voc&ecirc; sair do Facebook, a responsabilidade n&atilde;o &eacute; deles e sim do nosso site. Fazemos todos os esfor&ccedil;os para indicar claramente e mostrar todas as provas do produto e usamos resultados reais. N&atilde;o toleramos o spam ou tr&aacute;fego n&atilde;o solicitado.</p>
   </footer>
 
-  <!-- ========== STICKY CTA ========== -->
-  <div class="sticky-cta" id="stickyCta">
-    <span class="sticky-cta-micro">Vagas limitadas | Junho 2026</span>
-    <button class="sticky-cta-btn open-form-popup">SOLICITAR MINHA VAGA NO BHP</button>
-  </div>
+  <!-- STICKY CTA REMOVIDO -->
 
   <!-- ========== FORM POPUP ========== -->
   <div class="popup-overlay" id="formPopup" role="dialog" aria-modal="true" aria-label="Formul&aacute;rio de inscri&ccedil;&atilde;o BHP">
@@ -1858,6 +1971,20 @@
         <h4>Vaga solicitada com sucesso!</h4>
         <p>Nossa equipe entrar&aacute; em contato pelo WhatsApp em at&eacute; 24 horas. Fique atento ao seu celular.</p>
       </div>
+    </div>
+  </div>
+
+  <!-- ========== EXIT INTENT POPUP ========== -->
+  <div class="exit-popup-overlay" id="exitPopup">
+    <div class="exit-popup-card">
+      <button class="exit-popup-close" id="exitPopupClose" aria-label="Fechar">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <span class="exit-popup-badge">VAGAS ACABANDO</span>
+      <h3>Espera! Sua vaga ainda est&aacute; <span>dispon&iacute;vel</span></h3>
+      <p>200 empres&aacute;rios estar&atilde;o na mesma sala com Paulo Vieira em Guarulhos. N&atilde;o perca essa oportunidade.</p>
+      <button class="exit-popup-cta open-form-popup" id="exitPopupCta">QUERO GARANTIR MINHA VAGA</button>
+      <button class="exit-popup-dismiss" id="exitPopupDismiss">N&atilde;o, obrigado</button>
     </div>
   </div>
 
@@ -2037,6 +2164,64 @@
             }
           }
           requestAnimationFrame(step);
+        });
+      }
+
+      // 10. Exit intent popup
+      var exitPopup = document.getElementById('exitPopup');
+      var exitShown = false;
+
+      function showExitPopup() {
+        if (exitShown || !exitPopup) return;
+        // Don't show if form popup is already open
+        if (popup && popup.classList.contains('active')) return;
+        exitShown = true;
+        exitPopup.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeExitPopup() {
+        if (exitPopup) {
+          exitPopup.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      }
+
+      // Desktop: mouse leaves viewport (top)
+      document.addEventListener('mouseout', function(e) {
+        if (e.clientY <= 0 && !exitShown) {
+          showExitPopup();
+        }
+      });
+
+      // Mobile: back button or tab visibility change
+      document.addEventListener('visibilitychange', function() {
+        if (document.visibilityState === 'hidden' && !exitShown) {
+          // Will show when they come back
+        }
+        if (document.visibilityState === 'visible' && !exitShown) {
+          // Show after they've been on the page for at least 30 seconds
+          if (performance.now() > 30000) {
+            showExitPopup();
+          }
+        }
+      });
+
+      var exitCloseBtn = document.getElementById('exitPopupClose');
+      var exitDismissBtn = document.getElementById('exitPopupDismiss');
+      var exitCtaBtn = document.getElementById('exitPopupCta');
+
+      if (exitCloseBtn) exitCloseBtn.addEventListener('click', closeExitPopup);
+      if (exitDismissBtn) exitDismissBtn.addEventListener('click', closeExitPopup);
+      if (exitCtaBtn) {
+        exitCtaBtn.addEventListener('click', function() {
+          closeExitPopup();
+          // openPopup is already bound via .open-form-popup class
+        });
+      }
+      if (exitPopup) {
+        exitPopup.addEventListener('click', function(e) {
+          if (e.target === exitPopup) closeExitPopup();
         });
       }
 
