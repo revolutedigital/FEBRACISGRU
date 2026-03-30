@@ -370,9 +370,20 @@
     }
     .dores-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(6, 1fr);
       gap: 20px;
       margin-bottom: 48px;
+    }
+    .dor-card:nth-child(1),
+    .dor-card:nth-child(2),
+    .dor-card:nth-child(3) {
+      grid-column: span 2;
+    }
+    .dor-card:nth-child(4) {
+      grid-column: 2 / span 2;
+    }
+    .dor-card:nth-child(5) {
+      grid-column: 4 / span 2;
     }
     .dor-card {
       padding: 28px;
@@ -387,12 +398,6 @@
     .dor-card:hover {
       transform: translateY(-3px);
       box-shadow: 0 8px 30px rgba(231, 76, 60, 0.1);
-    }
-    .dor-card:last-child {
-      grid-column: 1 / -1;
-      max-width: 540px;
-      margin: 0 auto;
-      width: 100%;
     }
     .dor-card-icon {
       width: 40px;
@@ -1133,9 +1138,6 @@
 
       .dores-grid {
         grid-template-columns: 1fr;
-      }
-      .dor-card:last-child {
-        max-width: 100%;
       }
 
       .about-grid {
