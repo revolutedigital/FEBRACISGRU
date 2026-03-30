@@ -116,15 +116,22 @@
     html {
       scroll-behavior: smooth;
       font-size: 16px;
+      overflow-x: hidden;
     }
 
     body {
       font-family: 'Montserrat', sans-serif;
+      font-size: 18px;
       background-color: var(--bg-primary);
       color: var(--text-white);
       line-height: 1.7;
       overflow-x: hidden;
       padding-top: 28px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
     }
 
     /* =====================================================
@@ -140,25 +147,27 @@
       padding: 100px 0;
     }
 
+    .bg-primary {
+      background-color: var(--bg-primary);
+    }
+
+    .bg-secondary {
+      background-color: var(--bg-secondary);
+    }
+
     /* =====================================================
        TYPOGRAPHY
     ===================================================== */
     h1 {
-      font-family: 'Montserrat', sans-serif;
       font-weight: 800;
       font-size: clamp(32px, 5vw, 56px);
       line-height: 1.05;
     }
 
     h2 {
-      font-family: 'Montserrat', sans-serif;
       font-weight: 700;
       font-size: clamp(28px, 4vw, 42px);
       line-height: 1.1;
-    }
-
-    body {
-      font-size: 18px;
     }
 
     /* =====================================================
@@ -966,21 +975,18 @@
        REDUCED MOTION
     ===================================================== */
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-      }
+      * { transition-duration: 0.01ms !important; }
 
       .reveal {
-        opacity: 1;
-        transform: none;
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
       }
 
-      html {
-        scroll-behavior: auto;
-      }
+      .sticky-cta { transition: none; }
+      .btn-primary { animation: none; }
+
+      html { scroll-behavior: auto; }
     }
 
     /* =====================================================
@@ -1014,12 +1020,72 @@
         grid-template-columns: 1fr 1fr;
       }
 
+      .hero-stat-card {
+        min-width: 0;
+      }
+
       .dores-transition {
         padding: 36px 24px;
       }
 
       .dores-transition p {
         font-size: 1rem;
+      }
+
+      .sticky-cta {
+        padding: 10px 16px;
+      }
+
+      .sticky-cta .btn-primary {
+        width: 100%;
+        justify-content: center;
+        font-size: 0.85rem;
+        padding: 12px 16px;
+      }
+
+      .sticky-cta-inner {
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .sticky-cta-micro {
+        font-size: 0.7rem;
+      }
+
+      .btn-primary {
+        font-size: 0.9rem;
+        padding: 14px 24px;
+      }
+    }
+
+    /* Small mobile: up to 480px */
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      .hero-stats {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-scarcity {
+        padding: 14px 16px;
+        font-size: 0.9rem;
+      }
+
+      .pain-card {
+        padding: 20px 20px;
+      }
+
+      .pilar-card,
+      .tool-card,
+      .depoimento-card,
+      .para-quem-card {
+        padding: 24px 20px;
+      }
+
+      .lead-form-card {
+        padding: 24px 16px;
       }
     }
 
@@ -1847,7 +1913,7 @@
     <!-- SECTION: investimento -->
 
     <!-- SECTION: faq -->
-    <section class="bg-primary" style="padding: 80px 0;">
+    <section class="section bg-primary" id="faq">
       <div class="container" style="max-width: 800px;">
         <h2 class="reveal" style="text-align: center; font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 800; margin-bottom: 48px;">Perguntas Frequentes</h2>
 
@@ -1915,7 +1981,7 @@
     </section>
 
     <!-- SECTION: cta-final -->
-    <section id="formFinal" class="bg-secondary" style="padding: 80px 0;">
+    <section id="formFinal" class="section bg-secondary">
       <div class="container" style="max-width: 700px; text-align: center;">
         <h2 class="reveal" style="font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 800; margin-bottom: 16px; line-height: 1.25;">
           A pr&oacute;xima turma tem vagas limitadas.<br>
