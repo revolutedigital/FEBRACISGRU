@@ -1246,24 +1246,51 @@
     /* ========== RESPONSIVE ========== */
     @media (max-width: 768px) {
       section { padding: 40px 0; }
+      .container { padding: 0 16px; }
       .mentor-grid { grid-template-columns: 1fr !important; }
 
-      h2 { font-size: 1.35rem; }
+      h2 { font-size: 1.25rem; }
 
-      .hero h1 { font-size: 1.6rem; }
+      .hero { padding: 70px 16px 40px; }
+      .hero h1 { font-size: 1.5rem; }
+      .hero-content { max-width: 100%; }
+      .hero-logo { max-width: 160px; }
+
+      .marquee-text { font-size: 12px; }
 
       .stats-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
       }
+      .stat-card { padding: 16px 12px; }
+      .stat-number { font-size: 1.5rem; }
 
       .dores-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
       }
+      .dor-card:nth-child(1),
+      .dor-card:nth-child(2),
+      .dor-card:nth-child(3),
+      .dor-card:nth-child(4),
+      .dor-card:nth-child(5) {
+        grid-column: auto !important;
+      }
+      .dor-card { padding: 20px 16px; }
+      .dores-transition { padding: 28px 20px; }
 
       .about-grid {
         grid-template-columns: 1fr;
+        gap: 24px;
       }
       .about-photo-col { order: -1; }
+
+      .photo-placeholder {
+        aspect-ratio: 16 / 10 !important;
+        border-radius: 12px !important;
+      }
+      .photo-placeholder img {
+        border-radius: 10px !important;
+      }
 
       .pilares-grid {
         grid-template-columns: 1fr;
@@ -1276,50 +1303,82 @@
       .ferramentas-grid {
         grid-template-columns: 1fr;
       }
+      .tool-card { padding: 24px 16px; }
 
       .numeros-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
       }
-      .numeros-grid .numero-item:last-child {
-        grid-column: 1 / -1;
-      }
+      .numero-item { padding: 16px 12px; }
+      .numero-value { font-size: 1.8rem; }
 
       .personalizado-grid {
         grid-template-columns: 1fr;
+        gap: 24px;
       }
       .personalizado-features {
         grid-template-columns: 1fr;
       }
+      .feature-item { padding: 16px; }
 
       .para-quem-grid {
         grid-template-columns: 1fr;
       }
+      .pq-card { padding: 24px 16px; }
 
-      .sticky-cta {
-        flex-direction: column;
-        gap: 8px;
-        padding: 10px 16px;
-      }
+      .faq-question { font-size: 14px; padding: 18px 0; }
 
       .popup-card {
-        padding: 28px 20px;
+        padding: 24px 16px;
+        margin: 10px;
+        max-height: 95vh;
       }
 
+      .exit-popup-card {
+        padding: 28px 20px;
+        margin: 10px;
+      }
+      .exit-popup-card h3 { font-size: 1.3rem; }
+
       .cta-btn {
-        padding: 14px 28px;
+        padding: 14px 24px;
         font-size: 13px;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+      }
+      .cta-btn-outline {
+        padding: 12px 24px;
+        font-size: 13px;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
       }
 
       .cta-final-inner {
-        padding: 36px 20px;
+        padding: 32px 16px;
+      }
+
+      .video-placeholder {
+        border-radius: 10px !important;
+      }
+
+      .gold-line { width: 40px; }
+
+      footer .container {
+        text-align: center;
       }
     }
 
     @media (max-width: 480px) {
-      .hero h1 { font-size: 1.4rem; }
-      .stat-number { font-size: 1.6rem; }
+      .hero h1 { font-size: 1.3rem; }
+      h2 { font-size: 1.15rem; }
+      .stat-number { font-size: 1.3rem; }
+      .stat-label { font-size: 10px; }
       .numeros-grid { grid-template-columns: 1fr; }
       .numeros-grid .numero-item:last-child { grid-column: auto; }
+      .stats-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+      .stat-card { padding: 12px 8px; }
     }
   </style>
 </head>
