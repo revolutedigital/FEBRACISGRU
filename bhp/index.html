@@ -288,13 +288,19 @@
     /* =====================================================
        HERO SECTION
     ===================================================== */
+    .hero-logo {
+      display: block;
+      max-width: 220px;
+      margin: 0 auto 24px;
+    }
+
     .hero {
       position: relative;
-      min-height: 100vh;
+      min-height: auto;
       display: flex;
       align-items: center;
       overflow: hidden;
-      padding: 120px 0 80px;
+      padding: 100px 0 60px;
       background: var(--gradient-hero);
     }
 
@@ -326,7 +332,7 @@
       position: relative;
       z-index: 1;
       text-align: center;
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
     }
 
@@ -340,36 +346,36 @@
       border: 1px solid var(--gold-primary);
       border-radius: 100px;
       padding: 6px 18px;
-      margin-bottom: 28px;
+      margin-bottom: 16px;
     }
 
     .hero-content h1 {
-      margin-bottom: 28px;
+      margin-bottom: 16px;
     }
 
     .hero-paragraph {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       color: var(--text-light);
       line-height: 1.7;
-      margin-bottom: 32px;
+      margin-bottom: 24px;
     }
 
     .hero-benefits {
       list-style: none;
-      text-align: left;
-      max-width: 520px;
+      max-width: 620px;
       margin: 0 auto 32px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 24px;
     }
 
     .hero-benefits li {
       display: flex;
       align-items: flex-start;
-      gap: 12px;
-      font-size: 1rem;
+      gap: 10px;
+      font-size: 0.95rem;
       line-height: 1.5;
+      text-align: left;
     }
 
     .hero-benefits li svg {
@@ -408,28 +414,38 @@
       font-size: 0.8rem;
       color: var(--text-muted);
       margin-top: 12px;
-      margin-bottom: 48px;
+      margin-bottom: 0;
     }
 
-    .hero-stats {
+    /* =====================================================
+       STATS SECTION (separated from hero)
+       ===================================================== */
+    .stats-bar {
+      background: var(--bg-secondary);
+      padding: 48px 0;
+      text-align: center;
+    }
+
+    .stats-grid {
       display: flex;
       gap: 16px;
       justify-content: center;
       flex-wrap: wrap;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
 
-    .hero-stat-card {
+    .stat-card {
       background: var(--bg-card);
       border: 1px solid var(--border-subtle);
       border-radius: 12px;
-      padding: 16px 20px;
+      padding: 20px 24px;
       text-align: center;
       flex: 1;
       min-width: 140px;
+      max-width: 220px;
     }
 
-    .hero-stat-number {
+    .stat-number {
       color: var(--gold-primary);
       font-size: 2rem;
       font-weight: 800;
@@ -437,7 +453,7 @@
       line-height: 1.1;
     }
 
-    .hero-stat-label {
+    .stat-label {
       color: var(--text-muted);
       font-size: 0.75rem;
       line-height: 1.4;
@@ -445,7 +461,7 @@
       display: block;
     }
 
-    .hero-date-badge {
+    .stats-date-badge {
       display: inline-block;
       font-size: 0.8rem;
       font-weight: 600;
@@ -499,7 +515,6 @@
       border-left: 3px solid var(--red-accent);
       border-radius: 0 16px 16px 0;
       padding: 28px 32px;
-      margin-bottom: 20px;
       transition: border-color 0.3s, background 0.3s;
     }
 
@@ -580,6 +595,78 @@
       color: var(--gold-primary);
       width: 22px;
       height: 22px;
+    }
+
+    /* BHP About — two-column grid */
+    .bhp-about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .bhp-about-image {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .bhp-about-image img {
+      width: 100%;
+      display: block;
+      border-radius: 20px;
+    }
+
+    .bhp-about-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(15,34,64,0.4) 0%, transparent 50%, rgba(15,34,64,0.6) 100%);
+      border-radius: 20px;
+      pointer-events: none;
+    }
+
+    @media (max-width: 768px) {
+      .bhp-about-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Pain cards — 2-column grid on desktop */
+    .pain-cards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .pain-cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Escola Febracis — horizontal layout */
+    .escola-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .escola-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media (max-width: 768px) {
+      .escola-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .escola-logo {
+        justify-content: flex-start;
+      }
     }
 
     /* =====================================================
@@ -821,10 +908,16 @@
     ===================================================== */
     .personalizado-features {
       list-style: none;
-      margin: 40px 0;
-      display: flex;
-      flex-direction: column;
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 24px;
+    }
+
+    @media (max-width: 768px) {
+      .personalizado-features {
+        grid-template-columns: 1fr;
+      }
     }
 
     .personalizado-features li {
@@ -1015,13 +1108,18 @@
         padding: 100px 0 60px;
       }
 
-      .hero-stats {
+      .stats-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
       }
 
-      .hero-stat-card {
+      .stat-card {
         min-width: 0;
+        max-width: none;
+      }
+
+      .hero-benefits {
+        grid-template-columns: 1fr;
       }
 
       .dores-transition {
@@ -1064,7 +1162,7 @@
         padding: 0 16px;
       }
 
-      .hero-stats {
+      .stats-grid {
         grid-template-columns: 1fr 1fr;
       }
 
@@ -1173,6 +1271,7 @@
         <div class="video-overlay"></div>
       </div>
       <div class="container hero-content">
+        <img src="/bhp/img/logo-bhp-gestao-de-negocios.webp" alt="BHP - Gest&atilde;o de Neg&oacute;cios" class="hero-logo">
         <span class="hero-badge">Febracis Guarulhos | Imers&atilde;o Presencial para Empres&aacute;rios</span>
         <h1>
           Voc&ecirc; construiu uma empresa de R$200 mil/m&ecirc;s...<br>
@@ -1221,31 +1320,37 @@
         </div>
         <button class="btn-primary open-form-popup" type="button">SOLICITAR MINHA VAGA NO BHP</button>
         <p class="hero-microcopy">Turma presencial em Guarulhos | Aprova&ccedil;&atilde;o em at&eacute; 48h</p>
-        <div class="hero-stats">
-          <div class="hero-stat-card">
-            <span class="hero-stat-number">33h</span>
-            <span class="hero-stat-label">de imers&atilde;o (n&atilde;o &eacute; cursinho de fim de semana)</span>
+      </div>
+    </section>
+
+    <!-- SECTION: stats-bar -->
+    <section class="stats-bar">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-number">33h</span>
+            <span class="stat-label">de imers&atilde;o (n&atilde;o &eacute; cursinho de fim de semana)</span>
           </div>
-          <div class="hero-stat-card">
-            <span class="hero-stat-number">9</span>
-            <span class="hero-stat-label">&aacute;reas de neg&oacute;cio cobertas em profundidade</span>
+          <div class="stat-card">
+            <span class="stat-number">9</span>
+            <span class="stat-label">&aacute;reas de neg&oacute;cio cobertas em profundidade</span>
           </div>
-          <div class="hero-stat-card">
-            <span class="hero-stat-number">4</span>
-            <span class="hero-stat-label">ferramentas pr&aacute;ticas para aplicar na segunda</span>
+          <div class="stat-card">
+            <span class="stat-number">4</span>
+            <span class="stat-label">ferramentas pr&aacute;ticas para aplicar na segunda</span>
           </div>
-          <div class="hero-stat-card">
-            <span class="hero-stat-number">+30 mil</span>
-            <span class="hero-stat-label">empres&aacute;rios j&aacute; formados pelo m&eacute;todo</span>
+          <div class="stat-card">
+            <span class="stat-number">+30 mil</span>
+            <span class="stat-label">empres&aacute;rios j&aacute; formados pelo m&eacute;todo</span>
           </div>
         </div>
-        <span class="hero-date-badge">Pr&oacute;xima Turma: <strong>24 a 26 de Junho 2026</strong> | Guarulhos, SP | Presencial</span>
+        <span class="stats-date-badge">Pr&oacute;xima Turma: <strong>24 a 26 de Junho 2026</strong> | Guarulhos, SP | Presencial</span>
       </div>
     </section>
 
     <!-- SECTION: video -->
     <section class="section" id="video" style="background: var(--bg-secondary);">
-      <div class="container" style="text-align: center; max-width: 800px;">
+      <div class="container" style="text-align: center; max-width: 900px;">
         <h2 class="reveal">
           33 horas que mudaram a hist&oacute;ria de <span class="text-gold">+30 mil empresas.</span><br>
           <span class="text-gold">A sua pode ser a pr&oacute;xima.</span>
@@ -1271,10 +1376,12 @@
 
     <!-- SECTION: dores -->
     <section class="section" id="dores" style="background: var(--bg-primary);">
-      <div class="container" style="max-width: 860px;">
+      <div class="container">
         <h2 class="reveal" style="text-align: center; margin-bottom: 48px;">
           Se sua empresa fatura R$200 mil+ por m&ecirc;s, voc&ecirc; provavelmente vive <span class="text-gold">pelo menos</span> um desses cen&aacute;rios:
         </h2>
+
+        <div class="pain-cards-grid">
 
         <!-- Dor 1 -->
         <div class="pain-card reveal delay-1">
@@ -1319,13 +1426,15 @@
         </div>
 
         <!-- Dor 5 -->
-        <div class="pain-card reveal delay-5">
+        <div class="pain-card reveal delay-5" style="grid-column: 1 / -1; max-width: 600px; margin: 0 auto;">
           <svg class="pain-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
           </svg>
           <h3>Voc&ecirc; sabe que precisa dar feedback, cobrar resultado, desenvolver gente... mas n&atilde;o sabe como.</h3>
           <p>A empresa cresceu, mas a sua lideran&ccedil;a n&atilde;o amadureceu junto. Feedback? Evita ou faz de um jeito que desmotiva. O time n&atilde;o cresce porque n&atilde;o recebe dire&ccedil;&atilde;o. E a cada dia que passa sem resolver isso, a dist&acirc;ncia entre onde voc&ecirc; est&aacute; e onde poderia estar s&oacute; aumenta.</p>
         </div>
+
+        </div><!-- /.pain-cards-grid -->
 
         <!-- Transition block -->
         <div class="dores-transition reveal">
@@ -1343,49 +1452,55 @@
 
     <!-- SECTION: o-que-e-bhp -->
     <section class="section" id="o-que-e-bhp" style="background: var(--bg-secondary);">
-      <div class="container" style="max-width: 900px;">
-        <h2 class="reveal">
-          N&atilde;o &eacute; curso. N&atilde;o &eacute; palestra. N&atilde;o &eacute; motiva&ccedil;&atilde;o.<br>
-          <span class="text-gold">&Eacute; a imers&atilde;o que transforma a maneira como voc&ecirc; comanda o seu neg&oacute;cio.</span>
-        </h2>
-        <p class="reveal" style="color: var(--text-light); margin-top: 32px; font-size: 1.05rem; line-height: 1.7;">
-          O Business High Performance &eacute; o treinamento de gest&atilde;o da Escola de Neg&oacute;cios da Febracis. 33 horas em 3 dias. Presencial. Intensivo. Criado por Paulo Vieira &mdash; o maior coach de neg&oacute;cios do Brasil &mdash; e validado por mais de 30 mil empres&aacute;rios em mais de 600 turmas.
-        </p>
-        <p class="reveal" style="font-weight: 700; margin-top: 40px; font-size: 1.1rem;">O que faz o BHP diferente de tudo que voc&ecirc; j&aacute; fez:</p>
-        <ul class="bhp-differentials">
-          <li class="reveal delay-1">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"/>
-              <polyline points="9 12 11 14 15 10"/>
-            </svg>
-            <span><strong>100% pr&aacute;tico</strong> &mdash; voc&ecirc; sai com 4 ferramentas para aplicar na segunda-feira, n&atilde;o com um caderno cheio de anota&ccedil;&otilde;es que vira gaveta</span>
-          </li>
-          <li class="reveal delay-2">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"/>
-              <polyline points="9 12 11 14 15 10"/>
-            </svg>
-            <span><strong>Focado em resultado mensur&aacute;vel</strong> &mdash; margem, vendas, reten&ccedil;&atilde;o, processos. Coisas que aparecem no caixa, n&atilde;o no Instagram</span>
-          </li>
-          <li class="reveal delay-3">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"/>
-              <polyline points="9 12 11 14 15 10"/>
-            </svg>
-            <span><strong>Turma curada</strong> &mdash; s&oacute; empres&aacute;rios que j&aacute; faturam alto. Voc&ecirc; n&atilde;o vai perder tempo com quem est&aacute; come&ccedil;ando</span>
-          </li>
-          <li class="reveal delay-4">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"/>
-              <polyline points="9 12 11 14 15 10"/>
-            </svg>
-            <span><strong>Paulo Vieira ao vivo</strong> &mdash; n&atilde;o &eacute; v&iacute;deo gravado, n&atilde;o &eacute; equipe terceirizada. &Eacute; o criador do m&eacute;todo, presencialmente</span>
-          </li>
-        </ul>
-        <p class="reveal" style="color: var(--text-light); font-size: 1rem; line-height: 1.7; margin-top: 12px;">
-          Empresas que v&atilde;o de R$200 mil a R$1 milh&atilde;o. De R$1 milh&atilde;o a R$10 milh&otilde;es. De opera&ccedil;&atilde;o ca&oacute;tica a processos escal&aacute;veis. Esse &eacute; o tipo de transforma&ccedil;&atilde;o que acontece aqui.
-        </p>
-        <img src="/bhp/img/newton-e-paulo.webp" alt="Newton e Paulo Vieira" loading="lazy" class="reveal" style="border-radius: 16px; max-width: 100%; margin-top: 40px; display: block;">
+      <div class="container">
+        <div class="bhp-about-grid">
+          <div class="bhp-about-text">
+            <h2 class="reveal">
+              N&atilde;o &eacute; curso. N&atilde;o &eacute; palestra. N&atilde;o &eacute; motiva&ccedil;&atilde;o.<br>
+              <span class="text-gold">&Eacute; a imers&atilde;o que transforma a maneira como voc&ecirc; comanda o seu neg&oacute;cio.</span>
+            </h2>
+            <p class="reveal" style="color: var(--text-light); margin-top: 32px; font-size: 1.05rem; line-height: 1.7;">
+              O Business High Performance &eacute; o treinamento de gest&atilde;o da Escola de Neg&oacute;cios da Febracis. 33 horas em 3 dias. Presencial. Intensivo. Criado por Paulo Vieira &mdash; o maior coach de neg&oacute;cios do Brasil &mdash; e validado por mais de 30 mil empres&aacute;rios em mais de 600 turmas.
+            </p>
+            <p class="reveal" style="font-weight: 700; margin-top: 40px; font-size: 1.1rem;">O que faz o BHP diferente de tudo que voc&ecirc; j&aacute; fez:</p>
+            <ul class="bhp-differentials">
+              <li class="reveal delay-1">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="9 12 11 14 15 10"/>
+                </svg>
+                <span><strong>100% pr&aacute;tico</strong> &mdash; voc&ecirc; sai com 4 ferramentas para aplicar na segunda-feira, n&atilde;o com um caderno cheio de anota&ccedil;&otilde;es que vira gaveta</span>
+              </li>
+              <li class="reveal delay-2">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="9 12 11 14 15 10"/>
+                </svg>
+                <span><strong>Focado em resultado mensur&aacute;vel</strong> &mdash; margem, vendas, reten&ccedil;&atilde;o, processos. Coisas que aparecem no caixa, n&atilde;o no Instagram</span>
+              </li>
+              <li class="reveal delay-3">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="9 12 11 14 15 10"/>
+                </svg>
+                <span><strong>Turma curada</strong> &mdash; s&oacute; empres&aacute;rios que j&aacute; faturam alto. Voc&ecirc; n&atilde;o vai perder tempo com quem est&aacute; come&ccedil;ando</span>
+              </li>
+              <li class="reveal delay-4">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="9 12 11 14 15 10"/>
+                </svg>
+                <span><strong>Paulo Vieira ao vivo</strong> &mdash; n&atilde;o &eacute; v&iacute;deo gravado, n&atilde;o &eacute; equipe terceirizada. &Eacute; o criador do m&eacute;todo, presencialmente</span>
+              </li>
+            </ul>
+            <p class="reveal" style="color: var(--text-light); font-size: 1rem; line-height: 1.7; margin-top: 12px;">
+              Empresas que v&atilde;o de R$200 mil a R$1 milh&atilde;o. De R$1 milh&atilde;o a R$10 milh&otilde;es. De opera&ccedil;&atilde;o ca&oacute;tica a processos escal&aacute;veis. Esse &eacute; o tipo de transforma&ccedil;&atilde;o que acontece aqui.
+            </p>
+          </div>
+          <div class="bhp-about-image reveal">
+            <img src="/bhp/img/newton-e-paulo.webp" alt="Newton e Paulo Vieira" loading="lazy">
+          </div>
+        </div>
       </div>
     </section>
 
@@ -1680,7 +1795,7 @@
 
     <!-- SECTION: personalizado -->
     <section class="section" id="personalizado" style="background: var(--bg-primary);">
-      <div class="container" style="max-width: 860px;">
+      <div class="container">
         <h2 class="reveal">
           Voc&ecirc; n&atilde;o vai s&oacute; fazer um treinamento.<br>
           <span class="text-gold">Vai ter um time dedicado &agrave; sua transforma&ccedil;&atilde;o.</span>
@@ -1734,15 +1849,21 @@
 
     <!-- SECTION: escola-febracis -->
     <section class="section" id="escola-febracis" style="background: var(--bg-secondary);">
-      <div class="container" style="text-align: center; max-width: 760px;">
-        <h2 class="reveal">A maior Escola de Neg&oacute;cios da Am&eacute;rica Latina</h2>
-        <p class="reveal" style="color: var(--text-light); margin-top: 32px; font-size: 1.05rem; line-height: 1.7;">
-          A Febracis &eacute; reconhecida como a maior escola de neg&oacute;cios da Am&eacute;rica Latina. Centenas de milhares de empres&aacute;rios formados. M&eacute;todo pr&oacute;prio. Resultados comprovados. O BHP &eacute; o carro-chefe da forma&ccedil;&atilde;o em gest&atilde;o.
-        </p>
-        <img src="/bhp/img/logo-febracis-dourado-1.webp" alt="Febracis" loading="lazy" class="reveal" style="max-width:300px;margin:40px auto 0;display:block;">
-        <div class="reveal" style="margin-top: 40px;">
-          <button class="btn-primary open-form-popup" type="button">FAZER PARTE DESSA HIST&Oacute;RIA</button>
-          <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 12px;">A maior escola de neg&oacute;cios da Am&eacute;rica Latina</p>
+      <div class="container">
+        <div class="escola-grid">
+          <div class="escola-text">
+            <h2 class="reveal">A maior Escola de Neg&oacute;cios da Am&eacute;rica Latina</h2>
+            <p class="reveal" style="color: var(--text-light); margin-top: 32px; font-size: 1.05rem; line-height: 1.7;">
+              A Febracis &eacute; reconhecida como a maior escola de neg&oacute;cios da Am&eacute;rica Latina. Centenas de milhares de empres&aacute;rios formados. M&eacute;todo pr&oacute;prio. Resultados comprovados. O BHP &eacute; o carro-chefe da forma&ccedil;&atilde;o em gest&atilde;o.
+            </p>
+            <div class="reveal" style="margin-top: 40px;">
+              <button class="btn-primary open-form-popup" type="button">FAZER PARTE DESSA HIST&Oacute;RIA</button>
+              <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 12px;">A maior escola de neg&oacute;cios da Am&eacute;rica Latina</p>
+            </div>
+          </div>
+          <div class="escola-logo reveal">
+            <img src="/bhp/img/logo-febracis-dourado-1.webp" alt="Febracis" loading="lazy" style="max-width:260px;display:block;">
+          </div>
         </div>
       </div>
     </section>
