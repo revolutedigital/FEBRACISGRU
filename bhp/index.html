@@ -546,6 +546,233 @@
     .delay-5 { transition-delay: 0.5s; }
 
     /* =====================================================
+       O QUE E O BHP SECTION
+    ===================================================== */
+    .bhp-differentials {
+      list-style: none;
+      margin: 32px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .bhp-differentials li {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--text-light);
+    }
+
+    .bhp-differentials li svg {
+      flex-shrink: 0;
+      margin-top: 2px;
+      color: var(--gold-primary);
+      width: 22px;
+      height: 22px;
+    }
+
+    /* =====================================================
+       3 PILARES SECTION
+    ===================================================== */
+    .pilares-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin: 48px 0;
+    }
+
+    .pilar-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 32px;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+
+    .pilar-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--gold-primary);
+    }
+
+    .pilar-card .pilar-icon {
+      width: 48px;
+      height: 48px;
+      color: var(--gold-primary);
+      margin-bottom: 20px;
+    }
+
+    .pilar-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--gold-primary);
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+
+    .pilar-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 6px;
+    }
+
+    .pilar-label svg {
+      flex-shrink: 0;
+      width: 16px;
+      height: 16px;
+      margin-top: 1px;
+    }
+
+    .pilar-label.problem {
+      color: var(--red-accent);
+    }
+
+    .pilar-label.solution {
+      color: var(--green-accent);
+    }
+
+    .pilar-text {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .pilar-text:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      .pilares-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* =====================================================
+       CONTEUDO PROGRAMATICO SECTION
+    ===================================================== */
+    .conteudo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin: 48px 0;
+    }
+
+    .conteudo-col h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--gold-primary);
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .conteudo-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .conteudo-col ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 1.5;
+    }
+
+    .conteudo-col ul li svg {
+      flex-shrink: 0;
+      margin-top: 3px;
+      color: var(--gold-primary);
+      width: 16px;
+      height: 16px;
+    }
+
+    @media (max-width: 768px) {
+      .conteudo-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .conteudo-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* =====================================================
+       FERRAMENTAS SECTION
+    ===================================================== */
+    .ferramentas-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin: 48px 0;
+    }
+
+    .tool-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(212, 168, 67, 0.15);
+      border-radius: 20px;
+      padding: 32px;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+
+    .tool-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(212, 168, 67, 0.3);
+    }
+
+    .tool-card .tool-number {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--gold-primary);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .tool-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-white);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .tool-resolve {
+      font-style: italic;
+      color: var(--red-accent);
+      font-size: 0.9rem;
+      margin-bottom: 16px;
+    }
+
+    .tool-resolve strong {
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .tool-card p {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .ferramentas-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* =====================================================
        REDUCED MOTION
     ===================================================== */
     @media (prefers-reduced-motion: reduce) {
@@ -802,6 +1029,308 @@
 
         <div style="text-align: center; margin-top: 40px;" class="reveal">
           <button class="btn-primary open-form-popup" type="button">CHEGA DE APAGAR INC&Ecirc;NDIO &mdash; SOLICITAR MINHA VAGA</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: o-que-e-bhp -->
+    <section class="section" id="o-que-e-bhp" style="background: var(--bg-secondary);">
+      <div class="container" style="max-width: 900px;">
+        <h2 class="reveal">
+          N&atilde;o &eacute; curso. N&atilde;o &eacute; palestra. N&atilde;o &eacute; motiva&ccedil;&atilde;o.<br>
+          <span class="text-gold">&Eacute; a imers&atilde;o que transforma a maneira como voc&ecirc; comanda o seu neg&oacute;cio.</span>
+        </h2>
+        <p class="reveal" style="color: var(--text-light); margin-top: 32px; font-size: 1.05rem; line-height: 1.7;">
+          O Business High Performance &eacute; o treinamento de gest&atilde;o da Escola de Neg&oacute;cios da Febracis. 33 horas em 3 dias. Presencial. Intensivo. Criado por Paulo Vieira &mdash; o maior coach de neg&oacute;cios do Brasil &mdash; e validado por mais de 30 mil empres&aacute;rios em mais de 600 turmas.
+        </p>
+        <p class="reveal" style="font-weight: 700; margin-top: 40px; font-size: 1.1rem;">O que faz o BHP diferente de tudo que voc&ecirc; j&aacute; fez:</p>
+        <ul class="bhp-differentials">
+          <li class="reveal delay-1">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="9 12 11 14 15 10"/>
+            </svg>
+            <span><strong>100% pr&aacute;tico</strong> &mdash; voc&ecirc; sai com 4 ferramentas para aplicar na segunda-feira, n&atilde;o com um caderno cheio de anota&ccedil;&otilde;es que vira gaveta</span>
+          </li>
+          <li class="reveal delay-2">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="9 12 11 14 15 10"/>
+            </svg>
+            <span><strong>Focado em resultado mensur&aacute;vel</strong> &mdash; margem, vendas, reten&ccedil;&atilde;o, processos. Coisas que aparecem no caixa, n&atilde;o no Instagram</span>
+          </li>
+          <li class="reveal delay-3">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="9 12 11 14 15 10"/>
+            </svg>
+            <span><strong>Turma curada</strong> &mdash; s&oacute; empres&aacute;rios que j&aacute; faturam alto. Voc&ecirc; n&atilde;o vai perder tempo com quem est&aacute; come&ccedil;ando</span>
+          </li>
+          <li class="reveal delay-4">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="9 12 11 14 15 10"/>
+            </svg>
+            <span><strong>Paulo Vieira ao vivo</strong> &mdash; n&atilde;o &eacute; v&iacute;deo gravado, n&atilde;o &eacute; equipe terceirizada. &Eacute; o criador do m&eacute;todo, presencialmente</span>
+          </li>
+        </ul>
+        <p class="reveal" style="color: var(--text-light); font-size: 1rem; line-height: 1.7; margin-top: 12px;">
+          Empresas que v&atilde;o de R$200 mil a R$1 milh&atilde;o. De R$1 milh&atilde;o a R$10 milh&otilde;es. De opera&ccedil;&atilde;o ca&oacute;tica a processos escal&aacute;veis. Esse &eacute; o tipo de transforma&ccedil;&atilde;o que acontece aqui.
+        </p>
+        <img src="/bhp/img/newton-e-paulo.webp" alt="Newton e Paulo Vieira" loading="lazy" class="reveal" style="border-radius: 16px; max-width: 100%; margin-top: 40px; display: block;">
+      </div>
+    </section>
+
+    <!-- SECTION: pilares -->
+    <section class="section" id="pilares" style="background: var(--bg-primary);">
+      <div class="container">
+        <h2 class="reveal" style="text-align: center; max-width: 760px; margin: 0 auto 0;">
+          3 eixos que atacam os 3 maiores gargalos de uma empresa em crescimento.
+        </h2>
+        <div class="pilares-grid">
+
+          <!-- Pilar 1 -->
+          <div class="pilar-card reveal delay-1">
+            <svg class="pilar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+            </svg>
+            <h3>Estrat&eacute;gia Empreendedora</h3>
+            <p class="pilar-label problem">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="15" y1="9" x2="9" y2="15"/>
+                <line x1="9" y1="9" x2="15" y2="15"/>
+              </svg>
+              O problema:
+            </p>
+            <p class="pilar-text">voc&ecirc; cresce, mas sem dire&ccedil;&atilde;o clara. Toma decis&otilde;es reativas em vez de estrat&eacute;gicas.</p>
+            <p class="pilar-label solution">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="9 12 11 14 15 10"/>
+              </svg>
+              O que voc&ecirc; vai aprender:
+            </p>
+            <p class="pilar-text">posicionamento, modelo de crescimento, an&aacute;lise de cen&aacute;rios e as alavancas reais de resultado na sua opera&ccedil;&atilde;o.</p>
+          </div>
+
+          <!-- Pilar 2 -->
+          <div class="pilar-card reveal delay-2">
+            <svg class="pilar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="12" y1="1" x2="12" y2="23"/>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+            <h3>Vendas e Negocia&ccedil;&atilde;o de Alta Performance</h3>
+            <p class="pilar-label problem">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="15" y1="9" x2="9" y2="15"/>
+                <line x1="9" y1="9" x2="15" y2="15"/>
+              </svg>
+              O problema:
+            </p>
+            <p class="pilar-text">vendas imprevis&iacute;veis, negocia&ccedil;&otilde;es mal conduzidas, zero previsibilidade de caixa.</p>
+            <p class="pilar-label solution">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="9 12 11 14 15 10"/>
+              </svg>
+              O que voc&ecirc; vai aprender:
+            </p>
+            <p class="pilar-text">pipeline estruturado, t&eacute;cnicas de fechamento, gest&atilde;o comercial com dados. O motor financeiro da empresa funcionando com m&eacute;todo.</p>
+          </div>
+
+          <!-- Pilar 3 -->
+          <div class="pilar-card reveal delay-3">
+            <svg class="pilar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+            <h3>Lideran&ccedil;a e Gest&atilde;o de Pessoas</h3>
+            <p class="pilar-label problem">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="15" y1="9" x2="9" y2="15"/>
+                <line x1="9" y1="9" x2="15" y2="15"/>
+              </svg>
+              O problema:
+            </p>
+            <p class="pilar-text">time que n&atilde;o entrega, rotatividade alta, lideran&ccedil;a por instinto.</p>
+            <p class="pilar-label solution">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="9 12 11 14 15 10"/>
+              </svg>
+              O que voc&ecirc; vai aprender:
+            </p>
+            <p class="pilar-text">recrutamento estrat&eacute;gico, reten&ccedil;&atilde;o, feedback que gera performance, e como construir uma equipe que funciona sem voc&ecirc;.</p>
+          </div>
+
+        </div>
+        <div style="text-align: center;" class="reveal">
+          <button class="btn-primary open-form-popup" type="button">QUERO DOMINAR OS 3 PILARES &mdash; SOLICITAR MINHA VAGA</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: conteudo-programatico -->
+    <section class="section" id="conteudo-programatico" style="background: var(--bg-secondary);">
+      <div class="container">
+        <h2 class="reveal" style="text-align: center; max-width: 700px; margin: 0 auto;">
+          Cada hora foi desenhada para resolver um problema real da sua empresa.
+        </h2>
+        <div class="conteudo-grid">
+
+          <!-- Coluna 1 -->
+          <div class="conteudo-col reveal delay-1">
+            <h3>Estrat&eacute;gia e Vis&atilde;o</h3>
+            <ul>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6"/>
+                </svg>
+                Mentalidade Empreendedora de Alta Performance
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6"/>
+                </svg>
+                An&aacute;lise de Cen&aacute;rios e Tomada de Decis&atilde;o Estrat&eacute;gica
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6"/>
+                </svg>
+                Posicionamento de Mercado que Gera Margem
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6"/>
+                </svg>
+                Estrat&eacute;gias para Escalar sem Perder Controle
+              </li>
+            </ul>
+          </div>
+
+          <!-- Coluna 2 -->
+          <div class="conteudo-col reveal delay-2">
+            <h3>Vendas e Resultado</h3>
+            <ul>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6"/>
+                </svg>
+                Lideran&ccedil;a Comercial e Constru&ccedil;&atilde;o de Pipeline
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6"/>
+                </svg>
+                T&eacute;cnicas de Negocia&ccedil;&atilde;o que Fecham
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6"/>
+                </svg>
+                Planejamento Financeiro e Previsibilidade de Caixa
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6"/>
+                </svg>
+                Cultura de Vendas: Como Fazer o Time Vender Sem Voc&ecirc;
+              </li>
+            </ul>
+          </div>
+
+          <!-- Coluna 3 -->
+          <div class="conteudo-col reveal delay-3">
+            <h3>Gest&atilde;o e Lideran&ccedil;a</h3>
+            <ul>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6"/>
+                </svg>
+                Recrutamento Estrat&eacute;gico: Contratar Certo da Primeira Vez
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6"/>
+                </svg>
+                Lideran&ccedil;a por Processo (N&atilde;o por Instinto)
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6"/>
+                </svg>
+                Feedback que Gera Reten&ccedil;&atilde;o e Performance
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6"/>
+                </svg>
+                Intelig&ecirc;ncia Relacional e Gest&atilde;o de Conflitos
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <div style="text-align: center;" class="reveal">
+          <button class="btn-primary open-form-popup" type="button">QUERO APRENDER TUDO ISSO &mdash; SOLICITAR MINHA VAGA</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: ferramentas -->
+    <section class="section" id="ferramentas" style="background: var(--bg-primary);">
+      <div class="container" style="max-width: 960px;">
+        <h2 class="reveal" style="text-align: center;">
+          Voc&ecirc; n&atilde;o vai sair do BHP com anota&ccedil;&otilde;es.<br>
+          <span class="text-gold">Vai sair com armas.</span>
+        </h2>
+        <p class="reveal" style="text-align: center; color: var(--text-light); margin-top: 24px; font-size: 1.05rem; line-height: 1.7; max-width: 680px; margin-left: auto; margin-right: auto;">
+          4 instrumentos de gest&atilde;o criados por Paulo Vieira, validados por +30 mil empres&aacute;rios, e que voc&ecirc; implementa na sua empresa no dia seguinte &agrave; imers&atilde;o.
+        </p>
+        <div class="ferramentas-grid">
+
+          <!-- Ferramenta 01 -->
+          <div class="tool-card reveal delay-1">
+            <div class="tool-number">01</div>
+            <h3>Identifica&ccedil;&atilde;o de Rotina</h3>
+            <p class="tool-resolve"><strong>Resolve:</strong> estou preso no operacional</p>
+            <p>Mapeie onde voc&ecirc; gasta cada hora do seu dia. Descubra quais atividades te prendem na opera&ccedil;&atilde;o e elimine o que nunca deveria ter sido seu. Resultado: horas livres para liderar de verdade.</p>
+          </div>
+
+          <!-- Ferramenta 02 -->
+          <div class="tool-card reveal delay-2">
+            <div class="tool-number">02</div>
+            <h3>Matriz de Decis&atilde;o</h3>
+            <p class="tool-resolve"><strong>Resolve:</strong> n&atilde;o sei se promovo, treino ou desligo</p>
+            <p>Framework quantitativo para decis&otilde;es de pessoas. Com dados &mdash; n&atilde;o com achismo. A ferramenta que elimina as decis&otilde;es de RH baseadas em emo&ccedil;&atilde;o e &lsquo;feeling&rsquo;.</p>
+          </div>
+
+          <!-- Ferramenta 03 -->
+          <div class="tool-card reveal delay-3">
+            <div class="tool-number">03</div>
+            <h3>Aplicativo Gerencial</h3>
+            <p class="tool-resolve"><strong>Resolve:</strong> n&atilde;o tenho gest&atilde;o de pessoas sistematizada</p>
+            <p>Processo estruturado para acompanhar cada colaborador do recrutamento ao desenvolvimento cont&iacute;nuo. Gest&atilde;o de pessoas deixa de ser improvisada e vira sistema.</p>
+          </div>
+
+          <!-- Ferramenta 04 -->
+          <div class="tool-card reveal delay-4">
+            <div class="tool-number">04</div>
+            <h3>Matriz de Feedback</h3>
+            <p class="tool-resolve"><strong>Resolve:</strong> evito conversas dif&iacute;ceis ou fa&ccedil;o de um jeito que desmotiva</p>
+            <p>T&eacute;cnica para dar feedbacks que geram confian&ccedil;a, desempenho e reten&ccedil;&atilde;o. Transforma o momento que todo gestor teme no momento mais poderoso da lideran&ccedil;a.</p>
+          </div>
+
+        </div>
+        <div style="text-align: center;" class="reveal">
+          <button class="btn-primary open-form-popup" type="button">QUERO ESSAS 4 FERRAMENTAS &mdash; SOLICITAR MINHA VAGA</button>
         </div>
       </div>
     </section>
