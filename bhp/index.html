@@ -1022,6 +1022,58 @@
         font-size: 1rem;
       }
     }
+
+    /* =====================================================
+       FAQ
+    ===================================================== */
+    .faq-item { border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .faq-question { width: 100%; background: none; border: none; color: var(--text-white); padding: 24px 0; font-size: 1.1rem; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; text-align: left; font-family: 'Montserrat', sans-serif; }
+    .faq-question svg { width: 20px; height: 20px; flex-shrink: 0; transition: transform 0.3s; color: var(--gold-primary); }
+    .faq-item.active .faq-question svg { transform: rotate(180deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; color: var(--text-light); line-height: 1.7; }
+    .faq-item.active .faq-answer { max-height: 300px; padding-bottom: 24px; }
+
+    /* =====================================================
+       FORM
+    ===================================================== */
+    .form-group { margin-bottom: 16px; }
+    .form-group input, .form-group select { width: 100%; padding: 14px 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; color: var(--text-white); font-family: 'Montserrat', sans-serif; font-size: 1rem; transition: border-color 0.3s, box-shadow 0.3s; }
+    .form-group input::placeholder { color: var(--text-muted); }
+    .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--gold-primary); box-shadow: 0 0 0 3px rgba(212,168,67,0.15); }
+    .form-group select { appearance: none; -webkit-appearance: none; cursor: pointer; }
+    .form-group select option { background: var(--bg-card); color: var(--text-white); }
+    .form-submit { width: 100%; padding: 16px; background: var(--gradient-gold); color: var(--text-dark); font-weight: 700; font-size: 1rem; border: none; border-radius: 12px; cursor: pointer; font-family: 'Montserrat', sans-serif; text-transform: uppercase; letter-spacing: 0.05em; transition: transform 0.3s, box-shadow 0.3s; }
+    .form-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(212,168,67,0.3); }
+    .form-redirect-msg { display: none; background: rgba(212,168,67,0.1); border: 1px solid rgba(212,168,67,0.3); border-radius: 12px; padding: 20px; margin-bottom: 16px; }
+    .form-redirect-msg.active { display: block; }
+    .form-redirect-msg p { color: var(--text-light); font-size: 0.9rem; margin-bottom: 8px; }
+    .form-redirect-msg a { color: var(--gold-primary); text-decoration: none; font-weight: 600; }
+
+    /* =====================================================
+       STICKY CTA
+    ===================================================== */
+    .sticky-cta { position: fixed; bottom: 0; left: 0; right: 0; z-index: 10001; background: var(--gradient-gold); padding: 12px 24px; text-align: center; transform: translateY(100%); transition: transform 0.4s cubic-bezier(0.16,1,0.3,1); box-shadow: 0 -4px 30px rgba(0,0,0,0.3); }
+    .sticky-cta.visible { transform: translateY(0); }
+    .sticky-cta-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
+    .sticky-cta .btn-primary { padding: 12px 24px; font-size: 0.9rem; }
+    .sticky-cta-micro { color: var(--text-dark); font-size: 0.75rem; font-weight: 500; opacity: 0.7; }
+
+    /* =====================================================
+       FORM POPUP
+    ===================================================== */
+    .form-popup-overlay { position: fixed; inset: 0; z-index: 10004; background: rgba(0,0,0,0.7); display: flex; align-items: center; justify-content: center; padding: 20px; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+    .form-popup-overlay.active { opacity: 1; pointer-events: auto; }
+    .lead-form-card { background: var(--bg-card); border: 1px solid rgba(212,168,67,0.2); border-radius: 24px; padding: 40px; max-width: 500px; width: 100%; position: relative; transform: scale(0.8); opacity: 0; transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), opacity 0.4s; }
+    .form-popup-overlay.active .lead-form-card { transform: scale(1); opacity: 1; }
+    .lead-form-card h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 8px; text-align: center; }
+    .form-sub { color: var(--text-muted); text-align: center; margin-bottom: 24px; font-size: 0.9rem; }
+    .form-popup-close { position: absolute; top: 16px; right: 16px; background: none; border: none; color: var(--text-muted); font-size: 1.5rem; cursor: pointer; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; }
+    .form-popup-close:hover { color: var(--text-white); }
+
+    @media (max-width: 768px) {
+      .form-popup-overlay { align-items: flex-start; padding-top: 10vh; }
+      .lead-form-card { padding: 28px 20px; }
+    }
   </style>
 </head>
 <body>
@@ -1795,10 +1847,237 @@
     <!-- SECTION: investimento -->
 
     <!-- SECTION: faq -->
+    <section class="bg-primary" style="padding: 80px 0;">
+      <div class="container" style="max-width: 800px;">
+        <h2 class="reveal" style="text-align: center; font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 800; margin-bottom: 48px;">Perguntas Frequentes</h2>
+
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+            Quanto tempo dura?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            33 horas em 3 dias. Imers&atilde;o presencial, intensiva, do tipo que muda a forma como voc&ecirc; opera. N&atilde;o d&aacute; pra comparar com cursinhos online de 2h.
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+            Qual a diferen&ccedil;a entre o BHP e o M&eacute;todo CIS?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            O CIS transforma a pessoa. O BHP transforma a empresa. O CIS trabalha intelig&ecirc;ncia emocional e mentalidade. O BHP &eacute; 100% gest&atilde;o: lideran&ccedil;a, vendas, ferramentas, processos. Muitos empres&aacute;rios fazem os dois &mdash; CIS primeiro, BHP depois.
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+            Preciso ter feito o CIS antes?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            N&atilde;o &eacute; obrigat&oacute;rio, mas quem fez o CIS chega no BHP com a base emocional pronta e aproveita 10x mais. Se n&atilde;o fez, n&atilde;o &eacute; impedimento &mdash; voc&ecirc; vai aproveitar igualmente.
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+            Posso levar s&oacute;cios ou gestores?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            Recomendamos fortemente. Quando o time de lideran&ccedil;a faz o BHP junto, a implementa&ccedil;&atilde;o &eacute; 3x mais r&aacute;pida. Consulte condi&ccedil;&otilde;es especiais para grupos da mesma empresa.
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+            Quando &eacute; a pr&oacute;xima turma?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            24 a 26 de junho de 2026, presencial em Guarulhos, SP. Preencha o formul&aacute;rio e nossa equipe entra em contato com os pr&oacute;ximos passos.
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+            E se minha empresa fatura abaixo de R$200 mil?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            O BHP foi desenhado para desafios de gest&atilde;o de empresas j&aacute; consolidadas. Se &eacute; o seu caso, o M&eacute;todo CIS &eacute; o treinamento certo pra voc&ecirc; agora &mdash; e vai preparar a base para o BHP no futuro.
+          </div>
+        </div>
+
+      </div>
+    </section>
 
     <!-- SECTION: cta-final -->
+    <section id="formFinal" class="bg-secondary" style="padding: 80px 0;">
+      <div class="container" style="max-width: 700px; text-align: center;">
+        <h2 class="reveal" style="font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 800; margin-bottom: 16px; line-height: 1.25;">
+          A pr&oacute;xima turma tem vagas limitadas.<br>
+          <span style="color: var(--gold-primary);">Solicite a sua e descubra se o BHP &eacute; para o momento da sua empresa.</span>
+        </h2>
+        <p class="reveal" style="color: var(--text-light); margin-bottom: 24px;">Preencha abaixo. Nossa equipe analisa seu perfil e entra em contato em at&eacute; 48 horas.</p>
+        <div class="reveal" style="display: inline-block; background: rgba(212,168,67,0.1); border: 1px solid rgba(212,168,67,0.3); border-radius: 12px; padding: 12px 24px; margin-bottom: 40px; font-size: 0.9rem; color: var(--text-light);">
+          Pr&oacute;xima Turma: <strong style="color: var(--gold-primary);">24 a 26 de Junho 2026</strong> | Guarulhos, SP | Presencial
+        </div>
+
+        <div class="reveal" style="background: var(--bg-card); border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; padding: 40px; max-width: 600px; margin: 0 auto;">
+          <form id="leadFormInline" action="#" method="POST">
+            <input type="hidden" name="utm_source" id="utm_source_inline">
+            <input type="hidden" name="utm_medium" id="utm_medium_inline">
+            <input type="hidden" name="utm_campaign" id="utm_campaign_inline">
+            <input type="hidden" name="treinamento" value="BHP">
+
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Seu nome completo" required autocomplete="name" aria-label="Nome completo">
+            </div>
+            <div class="form-group">
+              <input type="tel" name="whatsapp" placeholder="WhatsApp (DDD + n&uacute;mero)" required autocomplete="tel" aria-label="WhatsApp">
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Seu melhor e-mail" required autocomplete="email" aria-label="E-mail">
+            </div>
+            <div class="form-group">
+              <input type="text" name="empresa" placeholder="Nome da sua empresa" required autocomplete="organization" aria-label="Nome da empresa">
+            </div>
+            <div class="form-group">
+              <select name="cargo" required aria-label="Seu cargo">
+                <option value="" disabled selected>Selecione o seu cargo</option>
+                <option value="Dono">Dono</option>
+                <option value="Socio">S&oacute;cio</option>
+                <option value="CEO">CEO</option>
+                <option value="Diretor">Diretor</option>
+                <option value="Gestor">Gestor</option>
+                <option value="Outro">Outro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <select name="faturamento" id="faturamentoSelectInline" required aria-label="Faturamento mensal">
+                <option value="" disabled selected>Faturamento mensal da empresa</option>
+                <option value="R$200mil-R$500mil">R$200 mil a R$500 mil</option>
+                <option value="R$500mil-R$1milhao">R$500 mil a R$1 milh&atilde;o</option>
+                <option value="R$1milhao-R$5milhoes">R$1 milh&atilde;o a R$5 milh&otilde;es</option>
+                <option value="R$5milhoes-R$50milhoes">R$5 milh&otilde;es a R$50 milh&otilde;es</option>
+                <option value="Acima-R$50milhoes">Acima de R$50 milh&otilde;es</option>
+                <option value="Abaixo-R$200mil">Minha empresa fatura abaixo de R$200 mil</option>
+              </select>
+            </div>
+            <div class="form-redirect-msg" id="formRedirectMsgInline">
+              <p>O BHP &eacute; indicado para empresas com faturamento acima de R$200 mil/m&ecirc;s. Para o seu momento, recomendamos o <strong>M&eacute;todo CIS</strong> &mdash; o treinamento que j&aacute; transformou mais de 500 mil vidas.</p>
+              <a href="/">Clique aqui para conhecer o M&eacute;todo CIS &rarr;</a>
+            </div>
+            <div class="form-group funcionarios-group">
+              <select name="funcionarios" required aria-label="Quantidade de funcion&aacute;rios">
+                <option value="" disabled selected>Quantos funcion&aacute;rios?</option>
+                <option value="1-5">1 a 5</option>
+                <option value="6-20">6 a 20</option>
+                <option value="21-50">21 a 50</option>
+                <option value="51-200">51 a 200</option>
+                <option value="+200">Mais de 200</option>
+              </select>
+            </div>
+            <button type="submit" class="form-submit">Solicitar Minha Vaga no BHP &rarr;</button>
+            <p style="text-align: center; margin-top: 12px; font-size: 0.75rem; color: var(--text-muted);">Vagas limitadas e mediante aprova&ccedil;&atilde;o | Retorno em at&eacute; 48h | Atendimento humanizado</p>
+          </form>
+        </div>
+      </div>
+    </section>
 
   </main>
+
+  <footer style="background: rgba(0,0,0,0.3); border-top: 1px solid rgba(255,255,255,0.08); padding: 40px 0; text-align: center;">
+    <div class="container">
+      <img src="/Logo-CIS-GLOBAL-2023Presencial.png" alt="Febracis Guarulhos" style="max-height: 40px; margin-bottom: 16px; display: block; margin-left: auto; margin-right: auto;">
+      <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.7; margin-bottom: 16px;">
+        Febracis Guarulhos &mdash; Treinamentos de Alta Performance Empresarial<br>
+        Business High Performance | BHP | Presencial em Guarulhos, SP
+      </p>
+      <p style="color: var(--text-muted); font-size: 0.75rem; line-height: 1.7;">
+        &copy; 2026 Febracis Guarulhos. Todos os direitos reservados.<br>
+        Este site n&atilde;o faz parte do site Facebook ou Facebook Inc.
+      </p>
+    </div>
+  </footer>
+
+  <div class="sticky-cta" id="stickyCta" aria-label="Solicitar vaga">
+    <div class="sticky-cta-inner">
+      <button class="btn-primary open-form-popup" type="button">
+        Solicitar Minha Vaga no BHP
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+      <span class="sticky-cta-micro">Vagas limitadas | Junho 2026</span>
+    </div>
+  </div>
+
+  <div class="form-popup-overlay" id="formPopup" role="dialog" aria-modal="true" aria-label="Formul&aacute;rio de inscri&ccedil;&atilde;o">
+    <div class="lead-form-card">
+      <button class="form-popup-close" id="formPopupClose" aria-label="Fechar">&times;</button>
+      <h3>Solicite sua vaga no BHP</h3>
+      <p class="form-sub">Preencha e nossa equipe entra em contato para avaliar seu perfil</p>
+      <form id="leadForm" action="#" method="POST">
+        <input type="hidden" name="utm_source" id="utm_source">
+        <input type="hidden" name="utm_medium" id="utm_medium">
+        <input type="hidden" name="utm_campaign" id="utm_campaign">
+        <input type="hidden" name="treinamento" value="BHP">
+
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Seu nome completo" required autocomplete="name" aria-label="Nome completo">
+        </div>
+        <div class="form-group">
+          <input type="tel" name="whatsapp" placeholder="WhatsApp (DDD + n&uacute;mero)" required autocomplete="tel" aria-label="WhatsApp">
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Seu melhor e-mail" required autocomplete="email" aria-label="E-mail">
+        </div>
+        <div class="form-group">
+          <input type="text" name="empresa" placeholder="Nome da sua empresa" required autocomplete="organization" aria-label="Nome da empresa">
+        </div>
+        <div class="form-group">
+          <select name="cargo" required aria-label="Seu cargo">
+            <option value="" disabled selected>Selecione o seu cargo</option>
+            <option value="Dono">Dono</option>
+            <option value="Socio">S&oacute;cio</option>
+            <option value="CEO">CEO</option>
+            <option value="Diretor">Diretor</option>
+            <option value="Gestor">Gestor</option>
+            <option value="Outro">Outro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <select name="faturamento" id="faturamentoSelect" required aria-label="Faturamento mensal">
+            <option value="" disabled selected>Faturamento mensal da empresa</option>
+            <option value="R$200mil-R$500mil">R$200 mil a R$500 mil</option>
+            <option value="R$500mil-R$1milhao">R$500 mil a R$1 milh&atilde;o</option>
+            <option value="R$1milhao-R$5milhoes">R$1 milh&atilde;o a R$5 milh&otilde;es</option>
+            <option value="R$5milhoes-R$50milhoes">R$5 milh&otilde;es a R$50 milh&otilde;es</option>
+            <option value="Acima-R$50milhoes">Acima de R$50 milh&otilde;es</option>
+            <option value="Abaixo-R$200mil">Minha empresa fatura abaixo de R$200 mil</option>
+          </select>
+        </div>
+        <div class="form-redirect-msg" id="formRedirectMsg">
+          <p>O BHP &eacute; indicado para empresas com faturamento acima de R$200 mil/m&ecirc;s. Para o seu momento, recomendamos o <strong>M&eacute;todo CIS</strong> &mdash; o treinamento que j&aacute; transformou mais de 500 mil vidas.</p>
+          <a href="/">Clique aqui para conhecer o M&eacute;todo CIS &rarr;</a>
+        </div>
+        <div class="form-group funcionarios-group">
+          <select name="funcionarios" required aria-label="Quantidade de funcion&aacute;rios">
+            <option value="" disabled selected>Quantos funcion&aacute;rios?</option>
+            <option value="1-5">1 a 5</option>
+            <option value="6-20">6 a 20</option>
+            <option value="21-50">21 a 50</option>
+            <option value="51-200">51 a 200</option>
+            <option value="+200">Mais de 200</option>
+          </select>
+        </div>
+        <button type="submit" class="form-submit" id="formSubmitBtn">Solicitar Minha Vaga no BHP &rarr;</button>
+        <p class="form-micro" style="text-align: center; margin-top: 10px; font-size: 0.75rem; color: var(--text-muted);">Vagas limitadas e mediante aprova&ccedil;&atilde;o | Atendimento humanizado</p>
+      </form>
+    </div>
+  </div>
 
   <script>
     // =====================================================
