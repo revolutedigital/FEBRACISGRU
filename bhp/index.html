@@ -773,6 +773,196 @@
     }
 
     /* =====================================================
+       NUMEROS SECTION
+    ===================================================== */
+    .numeros-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+      margin: 48px 0;
+    }
+
+    .numero-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 24px;
+      text-align: center;
+      min-width: 180px;
+    }
+
+    .numero-value {
+      color: var(--gold-primary);
+      font-size: 2.5rem;
+      font-weight: 800;
+      line-height: 1.1;
+      display: block;
+    }
+
+    .numero-label {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-top: 6px;
+      display: block;
+    }
+
+    /* =====================================================
+       PERSONALIZADO SECTION
+    ===================================================== */
+    .personalizado-features {
+      list-style: none;
+      margin: 40px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .personalizado-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .feature-icon-circle {
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      border-radius: 50%;
+      border: 1px solid var(--gold-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--gold-primary);
+    }
+
+    .feature-icon-circle svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .personalizado-features li p {
+      color: var(--text-light);
+      font-size: 1rem;
+      line-height: 1.6;
+      padding-top: 10px;
+    }
+
+    /* =====================================================
+       DEPOIMENTOS SECTION
+    ===================================================== */
+    .depoimentos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin: 48px 0;
+    }
+
+    @media (max-width: 768px) {
+      .depoimentos-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .depoimento-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 32px;
+      text-align: center;
+    }
+
+    .depoimento-photo {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--bg-highlight);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+
+    .depoimento-photo svg {
+      width: 24px;
+      height: 24px;
+      color: var(--text-muted);
+    }
+
+    .depoimento-name {
+      font-weight: 700;
+      color: var(--text-white);
+      font-size: 1rem;
+    }
+
+    .depoimento-company {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-top: 4px;
+    }
+
+    .depoimento-quote {
+      font-style: italic;
+      color: var(--text-light);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-top: 16px;
+    }
+
+    /* =====================================================
+       PARA QUEM SECTION
+    ===================================================== */
+    .para-quem-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin: 48px 0;
+    }
+
+    @media (max-width: 768px) {
+      .para-quem-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .para-quem-card {
+      border-radius: 24px;
+      padding: 32px;
+      background: var(--bg-card);
+    }
+
+    .para-quem-card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 28px;
+      line-height: 1.3;
+    }
+
+    .para-quem-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .para-quem-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 1.5;
+    }
+
+    .para-quem-list li svg {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      margin-top: 1px;
+    }
+
+    /* =====================================================
        REDUCED MOTION
     ===================================================== */
     @media (prefers-reduced-motion: reduce) {
@@ -1335,6 +1525,259 @@
       </div>
     </section>
 
+    <!-- SECTION: numeros -->
+    <section class="section" id="numeros" style="background: var(--bg-secondary);">
+      <div class="container" style="text-align: center; max-width: 960px;">
+        <h2 class="reveal">
+          N&atilde;o &eacute; promessa. <span class="text-gold">S&atilde;o n&uacute;meros.</span>
+        </h2>
+        <div class="numeros-grid">
+          <div class="numero-item reveal delay-1">
+            <span class="numero-value" data-count-target="600">+600</span>
+            <span class="numero-label">turmas realizadas</span>
+          </div>
+          <div class="numero-item reveal delay-2">
+            <span class="numero-value" data-count-target="45000">+45 mil</span>
+            <span class="numero-label">empres&aacute;rios impactados</span>
+          </div>
+          <div class="numero-item reveal delay-3">
+            <span class="numero-value" data-count-target="600">+600</span>
+            <span class="numero-label">empresas transformadas</span>
+          </div>
+          <div class="numero-item reveal delay-4">
+            <span class="numero-value" data-count-target="25000">+25 mil</span>
+            <span class="numero-label">horas de conte&uacute;do entregues</span>
+          </div>
+          <div class="numero-item reveal delay-5">
+            <span class="numero-value" data-count-target="90">+90</span>
+            <span class="numero-label">ferramentas e recursos aplicados</span>
+          </div>
+        </div>
+        <img src="/bhp/img/empresas-que-tiveram-acesso-a-metodologia-febracis-img-desktop-1.webp" alt="Empresas que tiveram acesso &agrave; metodologia Febracis" loading="lazy" class="reveal" style="max-width:100%;margin-top:48px;border-radius:12px">
+        <p class="reveal" style="font-style: italic; color: var(--text-light); max-width: 700px; margin: 40px auto 0; line-height: 1.7;">
+          &ldquo;Quando voc&ecirc; v&ecirc; que empresas desse porte usam a mesma metodologia, a pergunta n&atilde;o &eacute; &lsquo;ser&aacute; que funciona?&rsquo; &mdash; &eacute; &lsquo;por que eu ainda n&atilde;o fiz?&rsquo;&rdquo;
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION: personalizado -->
+    <section class="section" id="personalizado" style="background: var(--bg-primary);">
+      <div class="container" style="max-width: 860px;">
+        <h2 class="reveal">
+          Voc&ecirc; n&atilde;o vai s&oacute; fazer um treinamento.<br>
+          <span class="text-gold">Vai ter um time dedicado &agrave; sua transforma&ccedil;&atilde;o.</span>
+        </h2>
+        <p class="reveal" style="color: var(--text-light); margin-top: 32px; font-size: 1.05rem; line-height: 1.7;">
+          A Febracis Guarulhos oferece uma experi&ecirc;ncia que vai muito al&eacute;m das 33 horas de imers&atilde;o:
+        </p>
+        <ul class="personalizado-features">
+          <li class="reveal delay-1">
+            <div class="feature-icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </div>
+            <p>Atendimento humanizado e personalizado &mdash; do primeiro contato at&eacute; o p&oacute;s-treinamento</p>
+          </li>
+          <li class="reveal delay-2">
+            <div class="feature-icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+              </svg>
+            </div>
+            <p>Suporte dedicado para implementar as ferramentas na realidade da SUA empresa</p>
+          </li>
+          <li class="reveal delay-3">
+            <div class="feature-icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <p>Networking com empres&aacute;rios de Guarulhos e Grande SP que est&atilde;o no mesmo n&iacute;vel</p>
+          </li>
+          <li class="reveal delay-4">
+            <div class="feature-icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="20 12 20 22 4 22 4 12"/>
+                <rect x="2" y="7" width="20" height="5"/>
+                <line x1="12" y1="22" x2="12" y2="7"/>
+                <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/>
+                <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/>
+              </svg>
+            </div>
+            <p>Condi&ccedil;&otilde;es especiais para levar s&oacute;cios e gestores da mesma empresa</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECTION: escola-febracis -->
+    <section class="section" id="escola-febracis" style="background: var(--bg-secondary);">
+      <div class="container" style="text-align: center; max-width: 760px;">
+        <h2 class="reveal">A maior Escola de Neg&oacute;cios da Am&eacute;rica Latina</h2>
+        <p class="reveal" style="color: var(--text-light); margin-top: 32px; font-size: 1.05rem; line-height: 1.7;">
+          A Febracis &eacute; reconhecida como a maior escola de neg&oacute;cios da Am&eacute;rica Latina. Centenas de milhares de empres&aacute;rios formados. M&eacute;todo pr&oacute;prio. Resultados comprovados. O BHP &eacute; o carro-chefe da forma&ccedil;&atilde;o em gest&atilde;o.
+        </p>
+        <img src="/bhp/img/logo-febracis-dourado-1.webp" alt="Febracis" loading="lazy" class="reveal" style="max-width:300px;margin:40px auto 0;display:block;">
+        <div class="reveal" style="margin-top: 40px;">
+          <button class="btn-primary open-form-popup" type="button">FAZER PARTE DESSA HIST&Oacute;RIA</button>
+          <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 12px;">A maior escola de neg&oacute;cios da Am&eacute;rica Latina</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: depoimentos -->
+    <section class="section" id="depoimentos" style="background: var(--bg-primary);">
+      <div class="container">
+        <h2 class="reveal" style="text-align: center; max-width: 700px; margin: 0 auto;">
+          Quem j&aacute; fez, n&atilde;o volta a gerir do mesmo jeito.
+        </h2>
+        <div class="depoimentos-grid">
+
+          <!-- Depoimento 1 -->
+          <div class="depoimento-card reveal delay-1">
+            <div class="depoimento-photo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+            </div>
+            <p class="depoimento-name">Nome do Empres&aacute;rio</p>
+            <p class="depoimento-company">Empresa X</p>
+            <p class="depoimento-quote">&ldquo;Depoimento em breve.&rdquo;</p>
+          </div>
+
+          <!-- Depoimento 2 -->
+          <div class="depoimento-card reveal delay-2">
+            <div class="depoimento-photo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+            </div>
+            <p class="depoimento-name">Nome do Empres&aacute;rio</p>
+            <p class="depoimento-company">Empresa X</p>
+            <p class="depoimento-quote">&ldquo;Depoimento em breve.&rdquo;</p>
+          </div>
+
+          <!-- Depoimento 3 -->
+          <div class="depoimento-card reveal delay-3">
+            <div class="depoimento-photo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+            </div>
+            <p class="depoimento-name">Nome do Empres&aacute;rio</p>
+            <p class="depoimento-company">Empresa X</p>
+            <p class="depoimento-quote">&ldquo;Depoimento em breve.&rdquo;</p>
+          </div>
+
+        </div>
+        <div style="text-align: center;" class="reveal">
+          <button class="btn-primary open-form-popup" type="button">QUERO ESSE RESULTADO &mdash; SOLICITAR MINHA VAGA</button>
+          <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 12px;">Aprova&ccedil;&atilde;o em at&eacute; 48h</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: para-quem -->
+    <section class="section" id="para-quem" style="background: var(--bg-secondary);">
+      <div class="container" style="max-width: 960px;">
+        <h2 class="reveal" style="text-align: center;">
+          Este treinamento n&atilde;o &eacute; para todo mundo. E &eacute; isso que faz ele funcionar.
+        </h2>
+        <div class="para-quem-grid">
+
+          <!-- Para quem E -->
+          <div class="para-quem-card reveal delay-1" style="border: 1px solid rgba(46,204,113,0.15);">
+            <h3 style="color: var(--green-accent);">O BHP &eacute; para voc&ecirc; se:</h3>
+            <ul class="para-quem-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color: var(--green-accent);">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                Sua empresa j&aacute; fatura R$200 mil+/m&ecirc;s e voc&ecirc; quer destravar o pr&oacute;ximo n&iacute;vel
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color: var(--green-accent);">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                Tem equipe e quer que ela entregue sem depender de voc&ecirc;
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color: var(--green-accent);">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                Quer ferramentas aplic&aacute;veis &mdash; n&atilde;o teoria motivacional
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color: var(--green-accent);">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                Est&aacute; disposto a dedicar 33 horas pra mudar de verdade
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color: var(--green-accent);">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                Quer estar numa sala com empres&aacute;rios que pensam grande
+              </li>
+            </ul>
+          </div>
+
+          <!-- Para quem NAO E -->
+          <div class="para-quem-card reveal delay-2" style="border: 1px solid rgba(231,76,60,0.15);">
+            <h3 style="color: var(--red-accent);">O BHP n&atilde;o &eacute; para voc&ecirc; se:</h3>
+            <ul class="para-quem-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color: var(--red-accent);">
+                  <line x1="18" y1="6" x2="6" y2="18"/>
+                  <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+                Sua empresa fatura abaixo de R$200 mil (conhe&ccedil;a o M&eacute;todo CIS)
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color: var(--red-accent);">
+                  <line x1="18" y1="6" x2="6" y2="18"/>
+                  <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+                Trabalha sozinho, sem equipe pra liderar
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color: var(--red-accent);">
+                  <line x1="18" y1="6" x2="6" y2="18"/>
+                  <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+                Busca &ldquo;motiva&ccedil;&atilde;o&rdquo; sem compromisso com execu&ccedil;&atilde;o
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color: var(--red-accent);">
+                  <line x1="18" y1="6" x2="6" y2="18"/>
+                  <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+                N&atilde;o tem 3 dias pra investir na pr&oacute;pria empresa
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color: var(--red-accent);">
+                  <line x1="18" y1="6" x2="6" y2="18"/>
+                  <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+                Prefere continuar resolvendo tudo sozinho
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <p class="reveal" style="text-align: center; color: var(--text-light); font-size: 1rem; line-height: 1.7; max-width: 680px; margin: 0 auto;">
+          Se voc&ecirc; est&aacute; no in&iacute;cio da jornada, comece pelo <strong>M&eacute;todo CIS</strong> &mdash; o treinamento que j&aacute; transformou +500 mil vidas. O BHP &eacute; o pr&oacute;ximo passo.
+        </p>
+      </div>
+    </section>
+
     <!-- SECTION: transformacao -->
 
     <!-- SECTION: sobre-o-treinamento -->
@@ -1345,11 +1788,7 @@
 
     <!-- SECTION: resultados -->
 
-    <!-- SECTION: depoimentos -->
-
     <!-- SECTION: empresas -->
-
-    <!-- SECTION: para-quem -->
 
     <!-- SECTION: bonus -->
 
