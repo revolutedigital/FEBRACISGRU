@@ -29,7 +29,9 @@ Complete rewrite of the BHP (Business High Performance) landing page at `bhp/ind
 
 ---
 
-## Color Palette (preserved from current)
+## Color Palette (new tokens — replaces current Inter/Playfair + old variable names)
+
+> **Note:** The current page uses `Inter` + `Playfair Display` fonts and color variables like `--gold: #EBA818`. This rewrite introduces **Montserrat** typography and a **new color token naming scheme**. These are intentional changes, not preserved values.
 
 ```css
 :root {
@@ -100,7 +102,7 @@ Complete rewrite of the BHP (Business High Performance) landing page at `bhp/ind
 
 ---
 
-## Page Structure (15 sections)
+## Page Structure (16 sections + 2 overlays)
 
 ### 1. Top Alert Bar (fixed)
 - Fixed at top, red gradient background
@@ -126,14 +128,14 @@ Complete rewrite of the BHP (Business High Performance) landing page at `bhp/ind
   - 33h — de imersao (nao e cursinho de fim de semana)
   - 9 — areas de negocio cobertas em profundidade
   - 4 — ferramentas praticas para aplicar na segunda
-  - +30 mil — empresarios ja formados pelo metodo
+  - +30 mil — empresarios ja formados pelo metodo (Note: Section 9 uses "+45 mil empresarios impactados" — different metric: "formados" = completed BHP specifically, "impactados" = broader Febracis reach)
 - **Date badge:** "Proxima Turma: 24 a 26 de Junho 2026 | Guarulhos, SP | Presencial"
 
 ### 3. VIDEO (YouTube)
 - **Background:** `--bg-secondary`
 - **H2:** "33 horas que mudaram a historia de +30 mil empresas. A sua pode ser a proxima."
 - **Paragraph:** "Assista e veja o que acontece quando um empresario para de apagar incendio e comeca a liderar com metodo."
-- **YouTube embed:** Placeholder (responsive 16:9 iframe container)
+- **YouTube embed:** Placeholder — responsive 16:9 container with dark background, play icon SVG centered, and text "Video em breve". When a real YouTube URL is provided, replace with standard iframe embed.
 - **CTA:** "QUERO O MESMO RESULTADO" -> opens popup
 - **Microcopy:** "Vagas limitadas | Aprovacao em ate 48h"
 
@@ -233,27 +235,37 @@ Complete rewrite of the BHP (Business High Performance) landing page at `bhp/ind
 ### 12. DEPOIMENTOS
 - **Background:** `--bg-primary`
 - **H2:** "Quem ja fez, nao volta a gerir do mesmo jeito."
-- **Testimonial cards (placeholders):** Carousel or grid with photo placeholder, name, company, quote
+- **Testimonial cards (placeholders):** Grid of 3 cards (desktop), stacked on mobile. Each card: circular photo placeholder (gray with user icon), name "Nome do Empresario", company "Empresa X", and placeholder quote text. Structure ready to be replaced with real content later.
 - **CTA:** "QUERO ESSE RESULTADO — SOLICITAR MINHA VAGA" -> popup
 
 ### 13. PARA QUEM
 - **Background:** `--bg-secondary`
 - **H2:** "Este treinamento nao e para todo mundo. E isso que faz ele funcionar."
 - **Visual table — 2 columns (green/red):**
-  - Left (green check icons): 5 "BHP e para voce se..." items
-  - Right (red X icons): 5 "BHP nao e para voce se..." items
-- **Text below:** CIS recommendation for early-stage entrepreneurs
+  - Left (green check icons) — "O BHP e para voce se:":
+    1. Sua empresa ja fatura R$200 mil+/mes e voce quer destravar o proximo nivel
+    2. Tem equipe e quer que ela entregue sem depender de voce
+    3. Quer ferramentas aplicaveis — nao teoria motivacional
+    4. Esta disposto a dedicar 33 horas pra mudar de verdade
+    5. Quer estar numa sala com empresarios que pensam grande
+  - Right (red X icons) — "O BHP nao e para voce se:":
+    1. Sua empresa fatura abaixo de R$200 mil (conheca o Metodo CIS)
+    2. Trabalha sozinho, sem equipe pra liderar
+    3. Busca "motivacao" sem compromisso com execucao
+    4. Nao tem 3 dias pra investir na propria empresa
+    5. Prefere continuar resolvendo tudo sozinho
+- **Text below:** "Se voce esta no inicio da jornada, comece pelo Metodo CIS — o treinamento que ja transformou +500 mil vidas. O BHP e o proximo passo."
 
 ### 14. FAQ
 - **Background:** `--bg-primary`
 - **H2:** "Perguntas Frequentes"
 - **6 accordion items** (click to expand):
-  1. Quanto tempo dura?
-  2. Qual a diferenca entre o BHP e o Metodo CIS?
-  3. Preciso ter feito o CIS antes?
-  4. Posso levar socios ou gestores?
-  5. Quando e a proxima turma?
-  6. E se minha empresa fatura abaixo de R$200 mil?
+  1. **Quanto tempo dura?** — "33 horas em 3 dias. Imersao presencial, intensiva, do tipo que muda a forma como voce opera. Nao da pra comparar com cursinhos online de 2h."
+  2. **Qual a diferenca entre o BHP e o Metodo CIS?** — "O CIS transforma a pessoa. O BHP transforma a empresa. O CIS trabalha inteligencia emocional e mentalidade. O BHP e 100% gestao: lideranca, vendas, ferramentas, processos. Muitos empresarios fazem os dois — CIS primeiro, BHP depois."
+  3. **Preciso ter feito o CIS antes?** — "Nao e obrigatorio, mas quem fez o CIS chega no BHP com a base emocional pronta e aproveita 10x mais. Se nao fez, nao e impedimento — voce vai aproveitar igualmente."
+  4. **Posso levar socios ou gestores?** — "Recomendamos fortemente. Quando o time de lideranca faz o BHP junto, a implementacao e 3x mais rapida. Consulte condicoes especiais para grupos da mesma empresa."
+  5. **Quando e a proxima turma?** — "24 a 26 de junho de 2026, presencial em Guarulhos, SP. Preencha o formulario e nossa equipe entra em contato com os proximos passos."
+  6. **E se minha empresa fatura abaixo de R$200 mil?** — "O BHP foi desenhado para desafios de gestao de empresas ja consolidadas. Se e o seu caso, o Metodo CIS e o treinamento certo pra voce agora — e vai preparar a base para o BHP no futuro."
 
 ### 15. FORMULARIO FINAL (Inline)
 - **Background:** `--bg-secondary`
@@ -291,12 +303,33 @@ Complete rewrite of the BHP (Business High Performance) landing page at `bhp/ind
 ### FORM POPUP (shared)
 - Same popup for all CTAs (except inline form at bottom)
 - Overlay with dark backdrop, centered card
-- Fields: Nome, WhatsApp, E-mail, Empresa, Cargo, Faturamento, Funcionarios
-- Hidden fields: utm_source, utm_medium, utm_campaign, treinamento=BHP
-- Submit endpoint: `https://hook.us2.make.com/2izbvm95o1e4njleuw7hpzccaanfirt6`
-- Redirect logic for faturamento < R$200k: show CIS recommendation message, hide submit
+- Hidden fields: `utm_source`, `utm_medium`, `utm_campaign`, `treinamento=BHP`
+- **Fields:**
+  - Nome completo (text, required, autocomplete="name")
+  - WhatsApp com DDD (tel, required, autocomplete="tel")
+  - E-mail (email, required, autocomplete="email")
+  - Nome da empresa (text, required, autocomplete="organization")
+  - Cargo (select, required): Dono / Socio / CEO / Diretor / Gestor / Outro
+  - Faturamento mensal (select, required, id="faturamentoSelect"):
+    - R$200 mil a R$500 mil (value="R$200mil-R$500mil")
+    - R$500 mil a R$1 milhao (value="R$500mil-R$1milhao")
+    - R$1 milhao a R$5 milhoes (value="R$1milhao-R$5milhoes")
+    - R$5 milhoes a R$50 milhoes (value="R$5milhoes-R$50milhoes")
+    - Acima de R$50 milhoes (value="Acima-R$50milhoes")
+    - Minha empresa fatura abaixo de R$200 mil (value="Abaixo-R$200mil")
+  - Funcionarios (select, required): 1-5 / 6-20 / 21-50 / 51-200 / +200
+- **Redirect logic:** When faturamento = "Abaixo-R$200mil", show CIS recommendation message, hide submit button and funcionarios field
+- Submit endpoint: `https://hook.us2.make.com/2izbvm95o1e4njleuw7hpzccaanfirt6` (POST FormData)
 - Close on X, overlay click, or Escape key
-- Success message after submit
+- Success message after submit (replaces form content)
+
+### INLINE FORM (Section 15) — Technical Notes
+- **New feature** (does not exist in current page)
+- Uses different element IDs to avoid conflicts with popup form (e.g., `leadFormInline`, `faturamentoSelectInline`)
+- Same fields, same select options, same redirect logic as popup
+- Also captures UTM params via hidden fields
+- Submits to the same Make webhook endpoint
+- Both forms share the same success behavior (innerHTML replacement)
 
 ---
 
@@ -334,24 +367,33 @@ All CTAs open the form popup, except the inline form at the bottom.
 | `logo-febracis-branco-1.webp` | `bhp/reformulation/Imagens/` | Febracis white logo |
 | `logo-febracis-dourado-1.webp` | `bhp/reformulation/Imagens/` | Febracis gold logo |
 
-Images from `bhp/reformulation/Imagens/` should be copied to `bhp/` (or a subfolder like `bhp/img/`) during implementation.
+Images from `bhp/reformulation/Imagens/` must be copied to `bhp/img/` during implementation. All `src` attributes should reference `/bhp/img/filename.webp`.
 
 ---
 
 ## Preserved from Current Page
 
-- **Form popup HTML structure** (fields, hidden inputs, close button)
-- **Form submission endpoint** (`https://hook.us2.make.com/2izbvm95o1e4njleuw7hpzccaanfirt6`)
+- **Form submission endpoint** (`https://hook.us2.make.com/2izbvm95o1e4njleuw7hpzccaanfirt6`) — POST FormData
 - **UTM capture logic** (query params -> hidden fields)
-- **Faturamento redirect logic** (< R$200k -> CIS message)
+- **Faturamento redirect logic** (< R$200k -> CIS message, hide submit)
 - **Hero video lazy loading** (defer load, play on ready)
-- **Scroll progress bar**
-- **IntersectionObserver reveal animations**
-- **FAQ accordion functionality**
-- **Sticky CTA show/hide on scroll**
-- **GTM/Stape tracking** (`GTM-NC44TJM9`)
-- **Schema.org structured data** (Event type)
+- **Scroll progress bar** — thin bar at top of page, gold color, tracks scroll percentage
+- **IntersectionObserver reveal animations** (fade-in-up on `.reveal` elements)
+- **FAQ accordion functionality** (click to expand/collapse, one open at a time)
+- **Sticky CTA show/hide on scroll** (appears after hero leaves viewport)
+- **GTM/Stape tracking** — loaded via Stape server-side proxy: `https://jcjrrbdr.san.stape.io/ns.html?id=GTM-NC44TJM9` (NOT standard GTM snippet)
+- **Schema.org structured data** (Event type) — update content to match new copy but preserve structure
 - **Accessibility** (skip link, aria labels, keyboard nav)
+- **Title/Meta/OG tags** — update copy to match new headline but preserve structure
+
+## Changed from Current Page
+
+- **Typography:** Inter + Playfair Display -> Montserrat (400/500/700/800)
+- **Color tokens:** New variable naming scheme (see Color Palette section)
+- **All copy:** Entirely new text per reformulation prompt
+- **New sections added:** Video YouTube, Pilares, Conteudo Programatico, Ferramentas, Numeros, Personalizado, Escola Febracis, Depoimentos, Para Quem, Formulario Final inline
+- **Inline form at bottom:** New feature — second conversion point
+- **Images:** New assets from `reformulation/Imagens/` folder
 
 ---
 
