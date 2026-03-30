@@ -1127,6 +1127,7 @@
     /* ========== RESPONSIVE ========== */
     @media (max-width: 768px) {
       section { padding: 40px 0; }
+      .mentor-grid { grid-template-columns: 1fr !important; }
 
       h2 { font-size: 1.35rem; }
 
@@ -1383,6 +1384,43 @@
 
   <div style="padding: 0; text-align: center;"><div class="gold-line" style="margin: 0 auto;"></div></div>
 
+  <!-- ========== 6B. MENTOR ========== -->
+  <section style="padding: 64px 0; background: var(--bg-dark);">
+    <div class="container">
+      <div class="gold-line"></div>
+      <h2 class="reveal" style="text-align: center;">Conhe&ccedil;a o seu mentor nessa jornada</h2>
+      <div class="mentor-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 40px; align-items: start;">
+
+        <!-- Newton Vieira -->
+        <div class="reveal" style="background: rgba(15,22,41,0.6); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--border); border-radius: 12px; padding: 32px; text-align: center;">
+          <div class="photo-placeholder" style="aspect-ratio: 1/1; max-width: 200px; margin: 0 auto 24px; border-radius: 50%; padding: 0; overflow: hidden;">
+            <!-- Substituir por foto do Newton -->
+            <span style="color: var(--text-muted); font-size: 13px;">Foto Newton</span>
+          </div>
+          <h3 style="font-size: 1.2rem; font-weight: 800; margin-bottom: 8px; color: var(--gold);">Newton Vieira</h3>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7;">
+            Durante o treinamento BHP, voc&ecirc; contar&aacute; com a condu&ccedil;&atilde;o de Newton Vieira, Master Coach, MBA em Planejamento e Gest&atilde;o Empresarial, respons&aacute;vel por trazer os maiores treinamentos de desenvolvimento de neg&oacute;cios e pessoas para o Estado do Tocantins.
+          </p>
+        </div>
+
+        <!-- Paulo Vieira -->
+        <div class="reveal" style="background: rgba(15,22,41,0.6); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--border); border-radius: 12px; padding: 32px; text-align: center;">
+          <div class="photo-placeholder" style="aspect-ratio: 1/1; max-width: 200px; margin: 0 auto 24px; border-radius: 50%; padding: 0; overflow: hidden;">
+            <!-- Substituir por foto do Paulo -->
+            <span style="color: var(--text-muted); font-size: 13px;">Foto Paulo</span>
+          </div>
+          <h3 style="font-size: 1.2rem; font-weight: 800; margin-bottom: 8px; color: var(--gold);">Paulo Vieira</h3>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7;">
+            O conte&uacute;do exclusivo foi criado por Paulo Vieira, Master Coach, PhD, autor mais lido na &aacute;rea de neg&oacute;cios nos &uacute;ltimos 4 anos, e presidente da Febracis, a maior Escola de Neg&oacute;cios da Am&eacute;rica Latina.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div style="padding: 0; text-align: center;"><div class="gold-line" style="margin: 0 auto;"></div></div>
+
   <!-- ========== 7. 3 PILARES ========== -->
   <section class="pilares-section">
     <div class="container">
@@ -1583,7 +1621,7 @@
           </div>
         </div>
         <div class="reveal">
-          <div class="photo-placeholder">Foto Imers&atilde;o BHP</div>
+          <div class="photo-placeholder" style="padding:0;overflow:hidden"><img src="/bhp/img/img-sobre-o-treinamento-1.webp" alt="Imers&atilde;o BHP" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:14px;display:block"></div>
         </div>
       </div>
     </div>
