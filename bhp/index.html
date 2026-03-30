@@ -258,6 +258,294 @@
     }
 
     /* =====================================================
+       TOP ALERT BAR
+    ===================================================== */
+    .top-alert-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10003;
+      background: linear-gradient(135deg, #B91C1C 0%, #DC2626 50%, #B91C1C 100%);
+      text-align: center;
+      padding: 6px 16px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* =====================================================
+       HERO SECTION
+    ===================================================== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding: 120px 0 80px;
+      background: var(--gradient-hero);
+    }
+
+    .hero-video-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      opacity: 0;
+      transition: opacity 1s;
+    }
+
+    .hero-video-bg.playing {
+      opacity: 0.3;
+    }
+
+    .hero-video-bg video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .video-overlay {
+      position: absolute;
+      inset: 0;
+      background: var(--overlay-dark);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gold-primary);
+      border: 1px solid var(--gold-primary);
+      border-radius: 100px;
+      padding: 6px 18px;
+      margin-bottom: 28px;
+    }
+
+    .hero-content h1 {
+      margin-bottom: 28px;
+    }
+
+    .hero-paragraph {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    .hero-benefits {
+      list-style: none;
+      text-align: left;
+      max-width: 520px;
+      margin: 0 auto 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .hero-benefits li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .hero-benefits li svg {
+      flex-shrink: 0;
+      margin-top: 2px;
+      color: var(--green-accent);
+      width: 20px;
+      height: 20px;
+    }
+
+    .hero-scarcity {
+      background: var(--bg-highlight);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 16px 24px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      text-align: left;
+      max-width: 620px;
+      margin: 0 auto 32px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--text-light);
+    }
+
+    .hero-scarcity svg {
+      flex-shrink: 0;
+      margin-top: 2px;
+      color: var(--gold-primary);
+      width: 20px;
+      height: 20px;
+    }
+
+    .hero-microcopy {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 12px;
+      margin-bottom: 48px;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .hero-stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 16px 20px;
+      text-align: center;
+      flex: 1;
+      min-width: 140px;
+    }
+
+    .hero-stat-number {
+      color: var(--gold-primary);
+      font-size: 2rem;
+      font-weight: 800;
+      display: block;
+      line-height: 1.1;
+    }
+
+    .hero-stat-label {
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      line-height: 1.4;
+      margin-top: 4px;
+      display: block;
+    }
+
+    .hero-date-badge {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      background: var(--gold-primary);
+      border-radius: 100px;
+      padding: 8px 20px;
+      margin-top: 8px;
+    }
+
+    /* =====================================================
+       VIDEO SECTION
+    ===================================================== */
+    .video-placeholder {
+      position: relative;
+      padding-bottom: 56.25%;
+      background: var(--bg-card);
+      border-radius: 16px;
+      border: 1px solid var(--border-subtle);
+      overflow: hidden;
+      margin: 40px 0;
+    }
+
+    .video-placeholder-content {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .video-placeholder-content svg {
+      width: 64px;
+      height: 64px;
+      color: var(--gold-primary);
+    }
+
+    .video-placeholder-content p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* =====================================================
+       DORES SECTION
+    ===================================================== */
+    .pain-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-left: 3px solid var(--red-accent);
+      border-radius: 0 16px 16px 0;
+      padding: 28px 32px;
+      margin-bottom: 20px;
+      transition: border-color 0.3s, background 0.3s;
+    }
+
+    .pain-card:hover {
+      border-color: rgba(235, 168, 24, 0.2);
+      background: var(--bg-highlight);
+    }
+
+    .pain-card .pain-icon {
+      width: 40px;
+      height: 40px;
+      color: var(--red-accent);
+      margin-bottom: 12px;
+    }
+
+    .pain-card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .pain-card p {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .dores-transition {
+      background: var(--bg-highlight);
+      border-radius: 20px;
+      padding: 48px 40px;
+      margin-top: 48px;
+      text-align: center;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .dores-transition p {
+      font-size: 1.2rem;
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .dores-transition p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Staggered reveal delays */
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+    .delay-4 { transition-delay: 0.4s; }
+    .delay-5 { transition-delay: 0.5s; }
+
+    /* =====================================================
        REDUCED MOTION
     ===================================================== */
     @media (prefers-reduced-motion: reduce) {
@@ -298,6 +586,24 @@
       .section {
         padding: 60px 0;
       }
+
+      .hero {
+        min-height: auto;
+        padding: 100px 0 60px;
+      }
+
+      .hero-stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .dores-transition {
+        padding: 36px 24px;
+      }
+
+      .dores-transition p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
@@ -319,12 +625,186 @@
   <main id="main-content">
 
     <!-- SECTION: alert-bar -->
+    <div class="top-alert-bar" role="banner">
+      VAGAS LIMITADAS &mdash; 24 A 26 DE JUNHO 2026 &mdash; GUARULHOS, SP
+    </div>
 
     <!-- SECTION: hero -->
+    <section class="hero" id="hero">
+      <div class="hero-video-bg" id="heroVideoBg" aria-hidden="true">
+        <video muted loop playsinline preload="none">
+          <source src="/bhp/bhp-video.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+      </div>
+      <div class="container hero-content">
+        <span class="hero-badge">Febracis Guarulhos | Imers&atilde;o Presencial para Empres&aacute;rios</span>
+        <h1>
+          Voc&ecirc; construiu uma empresa de R$200 mil/m&ecirc;s...<br>
+          <span class="text-red">pra virar ref&eacute;m dela?</span>
+        </h1>
+        <p class="hero-paragraph">
+          Em 33 horas, voc&ecirc; vai sair com o m&eacute;todo que <strong>separa empres&aacute;rios que trabalham no neg&oacute;cio</strong> dos que <strong>fazem o neg&oacute;cio trabalhar pra eles.</strong>
+        </p>
+        <ul class="hero-benefits">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="9 12 11 14 15 10"/>
+            </svg>
+            Descobrir exatamente onde est&atilde;o os gargalos que travam seu lucro
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="9 12 11 14 15 10"/>
+            </svg>
+            Montar um sistema de gest&atilde;o que roda sem voc&ecirc; no operacional
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="9 12 11 14 15 10"/>
+            </svg>
+            Implementar 4 ferramentas de gest&atilde;o j&aacute; na segunda-feira seguinte
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="9 12 11 14 15 10"/>
+            </svg>
+            Criar previsibilidade real de vendas e caixa &mdash; sem achismo
+          </li>
+        </ul>
+        <div class="hero-scarcity">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+            <line x1="12" y1="9" x2="12" y2="13"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+          <span><strong>Vagas limitadas e mediante aprova&ccedil;&atilde;o.</strong> O BHP n&atilde;o &eacute; para todo mundo &mdash; &eacute; para quem j&aacute; fatura alto e quer o pr&oacute;ximo n&iacute;vel.</span>
+        </div>
+        <button class="btn-primary open-form-popup" type="button">SOLICITAR MINHA VAGA NO BHP</button>
+        <p class="hero-microcopy">Turma presencial em Guarulhos | Aprova&ccedil;&atilde;o em at&eacute; 48h</p>
+        <div class="hero-stats">
+          <div class="hero-stat-card">
+            <span class="hero-stat-number">33h</span>
+            <span class="hero-stat-label">de imers&atilde;o (n&atilde;o &eacute; cursinho de fim de semana)</span>
+          </div>
+          <div class="hero-stat-card">
+            <span class="hero-stat-number">9</span>
+            <span class="hero-stat-label">&aacute;reas de neg&oacute;cio cobertas em profundidade</span>
+          </div>
+          <div class="hero-stat-card">
+            <span class="hero-stat-number">4</span>
+            <span class="hero-stat-label">ferramentas pr&aacute;ticas para aplicar na segunda</span>
+          </div>
+          <div class="hero-stat-card">
+            <span class="hero-stat-number">+30 mil</span>
+            <span class="hero-stat-label">empres&aacute;rios j&aacute; formados pelo m&eacute;todo</span>
+          </div>
+        </div>
+        <span class="hero-date-badge">Pr&oacute;xima Turma: <strong>24 a 26 de Junho 2026</strong> | Guarulhos, SP | Presencial</span>
+      </div>
+    </section>
 
     <!-- SECTION: video -->
+    <section class="section" id="video" style="background: var(--bg-secondary);">
+      <div class="container" style="text-align: center; max-width: 800px;">
+        <h2 class="reveal">
+          33 horas que mudaram a hist&oacute;ria de <span class="text-gold">+30 mil empresas.</span><br>
+          <span class="text-gold">A sua pode ser a pr&oacute;xima.</span>
+        </h2>
+        <p class="reveal" style="color: var(--text-light); margin-top: 24px; font-size: 1.05rem; line-height: 1.7;">
+          Assista e veja o que acontece quando um empres&aacute;rio para de apagar inc&ecirc;ndio e come&ccedil;a a liderar com m&eacute;todo.
+        </p>
+        <div class="video-placeholder reveal">
+          <div class="video-placeholder-content">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/>
+            </svg>
+            <p>V&iacute;deo em breve</p>
+          </div>
+        </div>
+        <div class="reveal">
+          <button class="btn-primary open-form-popup" type="button">QUERO O MESMO RESULTADO</button>
+          <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 12px;">Vagas limitadas | Aprova&ccedil;&atilde;o em at&eacute; 48h</p>
+        </div>
+      </div>
+    </section>
 
     <!-- SECTION: dores -->
+    <section class="section" id="dores" style="background: var(--bg-primary);">
+      <div class="container" style="max-width: 860px;">
+        <h2 class="reveal" style="text-align: center; margin-bottom: 48px;">
+          Se sua empresa fatura R$200 mil+ por m&ecirc;s, voc&ecirc; provavelmente vive <span class="text-gold">pelo menos</span> um desses cen&aacute;rios:
+        </h2>
+
+        <!-- Dor 1 -->
+        <div class="pain-card reveal delay-1">
+          <svg class="pain-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+          <h3>Voc&ecirc; trabalha 12h por dia e a empresa s&oacute; funciona com voc&ecirc; l&aacute; dentro.</h3>
+          <p>F&eacute;rias? S&oacute; no nome. Se voc&ecirc; desliga o celular por 24h, o WhatsApp enlouquece, as decis&otilde;es param, o time trava. Voc&ecirc; n&atilde;o construiu um neg&oacute;cio &mdash; construiu uma pris&atilde;o com CNPJ. E quanto mais cresce, mais preso voc&ecirc; fica.</p>
+        </div>
+
+        <!-- Dor 2 -->
+        <div class="pain-card reveal delay-2">
+          <svg class="pain-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/>
+            <polyline points="17 18 23 18 23 12"/>
+          </svg>
+          <h3>O faturamento subiu pra R$300, R$500 mil, R$1 milh&atilde;o... e o lucro n&atilde;o acompanhou.</h3>
+          <p>A estrutura cresceu mais r&aacute;pido que a margem. Mais gente, mais custo fixo, mais complexidade &mdash; e no fim do m&ecirc;s, quase empata. Voc&ecirc; sabe que tem um ralo. S&oacute; n&atilde;o sabe onde.</p>
+        </div>
+
+        <!-- Dor 3 -->
+        <div class="pain-card reveal delay-3">
+          <svg class="pain-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <line x1="23" y1="11" x2="17" y2="11"/>
+          </svg>
+          <h3>Voc&ecirc; contrata, treina, investe... e perde a pessoa em 4 meses.</h3>
+          <p>Cada sa&iacute;da &eacute; um recome&ccedil;o. Voc&ecirc; volta pro operacional, retreina, readapta, recomeça. O custo real da rotatividade n&atilde;o &eacute; s&oacute; financeiro &mdash; &eacute; a sua energia, a moral do time e o tempo que voc&ecirc; nunca recupera.</p>
+        </div>
+
+        <!-- Dor 4 -->
+        <div class="pain-card reveal delay-4">
+          <svg class="pain-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="20" x2="18" y2="10"/>
+            <line x1="12" y1="20" x2="12" y2="4"/>
+            <line x1="6" y1="20" x2="6" y2="14"/>
+          </svg>
+          <h3>Cada m&ecirc;s &eacute; uma surpresa. Voc&ecirc; n&atilde;o sabe quanto vai vender, quanto vai entrar, quanto vai sobrar.</h3>
+          <p>Sem pipeline, sem m&eacute;tricas, sem previsibilidade. As decis&otilde;es comerciais s&atilde;o tomadas no feeling. E no fundo voc&ecirc; sabe: gerenciar no achismo &eacute; a forma mais cara de administrar um neg&oacute;cio.</p>
+        </div>
+
+        <!-- Dor 5 -->
+        <div class="pain-card reveal delay-5">
+          <svg class="pain-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+          <h3>Voc&ecirc; sabe que precisa dar feedback, cobrar resultado, desenvolver gente... mas n&atilde;o sabe como.</h3>
+          <p>A empresa cresceu, mas a sua lideran&ccedil;a n&atilde;o amadureceu junto. Feedback? Evita ou faz de um jeito que desmotiva. O time n&atilde;o cresce porque n&atilde;o recebe dire&ccedil;&atilde;o. E a cada dia que passa sem resolver isso, a dist&acirc;ncia entre onde voc&ecirc; est&aacute; e onde poderia estar s&oacute; aumenta.</p>
+        </div>
+
+        <!-- Transition block -->
+        <div class="dores-transition reveal">
+          <p>Se voc&ecirc; se reconheceu em pelo menos um desses cen&aacute;rios, preste aten&ccedil;&atilde;o:</p>
+          <p>Nenhum desses problemas se resolve com mais esfor&ccedil;o. <strong>Mais esfor&ccedil;o &eacute; o que te trouxe at&eacute; aqui.</strong></p>
+          <p>O que resolve &eacute; <span class="text-gold">m&eacute;todo, ferramentas certas e uma lideran&ccedil;a que funciona sem voc&ecirc;.</span></p>
+          <p>E &eacute; exatamente isso que voc&ecirc; vai construir em 33 horas de imers&atilde;o.</p>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;" class="reveal">
+          <button class="btn-primary open-form-popup" type="button">CHEGA DE APAGAR INC&Ecirc;NDIO &mdash; SOLICITAR MINHA VAGA</button>
+        </div>
+      </div>
+    </section>
 
     <!-- SECTION: transformacao -->
 
