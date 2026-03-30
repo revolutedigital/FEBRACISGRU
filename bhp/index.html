@@ -1385,11 +1385,14 @@
     <div class="container">
       <div class="gold-line"></div>
       <h2 class="reveal">33 horas que mudaram a hist&oacute;ria de +30 mil empresas. A sua pode ser a pr&oacute;xima.</h2>
-      <div class="video-placeholder reveal" style="padding:0;background:#000">
-        <video controls playsinline preload="metadata" style="width:100%;height:100%;object-fit:contain;border-radius:16px;display:block">
-          <source src="/bhp/video-bhp-depoimento.mp4" type="video/mp4">
-          Seu navegador n&atilde;o suporta v&iacute;deo.
-        </video>
+      <div class="video-placeholder reveal" style="padding:0;background:#000;position:relative;cursor:pointer" id="ytPlayer" data-yt="D-Sq2cEOPFA">
+        <img src="/bhp/img/thumb-bhp.webp" alt="Assistir v&iacute;deo BHP" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:16px;display:block" id="ytThumb">
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none" id="ytPlayBtn">
+          <svg width="72" height="72" viewBox="0 0 72 72" fill="none" aria-hidden="true">
+            <circle cx="36" cy="36" r="35" fill="rgba(0,0,0,0.6)" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+            <polygon points="28,20 28,52 54,36" fill="#FFFFFF"/>
+          </svg>
+        </div>
       </div>
       <div class="text-center">
         <button class="cta-btn-outline open-form-popup">QUERO O MESMO RESULTADO</button>
@@ -2165,7 +2168,17 @@
         });
       }
 
-      // 10. Exit intent popup
+      // 10. YouTube lazy embed on click
+      var ytPlayer = document.getElementById('ytPlayer');
+      if (ytPlayer) {
+        ytPlayer.addEventListener('click', function() {
+          var ytId = ytPlayer.getAttribute('data-yt');
+          ytPlayer.innerHTML = '<iframe src="https://www.youtube.com/embed/' + ytId + '?autoplay=1&rel=0" style="position:absolute;inset:0;width:100%;height:100%;border:none;border-radius:16px" allow="autoplay;encrypted-media" allowfullscreen></iframe>';
+          ytPlayer.style.cursor = 'default';
+        });
+      }
+
+      // 11. Exit intent popup
       var exitPopup = document.getElementById('exitPopup');
       var exitShown = false;
 
