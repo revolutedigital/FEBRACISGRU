@@ -2080,39 +2080,192 @@
   </div>
 
   <script>
-    // =====================================================
-    // SCROLL PROGRESS BAR
-    // =====================================================
-    (function () {
-      var bar = document.getElementById('scrollProgress');
-      if (!bar) return;
-      function updateProgress() {
-        var scrollTop = window.scrollY || document.documentElement.scrollTop;
-        var docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-        bar.style.width = progress + '%';
-      }
-      window.addEventListener('scroll', updateProgress, { passive: true });
-      updateProgress();
-    })();
+    (function() {
+      'use strict';
 
-    // =====================================================
-    // SCROLL REVEAL
-    // =====================================================
-    (function () {
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-      var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
+      // =====================================================
+      // 1. HERO VIDEO LAZY LOADING
+      // =====================================================
+      var heroVideo = document.querySelector('#heroVideoBg video');
+      var heroVideoBg = document.getElementById('heroVideoBg');
+      if (heroVideo && heroVideoBg) {
+        function showVideo() { heroVideoBg.classList.add('playing'); }
+        heroVideo.addEventListener('playing', showVideo);
+        function lazyLoadVideo() {
+          heroVideo.preload = 'auto';
+          heroVideo.load();
+          heroVideo.play().catch(function() { showVideo(); });
+        }
+        if (document.readyState === 'complete') {
+          setTimeout(lazyLoadVideo, 100);
+        } else {
+          window.addEventListener('load', function() { setTimeout(lazyLoadVideo, 100); });
+        }
+      }
+
+      // =====================================================
+      // 2. SCROLL PROGRESS BAR
+      // =====================================================
+      var scrollProgress = document.getElementById('scrollProgress');
+      window.addEventListener('scroll', function() {
+        var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        var pct = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
+        if (scrollProgress) scrollProgress.style.width = pct + '%';
+      }, { passive: true });
+
+      // =====================================================
+      // 3. REVEAL ON SCROLL (IntersectionObserver)
+      // =====================================================
+      var revealElements = document.querySelectorAll('.reveal');
+      var revealObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(function(el) { revealObserver.observe(el); });
+
+      // =====================================================
+      // 4. STICKY CTA SHOW/HIDE
+      // =====================================================
+      var stickyCta = document.getElementById('stickyCta');
+      var heroSection = document.querySelector('.hero');
+      var floatObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (stickyCta) stickyCta.classList.toggle('visible', !entry.isIntersecting);
+        });
+      }, { threshold: 0 });
+      if (heroSection) floatObserver.observe(heroSection);
+
+      // =====================================================
+      // 5. FAQ ACCORDION
+      // =====================================================
+      window.toggleFaq = function(button) {
+        var item = button.parentElement;
+        var isActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(function(faq) {
+          faq.classList.remove('active');
+          faq.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+        if (!isActive) {
+          item.classList.add('active');
+          button.setAttribute('aria-expanded', 'true');
+        }
+      };
+
+      // =====================================================
+      // 6. UTM CAPTURE (both forms)
+      // =====================================================
+      var params = new URLSearchParams(window.location.search);
+      ['utm_source', 'utm_medium', 'utm_campaign'].forEach(function(key) {
+        var el = document.getElementById(key);
+        if (el && params.get(key)) el.value = params.get(key);
+        var elInline = document.getElementById(key + '_inline');
+        if (elInline && params.get(key)) elInline.value = params.get(key);
+      });
+
+      // =====================================================
+      // 7. FORM POPUP OPEN/CLOSE
+      // =====================================================
+      var formPopup = document.getElementById('formPopup');
+      var formPopupClose = document.getElementById('formPopupClose');
+
+      function openFormPopup() {
+        if (formPopup) {
+          formPopup.classList.add('active');
+          document.body.style.overflow = 'hidden';
+          var firstInput = formPopup.querySelector('input[name="name"]');
+          if (firstInput) setTimeout(function() { firstInput.focus(); }, 400);
+        }
+      }
+      function closeFormPopup() {
+        if (formPopup) {
+          formPopup.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      }
+
+      document.querySelectorAll('.open-form-popup').forEach(function(btn) {
+        btn.addEventListener('click', openFormPopup);
+      });
+      if (formPopupClose) formPopupClose.addEventListener('click', closeFormPopup);
+      if (formPopup) {
+        formPopup.addEventListener('click', function(e) {
+          if (e.target === formPopup) closeFormPopup();
+        });
+      }
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && formPopup && formPopup.classList.contains('active')) closeFormPopup();
+      });
+
+      // =====================================================
+      // 8. FORM SUBMISSION (both popup and inline)
+      // =====================================================
+      function setupForm(formId) {
+        var form = document.getElementById(formId);
+        if (!form) return;
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          var formData = new FormData(form);
+          fetch('https://hook.us2.make.com/2izbvm95o1e4njleuw7hpzccaanfirt6', { method: 'POST', body: formData });
+          form.innerHTML = '<div style="text-align:center;padding:24px"><p style="font-size:1.3rem;font-weight:700;color:var(--gold-primary);margin-bottom:12px">Inscri\u00e7\u00e3o recebida!</p><p style="color:var(--text-light)">Nossa equipe entrar\u00e1 em contato em breve.</p></div>';
+        });
+      }
+      setupForm('leadForm');
+      setupForm('leadFormInline');
+
+      // =====================================================
+      // 9. FATURAMENTO REDIRECT LOGIC (both forms)
+      // =====================================================
+      function setupFaturamentoRedirect(selectId, msgId) {
+        var select = document.getElementById(selectId);
+        var msg = document.getElementById(msgId);
+        if (!select) return;
+        select.addEventListener('change', function() {
+          var form = select.closest('form');
+          var submitBtn = form.querySelector('.form-submit');
+          var funcGroup = form.querySelector('.funcionarios-group');
+          if (this.value === 'Abaixo-R$200mil') {
+            if (msg) msg.classList.add('active');
+            if (submitBtn) submitBtn.style.display = 'none';
+            if (funcGroup) funcGroup.style.display = 'none';
+          } else {
+            if (msg) msg.classList.remove('active');
+            if (submitBtn) submitBtn.style.display = '';
+            if (funcGroup) funcGroup.style.display = '';
           }
         });
-      }, { threshold: 0.12 });
+      }
+      setupFaturamentoRedirect('faturamentoSelect', 'formRedirectMsg');
+      setupFaturamentoRedirect('faturamentoSelectInline', 'formRedirectMsgInline');
 
-      document.querySelectorAll('.reveal').forEach(function (el) {
-        observer.observe(el);
-      });
+      // =====================================================
+      // 10. COUNT-UP ANIMATION FOR STATS
+      // =====================================================
+      var countElements = document.querySelectorAll('[data-count-target]');
+      var countObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting && !entry.target.dataset.counted) {
+            entry.target.dataset.counted = 'true';
+            var target = parseInt(entry.target.dataset.countTarget);
+            var prefix = entry.target.dataset.countPrefix || '';
+            var suffix = entry.target.dataset.countSuffix || '';
+            var duration = 2000;
+            var startTime = null;
+            function animate(currentTime) {
+              if (!startTime) startTime = currentTime;
+              var progress = Math.min((currentTime - startTime) / duration, 1);
+              var eased = 1 - Math.pow(1 - progress, 3);
+              var current = Math.floor(eased * target);
+              entry.target.textContent = prefix + current.toLocaleString('pt-BR') + suffix;
+              if (progress < 1) requestAnimationFrame(animate);
+              else entry.target.textContent = prefix + target.toLocaleString('pt-BR') + suffix;
+            }
+            requestAnimationFrame(animate);
+          }
+        });
+      }, { threshold: 0.3 });
+      countElements.forEach(function(el) { countObserver.observe(el); });
+
     })();
   </script>
 
