@@ -1284,12 +1284,20 @@
       }
       .about-photo-col { order: -1; }
 
-      .photo-placeholder {
+      .about-photo-col .photo-placeholder,
+      .personalizado-grid .photo-placeholder {
         aspect-ratio: 16 / 10 !important;
         border-radius: 12px !important;
+        width: 100% !important;
+        max-width: 100% !important;
       }
-      .photo-placeholder img {
+      .about-photo-col .photo-placeholder img,
+      .personalizado-grid .photo-placeholder img {
         border-radius: 10px !important;
+      }
+      .mentor-grid .photo-placeholder {
+        border-radius: 50% !important;
+        aspect-ratio: 1 / 1 !important;
       }
 
       .pilares-grid {
